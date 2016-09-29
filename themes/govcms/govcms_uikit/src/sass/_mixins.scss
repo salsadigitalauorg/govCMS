@@ -1,0 +1,60 @@
+/**
+ * For creating breakpoints.
+ * Use in order of smallest to largest:
+ * div {
+ *   font-size: 24px;
+ *   @include breakpoint(tablet) {
+ *     font-size: 32px;
+ *   }
+ *   @include breakpoint(desktop) {
+ *     font-size: 48px;
+ *   }
+ * }
+ */
+
+@mixin breakpoint($class) {
+  @if $class==desktop {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+  @else if $class==tablet {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+  @else if $class==mobile {
+    @media (max-width: 420px) {
+      @content;
+    }
+  }
+  @else {
+    @warn "Breakpoint mixin supports: desktop, tablet, mobile";
+  }
+}
+
+
+/**
+ * For use on full width containers.
+ * Centres the column with a max-width.
+ */
+
+@mixin center-column($width) {
+  max-width: $width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $mobile_column_padding;
+  padding-right: $mobile_column_padding;
+  box-sizing: content-box;
+}
+
+@mixin visually-hidden() {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}

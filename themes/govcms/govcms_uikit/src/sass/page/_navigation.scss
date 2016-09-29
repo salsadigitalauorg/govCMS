@@ -1,0 +1,50 @@
+.region-navigation {
+  background-color: $base_grey;
+  .block-superfish {
+    @include center-column($desktop_column);
+    ul.sf-menu {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &>li {
+        float: none;
+        &.sfHover {
+          &>a {
+            background-color: $primary_dark;
+          }
+        }
+        &>a {
+          display: inline-block;
+          padding-top: $default_padding;
+          padding-bottom: $default_padding;
+          padding-left: $default_padding;
+          padding-right: $default_padding;
+          color: white;
+          text-transform: uppercase;
+          text-decoration: none;
+          font-weight: 600;
+          &:hover, &:focus {
+            background-color: $primary_default;
+          }
+        }
+        &>ul {
+          top: 100%;
+          padding: 0;
+          margin: 0;
+          li {
+            a {
+              background-color: $primary_dark;
+              color: white;
+              text-decoration: none;
+              padding: 30px;
+              &:hover, &:focus {
+                background-color: $primary_default;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+#footer {
+  // background-color: $base_grey;
+}
+
+.region-footer {
+  // @include center-column($desktop_column);
+}
+
+#block-views-footer-teaser-block {
+  &>h2 {
+    @include visually-hidden;
+  }
+  .content {
+    @include center-column($desktop_column);
+  }
+}
+
+#block-menu-block-govcms-menu-block-footer {
+  background-color: $base_grey;
+  &>h2 {
+    @include visually-hidden;
+  }
+  .content {
+    @include center-column($desktop_column);
+  }
+}
+
+#block-menu-menu-footer-sub-menu {
+  background-color: $base_grey_light;
+  &>h2 {
+    @include visually-hidden;
+  }
+  .content {
+    @include center-column($desktop_column);
+  }
+}

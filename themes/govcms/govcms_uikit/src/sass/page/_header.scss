@@ -1,0 +1,67 @@
+.header__inner {
+  @include center-column($desktop_column);
+  padding-top: $default_padding;
+  padding-bottom: $default_padding;
+}
+
+.header__secondary-menu {
+  @include link-colours($primary_default, $base_mid_grey_light, $base_grey);
+  display: block;
+  text-align: right;
+  ul.links {
+    li {
+      display: inline-block;
+      margin-bottom: 0;
+      margin-left: $default-padding;
+      margin-right: 0;
+    }
+  }
+}
+
+.logo-and-search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.region-header {
+  display: flex;
+  align-items: center;
+}
+
+.text-resize {
+  margin: 0;
+  padding: 0;
+}
+
+.search-form-widget {
+  width: 370px;
+  height: 52px;
+  &>div {
+    display: flex;
+    justify-content: flex-start;
+    .form-item {
+      margin: 0;
+      width: 100%;
+      box-sizing: border-box;
+      input {
+        margin: 0;
+        height: 52px;
+      }
+    }
+    input[type="submit"] {
+      @include hide-text;
+      border: 0;
+      margin: 0;
+      padding: 0;
+      height: 52px;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url(../images/svg/magnifying_glass.svg);
+      &:hover, &:focus {
+        background-image: url(../images/svg/magnifying_glass_hover.svg);
+      }
+    }
+  }
+}
