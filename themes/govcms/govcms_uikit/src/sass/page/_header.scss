@@ -2,65 +2,117 @@
   @include center-column($desktop_column);
   padding-top: $default_padding;
   padding-bottom: $default_padding;
-}
-
-.header__secondary-menu {
-  @include link-colours($primary_default, $base_mid_grey_light, $base_grey);
-  display: block;
-  text-align: right;
-  ul.links {
-    li {
-      display: inline-block;
-      margin-bottom: 0;
-      margin-left: $default-padding;
-      margin-right: 0;
-    }
-  }
-}
-
-.logo-and-search {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.region-header {
-  display: flex;
-  align-items: center;
-}
-
-.text-resize {
-  margin: 0;
-  padding: 0;
-}
-
-.search-form-widget {
-  width: 370px;
-  height: 52px;
-  &>div {
-    display: flex;
-    justify-content: flex-start;
-    .form-item {
-      margin: 0;
-      width: 100%;
-      box-sizing: border-box;
-      input {
-        margin: 0;
-        height: 52px;
+  .header__secondary-menu {
+    @include link-colours($primary_default, $base_mid_grey_light, $base_grey);
+    display: block;
+    text-align: right;
+    ul.links {
+      li {
+        display: inline-block;
+        margin-bottom: 0;
+        margin-left: $default-padding;
+        margin-right: 0;
       }
     }
-    input[type="submit"] {
-      @include hide-text;
-      border: 0;
+  }
+  .logo-and-search {
+    @include breakpoint(tablet) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @include breakpoint(tablet) {
+        display: block;
+      }
+    }
+  }
+  .mobile_expand_search {
+    @include hide-text;
+    width: 52px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../images/svg/mobile_search_open.svg);
+    float: right;
+    vertical-align: top;
+    &.search-open {
+      background-image: url(../images/svg/mobile_search_close.svg);
+    }
+  }
+  .block-govcms-text-resize {
+    display: none;
+    @include breakpoint(tablet) {
+      display: block;
+    }
+    .text-resize {
       margin: 0;
       padding: 0;
-      height: 52px;
-      background-color: transparent;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-image: url(../images/svg/magnifying_glass.svg);
-      &:hover, &:focus {
-        background-image: url(../images/svg/magnifying_glass_hover.svg);
+    }
+  }
+  .region-header {
+    display: flex;
+    align-items: center;
+    .block-search-api-page {
+      width: 100%;
+      @include breakpoint(tablet) {
+        width: auto;
+      }
+    }
+    .search-form-widget {
+      margin-right: 0;
+      .js & {
+        display: none;
+      }
+      @include breakpoint(tablet) {
+        .js & {
+          display: block;
+        }
+        width: 370px;
+        height: 52px;
+      }
+      &.search-toggle {
+        display: none;
+        @include breakpoint(tablet) {
+          display: block;
+        }
+        &.search-open {
+          display: block;
+        }
+      }
+      &>div {
+        display: flex;
+        justify-content: flex-start;
+        .form-item {
+          margin: 0;
+          width: 100%;
+          box-sizing: border-box;
+          input {
+            margin: 0;
+            height: 52px;
+          }
+        }
+        input[type="submit"] {
+          @include hide-text;
+          border: 0;
+          margin: 0;
+          padding: 0;
+          width: 52px;
+          height: 52px;
+          background-color: transparent;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-image: url(../images/svg/magnifying_glass.svg);
+          &:hover, &:focus {
+            background-image: url(../images/svg/magnifying_glass_hover.svg);
+          }
+        }
       }
     }
   }
