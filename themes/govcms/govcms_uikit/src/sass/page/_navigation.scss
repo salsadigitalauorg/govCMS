@@ -2,12 +2,19 @@
   background-color: $base_grey;
   .block-superfish {
     @include center-column($desktop_column);
+    display: none;
+    @include breakpoint(tablet) {
+      display: block;
+    }
     ul.sf-menu {
+      display: table;
+      width: 100%;
       position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      @include breakpoint(desktop) {
+        table-layout: fixed;
+      }
       &>li {
+        display: table-cell;
         float: none;
         &.sfHover {
           &>a {
@@ -23,9 +30,11 @@
           display: inline-block;
           padding-top: $default_padding;
           padding-bottom: $default_padding;
-          padding-left: $default_padding;
-          padding-right: $default_padding;
+          box-sizing: border-box;
+          width: 100%;
           color: white;
+          vertical-align: top;
+          text-align: center;
           text-transform: uppercase;
           text-decoration: none;
           font-weight: 600;
@@ -55,6 +64,58 @@
                 }
               }
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+.mobile-nav {
+  position: relative;
+  @include breakpoint(tablet) {
+    display: none;
+  }
+  .js & {
+    display: none;
+  }
+  &.menu-open {
+    display: block;
+    @include breakpoint(tablet) {
+      display: none;
+    }
+  }
+  ul.links {
+    border-top: 1px solid $base_mid_grey_mid;
+    padding-left: 0;
+    padding-top: $default_padding;
+    padding-bottom: $default_padding;
+    text-align: center;
+    li {
+      list-style-type: none;
+      margin: 0;
+      a {
+        outline: 0;
+        display: block;
+        font-weight: 600;
+        font-size: rem(18);
+        text-transform: uppercase;
+        text-decoration: none;
+        padding-top: $default_padding / 2;
+        padding-bottom: $default_padding / 2;
+        color: $base_grey_light;
+        &:hover, &:focus {
+          color: white;
+          background-color: $primary_default;
+        }
+      }
+      &.active {
+        a {
+          color: white;
+          background-color: $primary_dark;
+          &:hover, &:focus {
+            color: white;
+            background-color: $primary_default;
           }
         }
       }

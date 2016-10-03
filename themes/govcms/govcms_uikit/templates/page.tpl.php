@@ -43,6 +43,12 @@
 
 <div id="nav">
   <?php print render($page['navigation']); ?>
+  <nav class="mobile-nav" id="mobile-nav">
+    <?php
+      $menu = menu_navigation_links('main-menu');
+      print theme('links__main_menu', array('links' => $menu));
+    ?>
+  </nav>
 </div>
 
 <div id="page">

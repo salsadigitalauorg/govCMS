@@ -24,11 +24,14 @@
     .logo-wrapper {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-end;
       @include breakpoint(tablet) {
         display: block;
       }
     }
+  }
+  .header__logo {
+    margin-right: auto;
   }
   .mobile_expand_search {
     @include hide-text;
@@ -39,11 +42,37 @@
     background-color: transparent;
     background-repeat: no-repeat;
     background-position: center;
+    outline: inherit;
     background-image: url(../images/svg/mobile_search_open.svg);
-    float: right;
-    vertical-align: top;
+    &:hover, &:focus {
+      background-image: url(../images/svg/mobile_search_open_hover.svg);
+    }
     &.search-open {
       background-image: url(../images/svg/mobile_search_close.svg);
+      &:hover, &:focus {
+        background-image: url(../images/svg/mobile_search_close_hover.svg);
+      }
+    }
+  }
+  .mobile_expand_menu {
+    @include hide-text;
+    width: 52px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    outline: inherit;
+    background-image: url(../images/svg/mobile_menu_open.svg);
+    &:hover, &:focus {
+      background-image: url(../images/svg/mobile_menu_open_hover.svg);
+    }
+    &.menu-open {
+      background-image: url(../images/svg/mobile_search_close.svg);
+      &:hover, &:focus {
+        background-image: url(../images/svg/mobile_search_close_hover.svg);
+      }
     }
   }
   .block-govcms-text-resize {

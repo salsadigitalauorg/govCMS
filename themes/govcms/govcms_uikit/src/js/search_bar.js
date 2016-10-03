@@ -20,7 +20,7 @@
       // Mobile.
       search_toggle_enabled = true;
       $widget.addClass('search-toggle');
-      $logo_wrapper.append($button);
+      $logo_wrapper.after($button);
     }
   }
 
@@ -46,7 +46,7 @@
       $widget = $('header .search-form-widget', context);
       if ($widget.length > 0) {
         $button = $('<button class="mobile_expand_search" aria-controls="' + $widget.attr('id') + '" aria-expanded="false">Toggle search form</button>');
-        $logo_wrapper = $('.logo-wrapper');
+        $logo_wrapper = $('.logo-wrapper .header__logo');
         $button.unbind('click', toggle_search).bind('click', toggle_search);
         $(window).unbind('resize', search_bar_resize).bind('resize', search_bar_resize);
         search_bar_resize();
