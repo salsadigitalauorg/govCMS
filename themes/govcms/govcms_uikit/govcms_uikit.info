@@ -1,5 +1,5 @@
 screenshot  = screenshot.png
-name        = govCMS
+name        = govCMS (UI-Kit)
 description = The govCMS theme, based on GOV.AU UI-Kit.
 core        = 7.x
 
@@ -19,3 +19,5 @@ regions[bottom]         = Page bottom
 
 regions[page_top]       = Page top
 regions[page_bottom]    = Page bottom
+
+settings[header_title] = govCMS

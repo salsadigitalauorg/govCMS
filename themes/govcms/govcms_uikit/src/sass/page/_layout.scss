@@ -5,7 +5,7 @@ html {
 }
 
 #content {
-  @include center-column($desktop_column);
+  // @include center-column($desktop_column);
   @include button-colours($primary_default, $primary_dark, #fff, black, black);
 }
 

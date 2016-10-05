@@ -24,9 +24,23 @@
     .logo-wrapper {
       display: flex;
       align-items: center;
-      justify-content: flex-end;
       @include breakpoint(tablet) {
         display: block;
+      }
+      a {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .header-title {
+        display: none;
+        @include breakpoint(tablet) {
+          margin-left: $default_padding;
+          display: inline-block;
+          vertical-align: middle;
+          font-size: rem(24px);
+          font-weight: 400;
+          color: $base_grey_light;
+        }
       }
     }
   }
@@ -79,10 +93,44 @@
     display: none;
     @include breakpoint(tablet) {
       display: block;
+      margin-right: 36px;
     }
-    .text-resize {
+    ul.text-resize {
       margin: 0;
       padding: 0;
+      li {
+        display: inline-block;
+        vertical-align: middle;
+        list-style: none;
+        margin-bottom: 0;
+        height: 30px;
+        a {
+          @include hide-text;
+          display: inline-block;
+          background-repeat: no-repeat;
+          background-position: center;
+          width: 30px;
+          height: 30px;
+        }
+        .font-small {
+          background-image: url(../images/svg/resize_text_small.svg);
+          &:hover, &:focus {
+            background-image: url(../images/svg/resize_text_small_hover.svg);
+          }
+        }
+        .font-large {
+          background-image: url(../images/svg/resize_text_large.svg);
+          &:hover, &:focus {
+            background-image: url(../images/svg/resize_text_large_hover.svg);
+          }
+        }
+        .reset {
+          background-image: url(../images/svg/resize_text_reset.svg);
+          &:hover, &:focus {
+            background-image: url(../images/svg/resize_text_reset_hover.svg);
+          }
+        }
+      }
     }
   }
   .region-header {
@@ -96,15 +144,18 @@
     }
     .search-form-widget {
       margin-right: 0;
+      height: 52px;
+      @include breakpoint(tablet) {
+        width: 250px;
+      }
+      @include breakpoint(desktop) {
+        width: 370px;
+      }
       .js & {
         display: none;
-      }
-      @include breakpoint(tablet) {
-        .js & {
+        @include breakpoint(tablet) {
           display: block;
         }
-        width: 370px;
-        height: 52px;
       }
       &.search-toggle {
         display: none;

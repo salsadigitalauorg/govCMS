@@ -33,7 +33,13 @@
     <div class="logo-and-search">
       <div class="logo-wrapper">
         <?php if ($logo): ?>
-          <a href="<?php print $front_page; ?>" title="<?php print t('Back to Homepage'); ?>" rel="home" class="header__logo" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" /></a>
+          <a href="<?php print $front_page; ?>" title="<?php print t('Back to Homepage'); ?>" rel="home" class="header__logo" id="logo">
+          <?php  ?>
+          <img src="<?php print $logo; ?>" alt="<?php print variable_get('site_name', 'Home'); ?>" class="header__logo-image" />
+          </a>
+        <?php endif; ?>
+        <?php if (theme_get_setting('header_title')): ?>
+          <div class="header-title"><?php print decode_entities(theme_get_setting('header_title')); ?></div>
         <?php endif; ?>
       </div>
       <?php print render($page['header']); ?>
