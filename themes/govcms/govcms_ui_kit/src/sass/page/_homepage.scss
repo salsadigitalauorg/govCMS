@@ -1,0 +1,27 @@
+.front {
+  .page__title {
+    @include visually-hidden;
+  }
+  .gov-front-layout {
+    .bean-basic-content {
+      background-color: $neutral_4;
+      &>.content {
+        @include center-column($desktop_column);
+        @include link-colours($primary_1, $secondary_3, $neutral_1);
+        padding-top: $default_padding * 2;
+        padding-bottom: 50px;
+        color: $neutral_1;
+        text-align: center;
+        p {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .gov-front-left {
+    @include center-column($desktop_column);
+  }
+  .gov-front-right {
+    @include center-column($desktop_column);
+  }
+}
