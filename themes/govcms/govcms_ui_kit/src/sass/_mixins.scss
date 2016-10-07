@@ -1,17 +1,16 @@
-/**
- * For creating breakpoints.
- * Use in order of smallest to largest:
- * div {
- *   font-size: 24px;
- *   @include breakpoint(tablet) {
- *     font-size: 32px;
- *   }
- *   @include breakpoint(desktop) {
- *     font-size: 48px;
- *   }
- * }
- */
-
+// =========================================================
+// For creating breakpoints.
+// Use in order of smallest to largest:
+// div {
+//   font-size: 24px;
+//   @include breakpoint(tablet) {
+//     font-size: 32px;
+//   }
+//   @include breakpoint(desktop) {
+//     font-size: 48px;
+//   }
+// }
+// =========================================================
 @mixin breakpoint($class) {
   @if $class==desktop {
     @media (min-width: 1200px) {
@@ -33,12 +32,10 @@
   }
 }
 
-
-/**
- * For use on full width containers.
- * Centres the column with a max-width.
- */
-
+// =========================================================
+// For use on full width containers.
+// Centres the column with a max-width.
+// =========================================================
 @mixin center-column($width) {
   max-width: $width;
   margin-left: auto;
@@ -57,4 +54,66 @@
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+// =========================================================
+// LISTING COMPONENT
+// =========================================================
+@mixin listing-component($has_image: no-image, $image_field: field-type-image) {
+  .node {
+    @include listing-component-wrapper;
+    &.has-thumbnail {
+      @if $has_image==image {
+        padding-top: 275px;
+        .#{$image_field} {
+          @include listing-component-image;
+        }
+      }
+    }
+    h2 {
+      @include listing-component-heading;
+      @if $has_image==no-image {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+@mixin listing-component-wrapper() {
+  box-sizing: border-box;
+  position: relative;
+  padding: 30px;
+  margin-bottom: 30px;
+  background-color: white;
+}
+
+@mixin listing-component-image() {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  a {
+    display: block;
+  }
+  img {
+    float: left;
+    object-fit: cover;
+    object-position: center;
+    height: 275px;
+    width: 100%;
+  }
+}
+
+@mixin listing-component-heading() {
+  font-size: rem(24px);
+  line-height: 1.5em;
+  @include link-colours($secondary_1, $secondary_3, $neutral_1);
+}
+
+@mixin listing-component-subtext() {
+  font-size: rem(14px);
+  color: $neutral_2;
+  text-transform: uppercase;
+  margin-top: $default_padding;
+  margin-bottom: $default_padding;
 }

@@ -68,3 +68,16 @@ function govcms_ui_kit_image_styles_alter(&$styles) {
   );
   return $styles;
 }
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function govcms_ui_kit_preprocess_node(&$variables) {
+  if ($variables['view_mode'] === 'teaser' || $variables['view_mode'] === 'compact') {
+    $has_thumb = !empty($variables['content']['field_thumbnail']);
+    $has_image = !empty($variables['content']['field_image']);
+    if ($has_thumb || $has_image) {
+      $variables['classes_array'][] = 'has-thumbnail';
+    }
+  }
+}
