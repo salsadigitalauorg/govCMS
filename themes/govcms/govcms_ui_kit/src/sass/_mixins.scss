@@ -34,7 +34,8 @@
 
 // =========================================================
 // For use on full width containers.
-// Centres the column with a max-width.
+// Centres the content using a max-width as specified.
+// Adds a padding for mobile margins.
 // =========================================================
 @mixin center-column($width) {
   max-width: $width;
@@ -57,28 +58,21 @@
 }
 
 // =========================================================
-// LISTING COMPONENT
+// LISTING MIXINS
+// These mixins should be applied to in the following fashion:
+// .view-row {
+//   @include listing-component-wrapper;
+//   h2 {
+//     @include listing-component-heading;
+//   }
+//   .date {
+//     @include listing-component-subtext;
+//   }
+//   .image {
+//     @include listing-component-image;
+//   }
+// }
 // =========================================================
-@mixin listing-component($has_image: no-image, $image_field: field-type-image) {
-  .node {
-    @include listing-component-wrapper;
-    &.has-thumbnail {
-      @if $has_image==image {
-        padding-top: 275px;
-        .#{$image_field} {
-          @include listing-component-image;
-        }
-      }
-    }
-    h2 {
-      @include listing-component-heading;
-      @if $has_image==no-image {
-        margin-top: 0;
-      }
-    }
-  }
-}
-
 @mixin listing-component-wrapper() {
   box-sizing: border-box;
   position: relative;
@@ -94,12 +88,20 @@
   width: 100%;
   a {
     display: block;
+    border-bottom: 0;
+    transition: none;
+    &:hover, &:focus {
+      background-color: black;
+      img {
+        opacity: 0.6;
+      }
+    }
   }
   img {
-    float: left;
+    display: table;
     object-fit: cover;
     object-position: center;
-    height: 275px;
+    height: $listing_component_image_height;
     width: 100%;
   }
 }

@@ -8,7 +8,7 @@
 /**
  * Implements hook_system_theme_settings_alter().
  */
-function govcms_uikit_form_system_theme_settings_alter(&$form, $form_state) {
+function govcms_ui_kit_form_system_theme_settings_alter(&$form, $form_state) {
   $form['govcms_uikit_options'] = array(
     '#type' => 'fieldset',
     '#title' => t('govCMS UI Kit settings'),
@@ -36,5 +36,12 @@ function govcms_uikit_form_system_theme_settings_alter(&$form, $form_state) {
     '#title'         => t('Footer copyright'),
     '#default_value' => theme_get_setting('footer_copyright'),
     '#description'   => t("Text to display beside the sub menu links. Defaults to <em>&copy; [current year]. [Site Name]. All rights reserved.</em>"),
+  );
+
+  $form['govcms_uikit_options']['override_image_styles'] = array(
+    '#type'          => 'checkbox',
+    '#title'         => t('Override image styles'),
+    '#default_value' => theme_get_setting('override_image_styles'),
+    '#description'   => t("Enable this to override any user-defined image styles with govCMS UI Kit default styles. Disabling this is recommend if modifying site."),
   );
 }

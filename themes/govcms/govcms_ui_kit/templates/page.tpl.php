@@ -74,27 +74,31 @@
 <div id="page">
 
   <?php print render($page['highlighted']); ?>
-  <?php print $breadcrumb; ?>
 
   <div id="main">
     <div id="content" class="column" role="main">
-
-      <a href="#skip-link" id="skip-content" class="element-invisible" tabindex="-1">Go to top of page</a>
-
-      <a id="main-content"></a>
-      <?php print render($title_prefix); ?>
-      <?php if ($title): ?>
-        <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
-      <?php endif; ?>
-      <?php print render($title_suffix); ?>
-      <?php print $messages; ?>
-      <?php print render($tabs); ?>
-      <?php print render($page['help']); ?>
-      <?php if ($action_links): ?>
-        <ul class="action-links"><?php print render($action_links); ?></ul>
-      <?php endif; ?>
-      <?php print render($page['content']); ?>
-      <?php print $feed_icons; ?>
+      <div class="content-header">
+        <div class="content-header-inner">
+          <?php print $breadcrumb; ?>
+          <a href="#skip-link" id="skip-content" class="element-invisible" tabindex="-1">Go to top of page</a>
+          <a id="main-content"></a>
+          <?php print render($title_prefix); ?>
+          <?php if ($title): ?>
+            <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
+          <?php endif; ?>
+          <?php print render($title_suffix); ?>
+        </div>
+      </div>
+      <div class="content-body">
+        <?php print $messages; ?>
+        <?php print render($tabs); ?>
+        <?php print render($page['help']); ?>
+        <?php if ($action_links): ?>
+          <ul class="action-links"><?php print render($action_links); ?></ul>
+        <?php endif; ?>
+        <?php print render($page['content']); ?>
+        <?php print $feed_icons; ?>
+      </div>
     </div>
 
     <?php

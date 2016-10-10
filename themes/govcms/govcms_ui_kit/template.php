@@ -34,9 +34,43 @@ function govcms_ui_kit_preprocess_html(&$variables) {
  * Implements hook_preprocess_field().
  */
 function govcms_ui_kit_preprocess_field(&$variables) {
-  if ($variables['element']['#field_name'] === 'field_slide_image') {
-    // kpr($variables);
-    $variables['items'][0]['#image_style'] = 'govcms_ui_kit_banner';
+  if (theme_get_setting('override_image_styles') == 1) {
+    // Define custom image style for image banners on home page.
+    if ($variables['element']['#field_name'] === 'field_slide_image') {
+      if ($variables['items'][0]['#image_style'] === 'feature_article') {
+        $variables['items'][0]['#image_style'] = 'govcms_ui_kit_banner';
+      }
+    }
+    // Define custom image style for thumbnails on news / blogs / etc.
+    elseif ($variables['element']['#field_name'] === 'field_thumbnail') {
+      $image_style = $variables['items'][0]['#image_style'];
+      if ($image_style === 'medium' || $image_style === 'thumbnail') {
+        $variables['items'][0]['#image_style'] = 'govcms_ui_kit_thumbnail';
+      }
+    }
+    // Define custom image style for views.
+    elseif ($variables['element']['#field_name'] === 'field_image') {
+      if ($variables['items'][0]['#image_style'] === 'medium') {
+        $variables['items'][0]['#image_style'] = 'govcms_ui_kit_thumbnail';
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function govcms_ui_kit_views_pre_render(&$variables) {
+  if (theme_get_setting('override_image_styles') == 1) {
+    if ($variables->name === 'footer_teaser') {
+      $len = count($variables->result);
+      for ($i = 0; $i < $len; $i++) {
+        // Define custom image style for thumbnails on footer_teaser.
+        if ($variables->result[$i]->field_field_image[0]['rendered']['#image_style'] == 'blog_teaser_thumbnail') {
+          $variables->result[$i]->field_field_image[0]['rendered']['#image_style'] = 'govcms_ui_kit_thumbnail';
+        }
+      }
+    }
   }
 }
 
@@ -44,28 +78,52 @@ function govcms_ui_kit_preprocess_field(&$variables) {
  * Implements hook_image_styles_alter().
  */
 function govcms_ui_kit_image_styles_alter(&$styles) {
-  $styles['govcms_ui_kit_banner'] = array(
-    'label' => 'govCMS UI-KIT - Banner',
-    'name' => 'govcms_ui_kit_banner',
-    'storage' => IMAGE_STORAGE_NORMAL,
-    'effects' => array(
-      array(
-        'label' => 'Scale and crop',
-        'name' => 'image_scale_and_crop',
-        'data' => array(
-          'width' => 1650,
-          'height' => 440,
-          'upscale' => 1,
+  if (theme_get_setting('override_image_styles') == 1) {
+    $styles['govcms_ui_kit_banner'] = array(
+      'label' => 'govCMS UI-KIT - Banner',
+      'name' => 'govcms_ui_kit_banner',
+      'storage' => IMAGE_STORAGE_NORMAL,
+      'effects' => array(
+        array(
+          'label' => 'Scale and crop',
+          'name' => 'image_scale_and_crop',
+          'data' => array(
+            'width' => 1650,
+            'height' => 440,
+            'upscale' => 1,
+          ),
+          'effect callback' => 'image_scale_and_crop_effect',
+          'dimensions callback' => 'image_resize_dimensions',
+          'form callback' => 'image_resize_form',
+          'summary theme' => 'image_resize_summary',
+          'module' => 'image',
+          'weight' => 0,
         ),
-        'effect callback' => 'image_scale_and_crop_effect',
-        'dimensions callback' => 'image_resize_dimensions',
-        'form callback' => 'image_resize_form',
-        'summary theme' => 'image_resize_summary',
-        'module' => 'image',
-        'weight' => 0,
       ),
-    ),
-  );
+    );
+    $styles['govcms_ui_kit_thumbnail'] = array(
+      'label' => 'govCMS UI-KIT - Thumbnail',
+      'name' => 'govcms_ui_kit_thumbnail',
+      'storage' => IMAGE_STORAGE_NORMAL,
+      'effects' => array(
+        array(
+          'label' => 'Scale and crop',
+          'name' => 'image_scale_and_crop',
+          'data' => array(
+            'width' => 370,
+            'height' => 275,
+            'upscale' => 1,
+          ),
+          'effect callback' => 'image_scale_and_crop_effect',
+          'dimensions callback' => 'image_resize_dimensions',
+          'form callback' => 'image_resize_form',
+          'summary theme' => 'image_resize_summary',
+          'module' => 'image',
+          'weight' => 0,
+        ),
+      ),
+    );
+  }
   return $styles;
 }
 

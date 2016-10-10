@@ -22,3 +22,4 @@ regions[page_top]       = Page top
 regions[page_bottom]    = Page bottom
 
 settings[header_title] = govCMS
+settings[override_image_styles] = 1
