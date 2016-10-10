@@ -1,0 +1,21 @@
+html {
+  &.large-fonts {
+    font-size: $large-font-size;
+  }
+}
+
+#content {
+  // @include center-column($desktop_column);
+  @include button-colours($secondary_1, darken($secondary_1, 20%), #fff, darken($secondary_1, 40%), darken($secondary_1, 40%));
+  .content {
+    @include link-colours($primary_1, $secondary_3, $neutral_1);
+  }
+}
+
+.sidebars {
+  // ...coming soon.
+}
+
+.more-link {
+  @include link-colours($primary_1, $secondary_3, $neutral_1);
+}
