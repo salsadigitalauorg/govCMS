@@ -19,11 +19,6 @@
       &>li {
         display: table-cell;
         float: none;
-        &.sfHover {
-          &>a {
-            // background-color: $secondary_1;
-          }
-        }
         &.menuparent {
           &>a:after {
             content: '';
