@@ -2,12 +2,12 @@
 // For creating breakpoints.
 // Use in order of smallest to largest:
 // div {
-//   font-size: 24px;
+//   font-size: rem(24);
 //   @include breakpoint(tablet) {
-//     font-size: 32px;
+//     font-size: rem(32);
 //   }
 //   @include breakpoint(desktop) {
-//     font-size: 48px;
+//     font-size: rem(48);
 //   }
 // }
 // =========================================================
@@ -41,8 +41,8 @@
   max-width: $width;
   margin-left: auto;
   margin-right: auto;
-  padding-left: $mobile_column_padding;
-  padding-right: $mobile_column_padding;
+  padding-left: rem($mobile_column_padding);
+  padding-right: rem($mobile_column_padding);
   box-sizing: content-box;
 }
 
@@ -76,8 +76,8 @@
 @mixin listing-component-wrapper() {
   box-sizing: border-box;
   position: relative;
-  padding: 30px;
-  margin-bottom: 30px;
+  padding: rem(30px);
+  margin-bottom: rem(30px);
   background-color: white;
 }
 

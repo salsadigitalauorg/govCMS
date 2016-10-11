@@ -34,12 +34,12 @@
       <div class="logo-wrapper">
         <?php if ($logo): ?>
           <?php
-            $logo_alt = theme_get_setting('header_logo_alt');
+            $logo_alt = theme_get_setting('govcms_ui_kit_header_logo_alt');
             $logo_alt = !empty($logo_alt) ? $logo_alt : variable_get('site_name', 'Home');
             $logo_img = theme_image(array(
               'path' => $logo,
               'alt' => $logo_alt,
-              'attributes' => array('class' => array('header__logo-image'))
+              'attributes' => array('class' => array('header__logo-image')),
             ));
             print l($logo_img, $front_page, array(
               'html' => TRUE,
@@ -52,8 +52,8 @@
             ));
           ?>
         <?php endif; ?>
-        <?php if (theme_get_setting('header_title')): ?>
-          <div class="header-title"><?php print decode_entities(theme_get_setting('header_title')); ?></div>
+        <?php if (theme_get_setting('govcms_ui_kit_header_title')): ?>
+          <div class="header-title"><?php print decode_entities(theme_get_setting('govcms_ui_kit_header_title')); ?></div>
         <?php endif; ?>
       </div>
       <?php print render($page['header']); ?>
@@ -72,6 +72,12 @@
 </div>
 
 <div id="page">
+
+  <?php
+    // Render the sidebars to see if there's anything in them.
+    $sidebar_first  = render($page['sidebar_first']);
+    $sidebar_second = render($page['sidebar_second']);
+  ?>
 
   <?php print render($page['highlighted']); ?>
 
@@ -96,24 +102,24 @@
         <?php if ($action_links): ?>
           <ul class="action-links"><?php print render($action_links); ?></ul>
         <?php endif; ?>
-        <?php print render($page['content']); ?>
-        <?php print $feed_icons; ?>
+        <div class="content-body-inner<?php print $sidebar_first ? ' has-sidebar' : ' no-sidebar'; ?>">
+          <?php print render($page['content']); ?>
+          <?php print $feed_icons; ?>
+          <?php if ($sidebar_first): ?>
+            <aside class="sidebar-first">
+              <?php print $sidebar_first; ?>
+            </aside>
+          <?php endif; ?>
+        </div>
       </div>
     </div>
-
-    <?php
-      // Render the sidebars to see if there's anything in them.
-      $sidebar_first  = render($page['sidebar_first']);
-      $sidebar_second = render($page['sidebar_second']);
-    ?>
-
-    <?php if ($sidebar_first || $sidebar_second): ?>
-      <aside class="sidebars" role="complementary">
-        <?php print $sidebar_first; ?>
-        <?php print $sidebar_second; ?>
-      </aside>
-    <?php endif; ?>
   </div>
+
+  <?php if ($sidebar_second): ?>
+    <aside class="sidebar-second" role="complementary">
+      <?php print $sidebar_second; ?>
+    </aside>
+  <?php endif; ?>
   
   <div id="footer">
     <?php print render($page['footer']); ?>

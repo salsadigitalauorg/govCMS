@@ -1,6 +1,6 @@
 .header__inner {
   @include center-column($desktop_column);
-  padding-top: 16px;
+  padding-top: rem(16px);
   padding-bottom: $default_padding;
   .header__secondary-menu {
     @include link-colours($primary_1, $secondary_3, $neutral_1);
@@ -52,7 +52,7 @@
   }
   .mobile_expand_search {
     @include hide-text;
-    width: 52px;
+    width: rem(52px);
     padding: 0;
     margin: 0;
     border: 0;
@@ -73,7 +73,7 @@
   }
   .mobile_expand_menu {
     @include hide-text;
-    width: 52px;
+    width: rem(52px);
     padding: 0;
     margin: 0;
     border: 0;
@@ -96,7 +96,7 @@
     display: none;
     @include breakpoint(tablet) {
       display: block;
-      margin-right: 36px;
+      margin-right: rem(36px);
     }
     ul.text-resize {
       margin: 0;
@@ -106,14 +106,14 @@
         vertical-align: middle;
         list-style: none;
         margin-bottom: 0;
-        height: 30px;
+        height: rem(30px);
         a {
           @include hide-text;
           display: inline-block;
           background-repeat: no-repeat;
           background-position: center;
-          width: 30px;
-          height: 30px;
+          width: rem(30px);
+          height: rem(30px);
         }
         .font-small {
           background-image: url(../images/svg/resize_text_small.svg);
@@ -147,12 +147,12 @@
     }
     .search-form-widget {
       margin-right: 0;
-      height: 52px;
+      height: rem(52px);
       @include breakpoint(tablet) {
-        width: 250px;
+        width: rem(250px);
       }
       @include breakpoint(desktop) {
-        width: 370px;
+        width: rem(370px);
       }
       .js & {
         display: none;
@@ -167,6 +167,7 @@
         }
         &.search-open {
           display: block;
+          margin-top: $default_padding;
         }
       }
       &>div {
@@ -176,9 +177,14 @@
           margin: 0;
           width: 100%;
           box-sizing: border-box;
+          flex: 1;
           input {
             margin: 0;
-            height: 52px;
+            height: rem(52px);
+            background-color: $neutral_4;
+            border: 1px solid $neutral_3;
+            z-index: 1;
+            position: relative;
           }
         }
         input[type="submit"] {
@@ -186,9 +192,12 @@
           border: 0;
           margin: 0;
           padding: 0;
-          width: 52px;
-          height: 52px;
-          background-color: transparent;
+          width: rem(52px);
+          height: rem(52px);
+          box-sizing: border-box;
+          background-color: $neutral_4;
+          border: 1px solid $neutral_3;
+          border-left: 0;
           background-repeat: no-repeat;
           background-position: center;
           background-image: url(../images/svg/magnifying_glass.svg);

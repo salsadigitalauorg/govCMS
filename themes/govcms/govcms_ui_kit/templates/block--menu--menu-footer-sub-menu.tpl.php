@@ -55,8 +55,8 @@
   <div class="content"<?php print $content_attributes; ?>>
     <?php print $content ?>
       <div class="footer-copyright">
-      <?php if (theme_get_setting('footer_copyright')): ?>
-        <?php print decode_entities(theme_get_setting('footer_copyright')); ?>
+      <?php if (theme_get_setting('govcms_ui_kit_footer_copyright')): ?>
+        <?php print decode_entities(theme_get_setting('govcms_ui_kit_footer_copyright')); ?>
       <?php else: ?>
         &copy; <?php print date('Y'); ?>. <?php print variable_get('site_name', 'Home'); ?>. All rights reserved.
       <?php endif; ?>

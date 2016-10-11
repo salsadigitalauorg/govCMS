@@ -34,7 +34,7 @@ function govcms_ui_kit_preprocess_html(&$variables) {
  * Implements hook_preprocess_field().
  */
 function govcms_ui_kit_preprocess_field(&$variables) {
-  if (theme_get_setting('override_image_styles') == 1) {
+  if (theme_get_setting('govcms_ui_kit_override_image_styles') == 1) {
     // Define custom image style for image banners on home page.
     if ($variables['element']['#field_name'] === 'field_slide_image') {
       if ($variables['items'][0]['#image_style'] === 'feature_article') {
@@ -61,7 +61,7 @@ function govcms_ui_kit_preprocess_field(&$variables) {
  * Implements hook_views_pre_render().
  */
 function govcms_ui_kit_views_pre_render(&$variables) {
-  if (theme_get_setting('override_image_styles') == 1) {
+  if (theme_get_setting('govcms_ui_kit_override_image_styles') == 1) {
     if ($variables->name === 'footer_teaser') {
       $len = count($variables->result);
       for ($i = 0; $i < $len; $i++) {
@@ -78,7 +78,7 @@ function govcms_ui_kit_views_pre_render(&$variables) {
  * Implements hook_image_styles_alter().
  */
 function govcms_ui_kit_image_styles_alter(&$styles) {
-  if (theme_get_setting('override_image_styles') == 1) {
+  if (theme_get_setting('govcms_ui_kit_override_image_styles') == 1) {
     $styles['govcms_ui_kit_banner'] = array(
       'label' => 'govCMS UI-KIT - Banner',
       'name' => 'govcms_ui_kit_banner',
