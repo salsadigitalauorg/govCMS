@@ -1,11 +1,3 @@
-#footer {
-  // background-color: $base_grey;
-}
-
-.region-footer {
-  // @include center-column($desktop_column);
-}
-
 #block-views-footer-teaser-block {
   margin-top: $default_padding * 2;
   &>h2 {
@@ -23,11 +15,11 @@
   }
   .content {
     @include center-column($desktop_column);
-    padding-top: 17px;
-    padding-bottom: 17px;
+    padding-top: rem(17px);
+    padding-bottom: rem(17px);
     @include breakpoint(tablet) {
-      padding-top: 64px;
-      padding-bottom: 64px;
+      padding-top: rem(64px);
+      padding-bottom: rem(64px);
     }
     &>div>ul.menu {
       padding-left: 0;
@@ -39,7 +31,7 @@
         margin-bottom: 0;
       }
       &>li {
-        margin-bottom: 15px;
+        margin-bottom: rem(15px);
         @include breakpoint(tablet) {
           display: table-cell;
           margin-bottom: 0;
@@ -56,7 +48,7 @@
           @include breakpoint(tablet) {
             display: block;
             padding-left: 0;
-            margin-top: 35px;
+            margin-top: rem(35px);
           }
           ul {
             padding-left: $default_padding;
@@ -85,11 +77,11 @@
   }
   .content {
     @include center-column($desktop_column);
-    padding-top: 17px;
-    padding-bottom: 17px;
+    padding-top: rem(17px);
+    padding-bottom: rem(17px);
     @include breakpoint(tablet) {
-      padding-top: 38px;
-      padding-bottom: 38px;
+      padding-top: rem(38px);
+      padding-bottom: rem(38px);
       display: flex;
       justify-content: space-between;
       align-content: center;
@@ -104,17 +96,17 @@
       &>li {
         @include link-colours(white, $neutral_4, $neutral_1);
         padding-top: 0;
-        margin-bottom: 15px;
+        margin-bottom: rem(15px);
         margin-left: 0;
         margin-right: 0;
         padding: 0;
         list-style: none;
         @include breakpoint(tablet) {
           display: inline-block;
-          margin-left: 15px;
+          margin-left: rem(15px);
         }
         @include breakpoint(desktop) {
-          margin-left: 30px;
+          margin-left: rem(30px);
         }
       }
     }

@@ -39,7 +39,7 @@
             $logo_img = theme_image(array(
               'path' => $logo,
               'alt' => $logo_alt,
-              'attributes' => array('class' => array('header__logo-image'))
+              'attributes' => array('class' => array('header__logo-image')),
             ));
             print l($logo_img, $front_page, array(
               'html' => TRUE,
