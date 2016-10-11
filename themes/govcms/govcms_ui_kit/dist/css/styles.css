@@ -7413,10 +7413,6 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
   background-color: #146577;
 }
 
-#block-menu-block-govcms-menu-block-sidebar {
-  border: 1px solid red;
-}
-
 html.large-fonts {
   font-size: 150%;
 }
@@ -7601,6 +7597,39 @@ body.not-front #content .content-header .content-header-inner {
 
 .content-body .content span.placeholder-link:hover {
   cursor: not-allowed;
+}
+
+.content-body-inner.has-sidebar {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: content-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+  .content-body-inner.has-sidebar {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+.sidebar-first {
+  -ms-flex-order: -1;
+      order: -1;
+}
+
+@media (min-width: 768px) {
+  .sidebar-first {
+    width: 240px;
+    min-width: 240px;
+    padding-right: 60px;
+  }
 }
 
 .more-link {
@@ -9053,13 +9082,53 @@ body.not-front #content .content-header .content-header-inner {
   }
 }
 
-body.not-front #content .view {
+body.not-front #content .no-sidebar .view {
   max-width: 1170px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
   box-sizing: content-box;
+}
+
+@media (min-width: 768px) {
+  body.not-front #content .no-sidebar .views-row {
+    float: left;
+    display: block;
+    margin-right: 2.7461357194%;
+    width: 31.502576187%;
+  }
+  body.not-front #content .no-sidebar .views-row:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  body.not-front #content .no-sidebar .views-row:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
+body.not-front #content .has-sidebar .view {
+  max-width: 770px;
+}
+
+@media (min-width: 768px) {
+  body.not-front #content .has-sidebar .views-row {
+    float: left;
+    display: block;
+    margin-right: 2.7461357194%;
+    width: 48.6269321403%;
+  }
+  body.not-front #content .has-sidebar .views-row:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  body.not-front #content .has-sidebar .views-row:nth-child(2n) {
+    margin-right: 0;
+  }
 }
 
 @media (min-width: 768px) {
@@ -9076,24 +9145,6 @@ body.not-front #content .view {
     clear: both;
     content: "";
     display: table;
-  }
-}
-
-@media (min-width: 768px) {
-  body.not-front #content .view .view-content .views-row {
-    float: left;
-    display: block;
-    margin-right: 2.7461357194%;
-    width: 31.502576187%;
-  }
-  body.not-front #content .view .view-content .views-row:last-child {
-    margin-right: 0;
-  }
-}
-
-@media (min-width: 768px) and (min-width: 768px) {
-  body.not-front #content .view .view-content .views-row:nth-child(3n) {
-    margin-right: 0;
   }
 }
 
@@ -9285,5 +9336,9 @@ body.not-front #content .view .view-content .views-row .field-name-field-date, b
   text-transform: uppercase;
   margin-top: 22px;
   margin-bottom: 22px;
+}
+
+#block-menu-block-govcms-menu-block-sidebar h2, #block-menu-block-govcms-menu-block-sidebar .display {
+  margin-top: 0;
 }
 /*# sourceMappingURL=styles.css.map */

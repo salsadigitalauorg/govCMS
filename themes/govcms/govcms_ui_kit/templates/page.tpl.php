@@ -73,6 +73,12 @@
 
 <div id="page">
 
+  <?php
+    // Render the sidebars to see if there's anything in them.
+    $sidebar_first  = render($page['sidebar_first']);
+    $sidebar_second = render($page['sidebar_second']);
+  ?>
+
   <?php print render($page['highlighted']); ?>
 
   <div id="main">
@@ -96,24 +102,24 @@
         <?php if ($action_links): ?>
           <ul class="action-links"><?php print render($action_links); ?></ul>
         <?php endif; ?>
-        <?php print render($page['content']); ?>
-        <?php print $feed_icons; ?>
+        <div class="content-body-inner<?php print $sidebar_first ? ' has-sidebar' : ' no-sidebar'; ?>">
+          <?php print render($page['content']); ?>
+          <?php print $feed_icons; ?>
+          <?php if ($sidebar_first): ?>
+            <aside class="sidebar-first">
+              <?php print $sidebar_first; ?>
+            </aside>
+          <?php endif; ?>
+        </div>
       </div>
     </div>
-
-    <?php
-      // Render the sidebars to see if there's anything in them.
-      $sidebar_first  = render($page['sidebar_first']);
-      $sidebar_second = render($page['sidebar_second']);
-    ?>
-
-    <?php if ($sidebar_first || $sidebar_second): ?>
-      <aside class="sidebars" role="complementary">
-        <?php print $sidebar_first; ?>
-        <?php print $sidebar_second; ?>
-      </aside>
-    <?php endif; ?>
   </div>
+
+  <?php if ($sidebar_second): ?>
+    <aside class="sidebar-second" role="complementary">
+      <?php print $sidebar_second; ?>
+    </aside>
+  <?php endif; ?>
   
   <div id="footer">
     <?php print render($page['footer']); ?>
