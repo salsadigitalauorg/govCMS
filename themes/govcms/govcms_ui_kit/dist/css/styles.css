@@ -7208,6 +7208,7 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
 
 .header__inner .region-header .search-form-widget.search-toggle.search-open {
   display: block;
+  margin-top: 22px;
 }
 
 .header__inner .region-header .search-form-widget > div {
@@ -7226,6 +7227,10 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
 .header__inner .region-header .search-form-widget > div .form-item input {
   margin: 0;
   height: 52px;
+  background-color: #f0f3f5;
+  border: 1px solid #bbbbbb;
+  z-index: 1;
+  position: relative;
 }
 
 .header__inner .region-header .search-form-widget > div input[type="submit"] {
@@ -7237,7 +7242,10 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
   padding: 0;
   width: 52px;
   height: 52px;
-  background-color: transparent;
+  box-sizing: border-box;
+  background-color: #f0f3f5;
+  border: 1px solid #bbbbbb;
+  border-left: 0;
   background-repeat: no-repeat;
   background-position: center;
   background-image: url(../images/svg/magnifying_glass.svg);

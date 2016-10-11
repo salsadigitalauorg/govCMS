@@ -167,6 +167,7 @@
         }
         &.search-open {
           display: block;
+          margin-top: $default_padding;
         }
       }
       &>div {
@@ -179,6 +180,10 @@
           input {
             margin: 0;
             height: 52px;
+            background-color: $neutral_4;
+            border: 1px solid $neutral_3;
+            z-index: 1;
+            position: relative;
           }
         }
         input[type="submit"] {
@@ -188,7 +193,10 @@
           padding: 0;
           width: 52px;
           height: 52px;
-          background-color: transparent;
+          box-sizing: border-box;
+          background-color: $neutral_4;
+          border: 1px solid $neutral_3;
+          border-left: 0;
           background-repeat: no-repeat;
           background-position: center;
           background-image: url(../images/svg/magnifying_glass.svg);
