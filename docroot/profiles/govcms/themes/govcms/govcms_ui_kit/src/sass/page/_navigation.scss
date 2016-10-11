@@ -1,3 +1,6 @@
+// =========================================================
+// TOP NAVIGATION
+// =========================================================
 .region-navigation {
   background-color: $primary_1;
   .block-superfish {
@@ -16,11 +19,6 @@
       &>li {
         display: table-cell;
         float: none;
-        &.sfHover {
-          &>a {
-            // background-color: $secondary_1;
-          }
-        }
         &.menuparent {
           &>a:after {
             content: '';
@@ -28,15 +26,15 @@
             background-image: url(../images/svg/nav_down_arrow.svg);
             background-position: center;
             background-repeat: no-repeat;
-            width: 11px;
-            height: 7px;
-            margin-left: 5px;
+            width: rem(11px);
+            height: rem(7px);
+            margin-left: rem(5px);
             vertical-align: middle;
           }
         }
         &.active-trail {
           &>a {
-            background-color: #143D52;
+            background-color: $primary_3;
           }
         }
         &>a {
@@ -64,14 +62,14 @@
               &>a {
                 background-image: url(../images/svg/nav_right_arrow.svg);
                 background-repeat: no-repeat;
-                background-position: right 22px center;
+                background-position: right rem(22px) center;
               }
             }
             a {
               background-color: $primary_1;
               color: white;
               text-decoration: none;
-              padding: 30px;
+              padding: rem(30px);
               &:hover, &:focus {
                 background-color: $secondary_1;
               }
@@ -132,7 +130,7 @@
       &.active {
         a {
           color: white;
-          background-color: #143D52;
+          background-color: $primary_3;
           &:hover, &:focus {
             color: white;
             background-color: $secondary_1;

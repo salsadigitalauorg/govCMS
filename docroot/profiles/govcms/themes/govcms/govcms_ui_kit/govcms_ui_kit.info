@@ -13,7 +13,7 @@ regions[navigation]     = Navigation bar
 regions[highlighted]    = Highlighted
 regions[help]           = Help
 regions[content]        = Content
-regions[first_sidebar]  = First sidebar
+regions[sidebar_first]  = First sidebar
 regions[sidebar_second] = Second sidebar
 regions[footer]         = Footer
 regions[bottom]         = Page bottom
@@ -21,4 +21,5 @@ regions[bottom]         = Page bottom
 regions[page_top]       = Page top
 regions[page_bottom]    = Page bottom
 
-settings[header_title] = govCMS
+settings[govcms_ui_kit_header_title] = govCMS
+settings[govcms_ui_kit_override_image_styles] = 1

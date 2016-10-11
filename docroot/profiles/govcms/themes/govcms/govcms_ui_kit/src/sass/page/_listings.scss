@@ -1,6 +1,39 @@
-#content {
+// =========================================================
+// LISTING
+// The default style for content views.
+// =========================================================
+body.not-front #content {
+  .no-sidebar {
+    .view {
+      @include center-column($desktop_column);
+    }
+    .views-row {
+      @include breakpoint(tablet) {
+        @include span-columns(4 of 12);
+      }
+      &:nth-child(3n) {
+        @include breakpoint(tablet) {
+          @include omega();
+        }
+      }
+    }
+  }
+  .has-sidebar {
+    .view {
+      max-width: rem(770px);
+    }
+    .views-row {
+      @include breakpoint(tablet) {
+        @include span-columns(6 of 12);
+      }
+      &:nth-child(2n) {
+        @include breakpoint(tablet) {
+          @include omega();
+        }
+      }
+    }
+  }
   .view {
-    @include center-column($desktop_column);
     .view-content {
       @include breakpoint(tablet) {
         @include outer-container(100%);
@@ -8,18 +41,12 @@
         flex-wrap: wrap;
       }
       .views-row {
-        @include breakpoint(tablet) {
-          @include span-columns(4 of 12);
-          &:nth-child(3n) {
-            @include breakpoint(tablet) {
-              @include omega();
-            }
-          }
-        }
         .node {
           @include listing-component-wrapper;
+          padding-left: 0;
+          padding-right: 0;
           &.has-thumbnail {
-            padding-top: 275px;
+            padding-top: rem(275px);
             .field-type-image {
               @include listing-component-image;
               .field-item:nth-child(n + 2) {
@@ -27,7 +54,12 @@
               }
             }
             h2 {
-              margin-top: 30px;
+              margin-top: rem(30px);
+            }
+          }
+          &>.links {
+            li {
+              padding-left: 0;
             }
           }
         }
