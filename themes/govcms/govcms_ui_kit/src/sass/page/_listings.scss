@@ -1,0 +1,55 @@
+// =========================================================
+// LISTING
+// The default style for content views.
+// =========================================================
+body.not-front #content {
+  .view {
+    @include center-column($desktop_column);
+    .view-content {
+      @include breakpoint(tablet) {
+        @include outer-container(100%);
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .views-row {
+        @include breakpoint(tablet) {
+          @include span-columns(4 of 12);
+          &:nth-child(3n) {
+            @include breakpoint(tablet) {
+              @include omega();
+            }
+          }
+        }
+        .node {
+          @include listing-component-wrapper;
+          padding-left: 0;
+          padding-right: 0;
+          &.has-thumbnail {
+            padding-top: 275px;
+            .field-type-image {
+              @include listing-component-image;
+              .field-item:nth-child(n + 2) {
+                display: none;
+              }
+            }
+            h2 {
+              margin-top: 30px;
+            }
+          }
+          &>.links {
+            li {
+              padding-left: 0;
+            }
+          }
+        }
+        h2 {
+          @include listing-component-heading;
+          margin-top: 0;
+        }
+        .field-name-field-date, .submitted {
+          @include listing-component-subtext;
+        }
+      }
+    }
+  }
+}
