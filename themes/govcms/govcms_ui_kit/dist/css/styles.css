@@ -7330,6 +7330,10 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
   }
 }
 
+.region-navigation .block-superfish ul.sf-menu li.sfHover > a {
+  background-color: #142C3A;
+}
+
 .region-navigation .block-superfish ul.sf-menu > li {
   display: table-cell;
   float: none;
@@ -7348,13 +7352,13 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
 }
 
 .region-navigation .block-superfish ul.sf-menu > li.active-trail > a {
-  background-color: #1b3c4e;
+  background-color: #1B3B4D;
 }
 
 .region-navigation .block-superfish ul.sf-menu > li > a {
   display: inline-block;
   padding-top: 1.375rem;
-  padding-bottom: 1.375rem;
+  padding-bottom: 1.125rem;
   box-sizing: content-box;
   width: 100%;
   height: 100%;
@@ -7363,10 +7367,12 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
   text-align: center;
   text-decoration: none;
   font-weight: 600;
+  border-bottom: 4px solid transparent;
 }
 
 .region-navigation .block-superfish ul.sf-menu > li > a:hover, .region-navigation .block-superfish ul.sf-menu > li > a:focus {
-  background-color: #146577;
+  background-color: #142C3A;
+  border-bottom-color: white;
 }
 
 .region-navigation .block-superfish ul.sf-menu > li > ul {
@@ -7386,18 +7392,21 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
   color: white;
   text-decoration: none;
   padding: 1.875rem;
+  padding-bottom: 1.625rem;
+  border-bottom: 4px solid transparent;
 }
 
 .region-navigation .block-superfish ul.sf-menu > li > ul li a:hover, .region-navigation .block-superfish ul.sf-menu > li > ul li a:focus {
-  background-color: #146577;
+  background-color: #142C3A;
+  border-bottom-color: white;
 }
 
 .region-navigation .block-superfish ul.sf-menu > li > ul li.active-trail > a {
-  background-color: black;
+  background-color: #1B3B4D;
 }
 
 .region-navigation .block-superfish ul.sf-menu > li > ul li.active-trail > a:hover, .region-navigation .block-superfish ul.sf-menu > li > ul li.active-trail > a:focus {
-  background-color: #146577;
+  background-color: #142C3A;
 }
 
 .mobile-nav {
@@ -7456,7 +7465,7 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
 
 .mobile-nav ul.links li.active a {
   color: white;
-  background-color: #1b3c4e;
+  background-color: #1B3B4D;
 }
 
 .mobile-nav ul.links li.active a:hover, .mobile-nav ul.links li.active a:focus {

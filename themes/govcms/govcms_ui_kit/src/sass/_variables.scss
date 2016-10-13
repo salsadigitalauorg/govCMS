@@ -1,6 +1,7 @@
 $mobile_column_padding: rem(20px);
 $desktop_column: rem(1170px);
-$default_padding: rem(22px);
+$default_padding_px: 22px;
+$default_padding: rem($default_padding_px);
 $listing_component_image_height: rem(275px);
 // govCMS UI Kit Colours.
 $primary_1: #224A61;
@@ -13,3 +14,5 @@ $neutral_1: $non-black; // #313131
 $neutral_2: $grey; // #717171
 $neutral_3: $light-grey; // #BEBEBE
 $neutral_4: $non-white; // #F0F3F5
+$main_menu_hover: #142C3A;
+$main_menu_active: #1B3B4D;
