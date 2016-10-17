@@ -1,3 +1,6 @@
+// =========================================================
+// TEASER BLOCK VIEW
+// =========================================================
 #block-views-footer-teaser-block {
   margin-top: $default_padding * 2;
   &>h2 {
@@ -6,79 +9,113 @@
   .content {
     @include center-column($desktop_column);
   }
-}
-
-#block-menu-block-govcms-menu-block-footer {
-  background-color: $primary_1;
-  &>h2 {
-    @include visually-hidden;
-  }
-  .content {
-    @include center-column($desktop_column);
-    padding-top: rem(17px);
-    padding-bottom: rem(17px);
-    @include breakpoint(tablet) {
-      padding-top: rem(64px);
-      padding-bottom: rem(64px);
-    }
-    &>div>ul.menu {
-      padding-left: 0;
-      margin-bottom: 0;
+  .view-footer-teaser {
+    .view-content {
       @include breakpoint(tablet) {
-        display: table;
-        width: 100%;
-        table-layout: fixed;
-        margin-bottom: 0;
+        @include outer-container(100%);
+        display: flex;
+        flex-wrap: wrap;
       }
-      &>li {
-        margin-bottom: rem(15px);
+      .views-row {
+        @include listing-component-wrapper;
+        padding-top: $listing_component_image_height;
         @include breakpoint(tablet) {
-          display: table-cell;
-          margin-bottom: 0;
-          margin-bottom: $default_padding;
+          @include span-columns(4 of 12);
         }
-        &>a {
-          font-weight: 600;
+        h2 {
+          @include listing-component-heading;
+        }
+        .field-name-field-image {
+          @include listing-component-image;
+        }
+        .field-name-field-description {
+          @include listing-component-body;
+        }
+        &:nth-child(3n) {
           @include breakpoint(tablet) {
-            font-weight: 700;
+            @include omega();
           }
         }
-        &>ul {
-          display: none;
-          @include breakpoint(tablet) {
-            display: block;
-            padding-left: 0;
-            margin-top: rem(35px);
-          }
-          ul {
-            padding-left: $default_padding;
-            margin-top: $default_padding;
-          }
-        }
-      }
-      li {
-        // margin: 0;
-        margin-left: 0;
-        margin-right: 0;
-        margin-bottom: $default_padding;
-        padding: 0;
-        list-style: none;
-        @include link-colours(white, $neutral_4, $neutral_1);
       }
     }
   }
 }
 
+// =========================================================
+// GENERAL FOOTER MENUS
+// =========================================================
+.region-footer {
+  .block-menu, .block-menu-block {
+    background-color: $primary_1;
+    &>h2 {
+      @include visually-hidden;
+    }
+    .content {
+      @include center-column($desktop_column);
+      padding-top: rem(17px);
+      padding-bottom: rem(17px);
+      color: white;
+      @include breakpoint(tablet) {
+        padding-top: rem(64px);
+        padding-bottom: rem(64px);
+      }
+      ul.menu {
+        padding-left: 0;
+        margin-bottom: 0;
+        @include breakpoint(tablet) {
+          display: table;
+          width: 100%;
+          table-layout: fixed;
+          margin-bottom: 0;
+        }
+        &>li {
+          @include link-colours(white, $neutral_4, $neutral_1);
+          margin-left: 0;
+          margin-right: 0;
+          margin-bottom: $default_padding;
+          padding: 0;
+          list-style: none;
+          margin-bottom: rem(15px);
+          @include breakpoint(tablet) {
+            display: table-cell;
+            margin-bottom: 0;
+            margin-bottom: $default_padding;
+          }
+          &>a {
+            font-weight: 600;
+            @include breakpoint(tablet) {
+              font-weight: 700;
+            }
+          }
+          &>ul {
+            display: none;
+            @include breakpoint(tablet) {
+              display: block;
+              padding-left: 0;
+              margin-top: rem(35px);
+            }
+            li {
+              a {
+                font-weight: 400;
+              }
+            }
+            ul {
+              padding-left: $default_padding;
+              margin-top: $default_padding;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// =========================================================
+// DISCLAIMER FOOTER
+// =========================================================
 #block-menu-menu-footer-sub-menu {
   border-top: 1px solid darken($primary_1, 10%);
-  background-color: $primary_1;
-  &>h2 {
-    @include visually-hidden;
-  }
   .content {
-    @include center-column($desktop_column);
-    padding-top: rem(17px);
-    padding-bottom: rem(17px);
     @include breakpoint(tablet) {
       padding-top: rem(38px);
       padding-bottom: rem(38px);
@@ -87,20 +124,14 @@
       align-content: center;
     }
     ul.menu {
-      padding-left: 0;
       @include breakpoint(tablet) {
         order: 2;
-        margin-bottom: 0;
         text-align: right;
+        width: auto;
+        display: block;
       }
       &>li {
-        @include link-colours(white, $neutral_4, $neutral_1);
-        padding-top: 0;
         margin-bottom: rem(15px);
-        margin-left: 0;
-        margin-right: 0;
-        padding: 0;
-        list-style: none;
         @include breakpoint(tablet) {
           display: inline-block;
           margin-left: rem(15px);
@@ -108,10 +139,12 @@
         @include breakpoint(desktop) {
           margin-left: rem(30px);
         }
+        a {
+          font-weight: 400;
+        }
       }
     }
     .footer-copyright {
-      color: white;
       @include breakpoint(tablet) {
         order: 1;
       }
