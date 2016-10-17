@@ -41,13 +41,18 @@
               'alt' => $logo_alt,
               'attributes' => array('class' => array('header__logo-image')),
             ));
+            $logo_class = array('header__logo');
+            if (empty(theme_get_setting('govcms_ui_kit_header_title'))) {
+              $logo_class[] = 'no-title';
+            }
+
             print l($logo_img, $front_page, array(
               'html' => TRUE,
               'attributes' => array(
                 'id' => 'logo',
                 'title' => t('Back to Homepage'),
                 'rel' => 'home',
-                'class' => array('header__logo'),
+                'class' => $logo_class,
               ),
             ));
           ?>

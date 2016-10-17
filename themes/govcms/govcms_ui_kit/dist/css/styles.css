@@ -7054,24 +7054,38 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
 
 .header__inner .logo-and-search .logo-wrapper a img {
   float: left;
+  max-height: 50px;
+}
+
+@media (min-width: 768px) {
+  .header__inner .logo-and-search .logo-wrapper a img {
+    max-height: 100%;
+  }
 }
 
 .header__inner .logo-and-search .logo-wrapper .header-title {
-  display: none;
+  padding-left: 5px;
+  margin-right: auto;
+  font-size: 1.125rem;
+  color: #224A61;
+  font-weight: 400;
 }
 
 @media (min-width: 768px) {
   .header__inner .logo-and-search .logo-wrapper .header-title {
     margin-left: 1.375rem;
+    padding-left: 0;
     display: inline-block;
     vertical-align: middle;
     font-size: 1.875rem;
-    font-weight: 400;
-    color: #224A61;
   }
 }
 
 .header__inner .header__logo {
+  margin-right: 0;
+}
+
+.header__inner .header__logo.no-title {
   margin-right: auto;
 }
 
@@ -7079,7 +7093,7 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
   overflow: hidden;
   text-indent: 101%;
   white-space: nowrap;
-  width: 3.25rem;
+  width: 2.1875rem;
   padding: 0;
   margin: 0;
   border: 0;
@@ -7106,7 +7120,7 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
   overflow: hidden;
   text-indent: 101%;
   white-space: nowrap;
-  width: 3.25rem;
+  width: 2.1875rem;
   padding: 0;
   margin: 0;
   border: 0;
