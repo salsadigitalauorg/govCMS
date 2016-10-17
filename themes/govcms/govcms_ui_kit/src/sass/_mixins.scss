@@ -71,6 +71,9 @@
 //   .image {
 //     @include listing-component-image;
 //   }
+//   .body {
+//     @include listing-component-body;
+//   }
 // }
 // =========================================================
 @mixin listing-component-wrapper() {
@@ -118,4 +121,8 @@
   text-transform: uppercase;
   margin-top: $default_padding;
   margin-bottom: $default_padding;
+}
+
+@mixin listing-component-body() {
+  color: $neutral_1;
 }

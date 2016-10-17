@@ -67,8 +67,11 @@ body.not-front #content {
           @include listing-component-heading;
           margin-top: 0;
         }
-        .field-name-field-date, .submitted {
+        .field-name-field-date, .submitted, .field-type-datetime {
           @include listing-component-subtext;
+        }
+        .field-name-body {
+          @include listing-component-body;
         }
       }
     }

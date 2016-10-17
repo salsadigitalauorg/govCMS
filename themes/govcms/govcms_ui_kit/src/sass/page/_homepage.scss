@@ -1,22 +1,9 @@
+// =========================================================
+// FRONT PAGE PANEL
+// =========================================================
 .front {
   .page__title {
     @include visually-hidden;
-  }
-  .gov-front-layout {
-    .bean-basic-content {
-      background-color: $neutral_4;
-      &>.content {
-        @include center-column($desktop_column);
-        @include link-colours($primary_1, $secondary_3, $neutral_1);
-        padding-top: $default_padding * 2;
-        padding-bottom: rem(50px);
-        color: $neutral_1;
-        text-align: center;
-        p {
-          margin-bottom: 0;
-        }
-      }
-    }
   }
   .gov-front-left {
     padding-top: rem(40px);
@@ -32,6 +19,24 @@
     background-color: $neutral_4;
     .panel-pane {
       @include center-column($desktop_column);
+    }
+  }
+}
+
+// =========================================================
+// INTRODUCTION BEAN
+// =========================================================
+.bean-basic-content {
+  background-color: $neutral_4;
+  &>.content {
+    @include center-column($desktop_column);
+    @include link-colours($primary_1, $secondary_3, $neutral_1);
+    padding-top: $default_padding * 2;
+    padding-bottom: rem(50px);
+    color: $neutral_1;
+    text-align: center;
+    p {
+      margin-bottom: 0;
     }
   }
 }
@@ -106,6 +111,9 @@
       .submitted {
         @include listing-component-subtext;
       }
+      .field-name-body {
+        @include listing-component-body;
+      }
     }
   }
 }
@@ -142,36 +150,11 @@
         @include listing-component-heading;
         margin-top: 0;
       }
-      .submitted {
+      .field-type-datetime {
         @include listing-component-subtext;
       }
-    }
-  }
-}
-
-.view-footer-teaser {
-  .view-content {
-    @include breakpoint(tablet) {
-      @include outer-container(100%);
-      display: flex;
-      flex-wrap: wrap;
-    }
-    .views-row {
-      @include listing-component-wrapper;
-      padding-top: $listing_component_image_height;
-      @include breakpoint(tablet) {
-        @include span-columns(4 of 12);
-      }
-      h2 {
-        @include listing-component-heading;
-      }
-      .field-name-field-image {
-        @include listing-component-image;
-      }
-      &:nth-child(3n) {
-        @include breakpoint(tablet) {
-          @include omega();
-        }
+      .field-name-body {
+        @include listing-component-body;
       }
     }
   }
