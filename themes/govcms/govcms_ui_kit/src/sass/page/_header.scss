@@ -32,27 +32,37 @@
         vertical-align: middle;
         img {
           float: left;
+          max-height: 50px;
+          @include breakpoint(tablet) {
+            max-height: 100%;
+          }
         }
       }
       .header-title {
-        display: none;
+        padding-left: 5px;
+        margin-right: auto;
+        font-size: rem(18px);
+        color: $primary_1;
+        font-weight: 400;
         @include breakpoint(tablet) {
           margin-left: $default_padding;
+          padding-left: 0;
           display: inline-block;
           vertical-align: middle;
           font-size: rem(30px);
-          font-weight: 400;
-          color: $primary_1;
         }
       }
     }
   }
   .header__logo {
-    margin-right: auto;
+    margin-right: 0;
+    &.no-title {
+      margin-right: auto;
+    }
   }
   .mobile_expand_search {
     @include hide-text;
-    width: rem(52px);
+    width: rem(35px);
     padding: 0;
     margin: 0;
     border: 0;
@@ -73,7 +83,7 @@
   }
   .mobile_expand_menu {
     @include hide-text;
-    width: rem(52px);
+    width: rem(35px);
     padding: 0;
     margin: 0;
     border: 0;
