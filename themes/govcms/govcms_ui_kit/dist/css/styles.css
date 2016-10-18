@@ -8047,6 +8047,7 @@ body.not-front #content .content-header .content-header-inner {
 
 #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .field-name-field-image img {
   display: table;
+  font-family: "object-fit:cover;object-position:center";
   object-fit: cover;
   object-position: center;
   height: 17.1875rem;
@@ -8609,6 +8610,7 @@ ul.tabs.primary {
 
 #block-views-slideshow-block ul.mobile .field-name-field-slide-image img {
   height: 225px;
+  font-family: "object-fit:cover";
   object-fit: cover;
   float: left;
 }
@@ -8904,6 +8906,7 @@ ul.tabs.primary {
 #block-views-slideshow-block .slick-slider .field-name-field-slide-image img {
   width: 100%;
   height: 100%;
+  font-family: "object-fit:cover";
   object-fit: cover;
 }
 
@@ -9294,6 +9297,7 @@ ul.tabs.primary {
 
 .view-home-page-blog-articles .view-content .views-row .node.has-thumbnail .field-type-image img {
   display: table;
+  font-family: "object-fit:cover;object-position:center";
   object-fit: cover;
   object-position: center;
   height: 17.1875rem;
@@ -9515,6 +9519,7 @@ ul.tabs.primary {
 
 .view-latest-news .view-content .views-row .node.has-thumbnail .field-type-image img {
   display: table;
+  font-family: "object-fit:cover;object-position:center";
   object-fit: cover;
   object-position: center;
   height: 17.1875rem;
@@ -9769,6 +9774,7 @@ body.not-front #content .view .view-content .views-row .node.has-thumbnail .fiel
 
 body.not-front #content .view .view-content .views-row .node.has-thumbnail .field-type-image img {
   display: table;
+  font-family: "object-fit:cover;object-position:center";
   object-fit: cover;
   object-position: center;
   height: 17.1875rem;

@@ -47,6 +47,9 @@
         $slider.slick(banner_settings).removeClass('mobile');
         $(window).unbind('resize', slider_responsive).bind('resize', slider_responsive);
         slider_responsive();
+        objectFitImages($slider.find('img'));
+        console.log("hello");
+        console.log($slider.find('img'));
       }
     }
   };
