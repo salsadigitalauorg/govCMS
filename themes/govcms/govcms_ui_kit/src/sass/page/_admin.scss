@@ -11,3 +11,19 @@ ul.contextual-links {
     font-size: rem(16);
   }
 }
+
+ul.tabs.primary {
+  @include center-column($desktop_column);
+}
+
+.content .profile {
+  @include center-column($desktop_column);
+}
+
+#user-login {
+  @include center-column($desktop_column);
+  &>div {
+    max-width: 550px;
+    box-sizing: border-box;
+  }
+}

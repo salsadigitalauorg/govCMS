@@ -24,6 +24,13 @@ function govcms_ui_kit_html_head_alter(&$head_elements) {
 }
 
 /**
+ * Implements hook_js_alter().
+ */
+function govcms_ui_kit_js_alter(&$javascript) {
+  $javascript['misc/jquery.js']['data'] = drupal_get_path('theme', 'govcms_ui_kit') . '/vendor/jquery/jquery-3.1.1.min.js';
+}
+
+/**
  * Implements hook_preprocess_html().
  */
 function govcms_ui_kit_preprocess_html(&$variables) {

@@ -281,7 +281,8 @@ module.exports = function(grunt) {
       options: {
         map: true,
         processors: [
-          require('autoprefixer')({browsers: PREFIXER_BROWSERS})
+          require('autoprefixer')({browsers: PREFIXER_BROWSERS}),
+          require('postcss-object-fit-images')
         ]
       },
       dist: {

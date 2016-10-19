@@ -47,6 +47,96 @@
   font-weight: 300;
 }
 
+// =========================================================
+// SLIDER
+// =========================================================
+#block-views-slideshow-block {
+  &>h2 {
+    @include visually-hidden;
+  }
+  ul.mobile {
+    padding: 0;
+    li {
+      margin-bottom: 0;
+    }
+    .field-name-field-slide-image {
+      @include clearfix;
+      img {
+        height: 225px;
+        object-fit: cover;
+        float: left;
+      }
+    }
+    .banner-description-holder {
+      color: white;
+      padding: 30px $default_padding;
+      background-color: $primary_1;
+      h3 {
+        @include link-colours(white, $neutral_4, $neutral_1);
+        margin-top: 0;
+        font-weight: 400;
+      }
+      .field {
+        @include link-colours(white, $neutral_4, $neutral_1);
+      }
+    }
+  }
+  .slick-slider {
+    user-select: auto;
+    padding: 0;
+    .slick-slide {
+      list-style: none;
+      &:focus {
+        outline-style: none;
+      }
+    }
+    .field-name-field-slide-image {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      .field-items {
+        height: 100%;
+      }
+      .field-item {
+        height: 100%;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .banner-description-holder {
+      position: relative;
+      @include center-column($desktop_column);
+    }
+    .banner-description-panel {
+      position: relative;
+      box-sizing: border-box;
+      background-color: #0B3B46;
+      padding: 45px;
+      max-width: 524px;
+      min-height: 444px;
+      color: white;
+      h3 {
+        @include link-colours(white, $neutral_4, $neutral_1);
+        margin-top: 0;
+        margin-bottom: 21px;
+        font-size: rem(48px);
+        font-weight: 300;
+      }
+      .field {
+        @include link-colours(white, $neutral_4, $neutral_1);
+      }
+    }
+  }
+}
+
+// =========================================================
+// SOCIAL LINKS
+// =========================================================
 .block-govcms-social-links {
   background-color: $primary_2;
   .inner-wrapper {
@@ -76,6 +166,9 @@
   }
 }
 
+// =========================================================
+// HOME BLOGS
+// =========================================================
 .view-home-page-blog-articles {
   .view-content {
     @include breakpoint(tablet) {
@@ -118,6 +211,9 @@
   }
 }
 
+// =========================================================
+// NEWS
+// =========================================================
 .view-latest-news {
   .view-content {
     @include breakpoint(tablet) {
