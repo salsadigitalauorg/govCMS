@@ -258,7 +258,7 @@ Usage:
 main > article .see-more::after, footer[role='contentinfo'] .see-more::after, .list-horizontal .tags .see-more::after, .list-vertical .tags .see-more::after, .list-vertical--thirds .tags .see-more::after, .list-vertical--fourths .tags .see-more::after, .list-small .tags .see-more::after, .list-highlighted .tags .see-more::after, .primary-nav ul .see-more::after,
 .local-nav ul .see-more::after, [class^='breadcrumbs'] .see-more::after, [class^='breadcrumbs'][class$='--inverted'] .see-more::after, .skip-to .see-more::after, [class^='controls'] .see-more::after, .govau--header .see-more::after, .prerelease-govau--header .see-more::after, .hero .see-more::after,
 .hero-sml .see-more::after,
-.hero-med .see-more::after, .header__inner .header__secondary-menu .see-more::after, .content-body .content .see-more::after, .more-link .see-more::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 .see-more::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display .see-more::after, .region-footer .block-menu .content ul.menu > li .see-more::after, .region-footer .block-menu-block .content ul.menu > li .see-more::after, .bean-basic-content > .content .see-more::after, #block-views-slideshow-block ul.mobile .banner-description-holder h3 .see-more::after, #block-views-slideshow-block ul.mobile .banner-description-holder .field .see-more::after, #block-views-slideshow-block .slick-slider .banner-description-panel h3 .see-more::after, #block-views-slideshow-block .slick-slider .banner-description-panel .field .see-more::after, .view-home-page-blog-articles .view-content .views-row h2 .see-more::after, .view-home-page-blog-articles .view-content .views-row .display .see-more::after, .view-latest-news .view-content .views-row h2 .see-more::after, .view-latest-news .view-content .views-row .display .see-more::after, body.not-front #content .view .view-content .views-row h2 .see-more::after, body.not-front #content .view .view-content .views-row .display .see-more::after {
+.hero-med .see-more::after, .header__inner .header__secondary-menu .see-more::after, .content-body .content .see-more::after, .more-link .see-more::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 .see-more::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display .see-more::after, .region-footer .block-menu .content ul.menu > li .see-more::after, .region-footer .block-menu-block .content ul.menu > li .see-more::after, .bean-basic-content > .content .see-more::after, #block-views-slideshow-block .banner-description-holder h3 .see-more::after, #block-views-slideshow-block .banner-description-holder .field .see-more::after, .view-home-page-blog-articles .view-content .views-row h2 .see-more::after, .view-home-page-blog-articles .view-content .views-row .display .see-more::after, .view-latest-news .view-content .views-row h2 .see-more::after, .view-latest-news .view-content .views-row .display .see-more::after, body.not-front #content .view .view-content .views-row h2 .see-more::after, body.not-front #content .view .view-content .views-row .display .see-more::after {
   background-image: url("../latest/img/icons/arrow-right--aqua.svg");
 }
 
@@ -278,7 +278,7 @@ summary::before, .accordion--controls summary::before, .nav-toggle::before {
 main > article a[rel~='external']::after, footer[role='contentinfo'] a[rel~='external']::after, .list-horizontal .tags a[rel~='external']::after, .list-vertical .tags a[rel~='external']::after, .list-vertical--thirds .tags a[rel~='external']::after, .list-vertical--fourths .tags a[rel~='external']::after, .list-small .tags a[rel~='external']::after, .list-highlighted .tags a[rel~='external']::after, .primary-nav ul a[rel~='external']::after,
 .local-nav ul a[rel~='external']::after, [class^='breadcrumbs'] a[rel~='external']::after, [class^='breadcrumbs'][class$='--inverted'] a[rel~='external']::after, .skip-to a[rel~='external']::after, [class^='controls'] a[rel~='external']::after, .govau--header a[rel~='external']::after, .prerelease-govau--header a[rel~='external']::after, .hero a[rel~='external']::after,
 .hero-sml a[rel~='external']::after,
-.hero-med a[rel~='external']::after, .header__inner .header__secondary-menu a[rel~='external']::after, .content-body .content a[rel~='external']::after, .more-link a[rel~='external']::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 a[rel~='external']::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display a[rel~='external']::after, .region-footer .block-menu .content ul.menu > li a[rel~='external']::after, .region-footer .block-menu-block .content ul.menu > li a[rel~='external']::after, .bean-basic-content > .content a[rel~='external']::after, #block-views-slideshow-block ul.mobile .banner-description-holder h3 a[rel~='external']::after, #block-views-slideshow-block ul.mobile .banner-description-holder .field a[rel~='external']::after, #block-views-slideshow-block .slick-slider .banner-description-panel h3 a[rel~='external']::after, #block-views-slideshow-block .slick-slider .banner-description-panel .field a[rel~='external']::after, .view-home-page-blog-articles .view-content .views-row h2 a[rel~='external']::after, .view-home-page-blog-articles .view-content .views-row .display a[rel~='external']::after, .view-latest-news .view-content .views-row h2 a[rel~='external']::after, .view-latest-news .view-content .views-row .display a[rel~='external']::after, body.not-front #content .view .view-content .views-row h2 a[rel~='external']::after, body.not-front #content .view .view-content .views-row .display a[rel~='external']::after {
+.hero-med a[rel~='external']::after, .header__inner .header__secondary-menu a[rel~='external']::after, .content-body .content a[rel~='external']::after, .more-link a[rel~='external']::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 a[rel~='external']::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display a[rel~='external']::after, .region-footer .block-menu .content ul.menu > li a[rel~='external']::after, .region-footer .block-menu-block .content ul.menu > li a[rel~='external']::after, .bean-basic-content > .content a[rel~='external']::after, #block-views-slideshow-block .banner-description-holder h3 a[rel~='external']::after, #block-views-slideshow-block .banner-description-holder .field a[rel~='external']::after, .view-home-page-blog-articles .view-content .views-row h2 a[rel~='external']::after, .view-home-page-blog-articles .view-content .views-row .display a[rel~='external']::after, .view-latest-news .view-content .views-row h2 a[rel~='external']::after, .view-latest-news .view-content .views-row .display a[rel~='external']::after, body.not-front #content .view .view-content .views-row h2 a[rel~='external']::after, body.not-front #content .view .view-content .views-row .display a[rel~='external']::after {
   background-image: url("../latest/img/icons/external-link--aqua.svg");
 }
 
@@ -2077,7 +2077,7 @@ Style guide: Link styles.1 Hover links
 main > article a[rel~='external']::after, footer[role='contentinfo'] a[rel~='external']::after, .list-horizontal .tags a[rel~='external']::after, .list-vertical .tags a[rel~='external']::after, .list-vertical--thirds .tags a[rel~='external']::after, .list-vertical--fourths .tags a[rel~='external']::after, .list-small .tags a[rel~='external']::after, .list-highlighted .tags a[rel~='external']::after, .primary-nav ul a[rel~='external']::after,
 .local-nav ul a[rel~='external']::after, [class^='breadcrumbs'] a[rel~='external']::after, [class^='breadcrumbs'][class$='--inverted'] a[rel~='external']::after, .skip-to a[rel~='external']::after, [class^='controls'] a[rel~='external']::after, .govau--header a[rel~='external']::after, .prerelease-govau--header a[rel~='external']::after, .hero a[rel~='external']::after,
 .hero-sml a[rel~='external']::after,
-.hero-med a[rel~='external']::after, .header__inner .header__secondary-menu a[rel~='external']::after, .content-body .content a[rel~='external']::after, .more-link a[rel~='external']::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 a[rel~='external']::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display a[rel~='external']::after, .region-footer .block-menu .content ul.menu > li a[rel~='external']::after, .region-footer .block-menu-block .content ul.menu > li a[rel~='external']::after, .bean-basic-content > .content a[rel~='external']::after, #block-views-slideshow-block ul.mobile .banner-description-holder h3 a[rel~='external']::after, #block-views-slideshow-block ul.mobile .banner-description-holder .field a[rel~='external']::after, #block-views-slideshow-block .slick-slider .banner-description-panel h3 a[rel~='external']::after, #block-views-slideshow-block .slick-slider .banner-description-panel .field a[rel~='external']::after, .view-home-page-blog-articles .view-content .views-row h2 a[rel~='external']::after, .view-home-page-blog-articles .view-content .views-row .display a[rel~='external']::after, .view-latest-news .view-content .views-row h2 a[rel~='external']::after, .view-latest-news .view-content .views-row .display a[rel~='external']::after, body.not-front #content .view .view-content .views-row h2 a[rel~='external']::after, body.not-front #content .view .view-content .views-row .display a[rel~='external']::after {
+.hero-med a[rel~='external']::after, .header__inner .header__secondary-menu a[rel~='external']::after, .content-body .content a[rel~='external']::after, .more-link a[rel~='external']::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 a[rel~='external']::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display a[rel~='external']::after, .region-footer .block-menu .content ul.menu > li a[rel~='external']::after, .region-footer .block-menu-block .content ul.menu > li a[rel~='external']::after, .bean-basic-content > .content a[rel~='external']::after, #block-views-slideshow-block .banner-description-holder h3 a[rel~='external']::after, #block-views-slideshow-block .banner-description-holder .field a[rel~='external']::after, .view-home-page-blog-articles .view-content .views-row h2 a[rel~='external']::after, .view-home-page-blog-articles .view-content .views-row .display a[rel~='external']::after, .view-latest-news .view-content .views-row h2 a[rel~='external']::after, .view-latest-news .view-content .views-row .display a[rel~='external']::after, body.not-front #content .view .view-content .views-row h2 a[rel~='external']::after, body.not-front #content .view .view-content .views-row .display a[rel~='external']::after {
   content: '';
   position: absolute;
   display: inline;
@@ -7344,6 +7344,10 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
   }
 }
 
+html:not(.no-js) .region-navigation .block-superfish ul.sf-menu:not(.superfish-processed) > li > ul {
+  visibility: hidden;
+}
+
 .region-navigation .block-superfish ul.sf-menu li.sfHover > a {
   background-color: #142C3A;
 }
@@ -8594,34 +8598,90 @@ ul.tabs.primary {
   width: 1px;
 }
 
-#block-views-slideshow-block ul.mobile {
+#block-views-slideshow-block .view-content {
+  position: relative;
+}
+
+#block-views-slideshow-block .view-content > ul {
   padding: 0;
 }
 
-#block-views-slideshow-block ul.mobile li {
+@media (min-width: 768px) {
+  #block-views-slideshow-block .view-content > ul:not(.owl-loaded) > li:not(.views-row-first) {
+    display: none;
+  }
+}
+
+#block-views-slideshow-block .view-content li.views-row {
+  position: relative;
+  list-style: none;
   margin-bottom: 0;
 }
 
-#block-views-slideshow-block ul.mobile .field-name-field-slide-image::after {
+#block-views-slideshow-block .field-name-field-slide-image::after {
   clear: both;
   content: "";
   display: table;
 }
 
-#block-views-slideshow-block ul.mobile .field-name-field-slide-image img {
+@media (min-width: 768px) {
+  #block-views-slideshow-block .field-name-field-slide-image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  #block-views-slideshow-block .field-name-field-slide-image .field-items {
+    height: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  #block-views-slideshow-block .field-name-field-slide-image .field-item {
+    height: 100%;
+  }
+}
+
+#block-views-slideshow-block .field-name-field-slide-image img {
   height: 225px;
   font-family: "object-fit:cover";
   object-fit: cover;
   float: left;
 }
 
-#block-views-slideshow-block ul.mobile .banner-description-holder {
+@media (min-width: 768px) {
+  #block-views-slideshow-block .field-name-field-slide-image img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+#block-views-slideshow-block .banner-description-holder {
   color: white;
   padding: 30px 1.375rem;
   background-color: #224A61;
 }
 
-#block-views-slideshow-block ul.mobile .banner-description-holder h3 {
+@media (min-width: 768px) {
+  #block-views-slideshow-block .banner-description-holder {
+    max-width: 73.125rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    box-sizing: content-box;
+    background-color: transparent;
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+#block-views-slideshow-block .banner-description-holder h3 {
   color: white;
   /*
   See more link
@@ -8683,7 +8743,7 @@ ul.tabs.primary {
   font-weight: 400;
 }
 
-#block-views-slideshow-block ul.mobile .banner-description-holder h3 a {
+#block-views-slideshow-block .banner-description-holder h3 a {
   color: white;
   text-decoration: none;
   outline: none;
@@ -8693,26 +8753,26 @@ ul.tabs.primary {
   transition-property: background-color, border-color, color;
 }
 
-#block-views-slideshow-block ul.mobile .banner-description-holder h3 a:hover, #block-views-slideshow-block ul.mobile .banner-description-holder h3 a:focus {
+#block-views-slideshow-block .banner-description-holder h3 a:hover, #block-views-slideshow-block .banner-description-holder h3 a:focus {
   background-color: #f0f3f5;
   color: #313131;
 }
 
-#block-views-slideshow-block ul.mobile .banner-description-holder h3 a[rel~='external'] {
+#block-views-slideshow-block .banner-description-holder h3 a[rel~='external'] {
   display: inline;
   position: relative;
   margin-right: 1.6em;
 }
 
-#block-views-slideshow-block ul.mobile .banner-description-holder h3 a[rel~='external']:hover {
+#block-views-slideshow-block .banner-description-holder h3 a[rel~='external']:hover {
   border-color: transparent;
 }
 
-#block-views-slideshow-block ul.mobile .banner-description-holder h3 a[rel~='external']::after {
+#block-views-slideshow-block .banner-description-holder h3 a[rel~='external']::after {
   background-size: 0.9em auto;
 }
 
-#block-views-slideshow-block ul.mobile .banner-description-holder h3 .see-more {
+#block-views-slideshow-block .banner-description-holder h3 .see-more {
   display: inline-block;
   position: relative;
   margin-right: 1.6em;
@@ -8720,7 +8780,7 @@ ul.tabs.primary {
   color: #18788d;
 }
 
-#block-views-slideshow-block ul.mobile .banner-description-holder h3 .see-more::after {
+#block-views-slideshow-block .banner-description-holder h3 .see-more::after {
   content: '';
   position: absolute;
   top: 0;
@@ -8733,21 +8793,29 @@ ul.tabs.primary {
   background-size: 0.64em auto;
 }
 
-#block-views-slideshow-block ul.mobile .banner-description-holder h3 .see-more:hover, #block-views-slideshow-block ul.mobile .banner-description-holder h3 .see-more:focus {
+#block-views-slideshow-block .banner-description-holder h3 .see-more:hover, #block-views-slideshow-block .banner-description-holder h3 .see-more:focus {
   color: #313131;
 }
 
-#block-views-slideshow-block ul.mobile .banner-description-holder h3 span.placeholder-link {
+#block-views-slideshow-block .banner-description-holder h3 span.placeholder-link {
   color: rgba(255, 255, 255, 0.7);
   border-bottom: none;
   cursor: not-allowed;
 }
 
-#block-views-slideshow-block ul.mobile .banner-description-holder h3 span.placeholder-link:hover {
+#block-views-slideshow-block .banner-description-holder h3 span.placeholder-link:hover {
   cursor: not-allowed;
 }
 
-#block-views-slideshow-block ul.mobile .banner-description-holder .field {
+@media (min-width: 768px) {
+  #block-views-slideshow-block .banner-description-holder h3 {
+    margin-bottom: 21px;
+    font-size: 3rem;
+    font-weight: 300;
+  }
+}
+
+#block-views-slideshow-block .banner-description-holder .field {
   color: white;
   /*
   See more link
@@ -8807,7 +8875,7 @@ ul.tabs.primary {
   */
 }
 
-#block-views-slideshow-block ul.mobile .banner-description-holder .field a {
+#block-views-slideshow-block .banner-description-holder .field a {
   color: white;
   text-decoration: none;
   outline: none;
@@ -8817,26 +8885,26 @@ ul.tabs.primary {
   transition-property: background-color, border-color, color;
 }
 
-#block-views-slideshow-block ul.mobile .banner-description-holder .field a:hover, #block-views-slideshow-block ul.mobile .banner-description-holder .field a:focus {
+#block-views-slideshow-block .banner-description-holder .field a:hover, #block-views-slideshow-block .banner-description-holder .field a:focus {
   background-color: #f0f3f5;
   color: #313131;
 }
 
-#block-views-slideshow-block ul.mobile .banner-description-holder .field a[rel~='external'] {
+#block-views-slideshow-block .banner-description-holder .field a[rel~='external'] {
   display: inline;
   position: relative;
   margin-right: 1.6em;
 }
 
-#block-views-slideshow-block ul.mobile .banner-description-holder .field a[rel~='external']:hover {
+#block-views-slideshow-block .banner-description-holder .field a[rel~='external']:hover {
   border-color: transparent;
 }
 
-#block-views-slideshow-block ul.mobile .banner-description-holder .field a[rel~='external']::after {
+#block-views-slideshow-block .banner-description-holder .field a[rel~='external']::after {
   background-size: 0.9em auto;
 }
 
-#block-views-slideshow-block ul.mobile .banner-description-holder .field .see-more {
+#block-views-slideshow-block .banner-description-holder .field .see-more {
   display: inline-block;
   position: relative;
   margin-right: 1.6em;
@@ -8844,7 +8912,7 @@ ul.tabs.primary {
   color: #18788d;
 }
 
-#block-views-slideshow-block ul.mobile .banner-description-holder .field .see-more::after {
+#block-views-slideshow-block .banner-description-holder .field .see-more::after {
   content: '';
   position: absolute;
   top: 0;
@@ -8857,329 +8925,114 @@ ul.tabs.primary {
   background-size: 0.64em auto;
 }
 
-#block-views-slideshow-block ul.mobile .banner-description-holder .field .see-more:hover, #block-views-slideshow-block ul.mobile .banner-description-holder .field .see-more:focus {
+#block-views-slideshow-block .banner-description-holder .field .see-more:hover, #block-views-slideshow-block .banner-description-holder .field .see-more:focus {
   color: #313131;
 }
 
-#block-views-slideshow-block ul.mobile .banner-description-holder .field span.placeholder-link {
+#block-views-slideshow-block .banner-description-holder .field span.placeholder-link {
   color: rgba(255, 255, 255, 0.7);
   border-bottom: none;
   cursor: not-allowed;
 }
 
-#block-views-slideshow-block ul.mobile .banner-description-holder .field span.placeholder-link:hover {
+#block-views-slideshow-block .banner-description-holder .field span.placeholder-link:hover {
   cursor: not-allowed;
 }
 
-#block-views-slideshow-block .slick-slider {
-  -webkit-user-select: auto;
-     -moz-user-select: auto;
-      -ms-user-select: auto;
-          user-select: auto;
+@media (min-width: 768px) {
+  #block-views-slideshow-block .banner-description-panel {
+    position: relative;
+    box-sizing: border-box;
+    background-color: #0B3B46;
+    padding: 45px;
+    padding-top: 85px;
+    max-width: 524px;
+    min-height: 444px;
+    color: white;
+  }
+}
+
+#block-views-slideshow-block .slider-controls {
+  position: absolute;
+  top: 0;
+  padding-top: 34px;
+  padding-left: 37px;
+}
+
+#block-views-slideshow-block .slider-controls button {
+  color: #5bcbe3;
+  border: 0;
+  margin: 0;
+  display: inline;
+  width: 36px;
+  height: 36px;
+  overflow: hidden;
   padding: 0;
-}
-
-#block-views-slideshow-block .slick-slider .slick-slide {
-  list-style: none;
-}
-
-#block-views-slideshow-block .slick-slider .slick-slide:focus {
-  outline-style: none;
-}
-
-#block-views-slideshow-block .slick-slider .field-name-field-slide-image {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-#block-views-slideshow-block .slick-slider .field-name-field-slide-image .field-items {
-  height: 100%;
-}
-
-#block-views-slideshow-block .slick-slider .field-name-field-slide-image .field-item {
-  height: 100%;
-}
-
-#block-views-slideshow-block .slick-slider .field-name-field-slide-image img {
-  width: 100%;
-  height: 100%;
-  font-family: "object-fit:cover";
-  object-fit: cover;
-}
-
-#block-views-slideshow-block .slick-slider .banner-description-holder {
-  position: relative;
-  max-width: 73.125rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  box-sizing: content-box;
-}
-
-#block-views-slideshow-block .slick-slider .banner-description-panel {
-  position: relative;
-  box-sizing: border-box;
-  background-color: #0B3B46;
-  padding: 45px;
-  max-width: 524px;
-  min-height: 444px;
-  color: white;
-}
-
-#block-views-slideshow-block .slick-slider .banner-description-panel h3 {
-  color: white;
-  /*
-  See more link
-
-  Use see more links at the end of [lists](section-list-styles.html),
-  to take the user to a index page of all items.
-
-  Markup: <a class="see-more" href="#">See more</a>
-
-  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.2 See more link
-  */
-  /*
-  Placeholder links (prototyping)
-
-  Use placeholder links (greyed out links) to show actions that users can't currently take.
-
-  Your content should explain why the action isn't available and when it will be.
-
-  <p class="callout">Placeholders only work in `<span>` tags; not `<a>`.</p>
-
-  Markup: <p><span class="placeholder-link">Draft news item</span></p>
-  <p><a href="#">News item</a><p>
-
-  <details open data-label="placeholder-links-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.3 Placeholder links
-  */
-  margin-top: 0;
-  margin-bottom: 21px;
-  font-size: 3rem;
-  font-weight: 300;
-}
-
-#block-views-slideshow-block .slick-slider .banner-description-panel h3 a {
-  color: white;
-  text-decoration: none;
-  outline: none;
-  border-bottom: solid 1px #f0f3f5;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
-  transition-property: background-color, border-color, color;
-}
-
-#block-views-slideshow-block .slick-slider .banner-description-panel h3 a:hover, #block-views-slideshow-block .slick-slider .banner-description-panel h3 a:focus {
-  background-color: #f0f3f5;
-  color: #313131;
-}
-
-#block-views-slideshow-block .slick-slider .banner-description-panel h3 a[rel~='external'] {
-  display: inline;
-  position: relative;
-  margin-right: 1.6em;
-}
-
-#block-views-slideshow-block .slick-slider .banner-description-panel h3 a[rel~='external']:hover {
-  border-color: transparent;
-}
-
-#block-views-slideshow-block .slick-slider .banner-description-panel h3 a[rel~='external']::after {
-  background-size: 0.9em auto;
-}
-
-#block-views-slideshow-block .slick-slider .banner-description-panel h3 .see-more {
-  display: inline-block;
-  position: relative;
-  margin-right: 1.6em;
-  font-weight: 700;
-  color: #18788d;
-}
-
-#block-views-slideshow-block .slick-slider .banner-description-panel h3 .see-more::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: -1.2em;
-  display: block;
-  width: 1.2em;
-  height: 1.2em;
+  vertical-align: top;
+  background-color: transparent;
   background-repeat: no-repeat;
-  background-position: right 0.4em;
-  background-size: 0.64em auto;
+  background-position: center;
+  border-bottom: 1px solid transparent;
 }
 
-#block-views-slideshow-block .slick-slider .banner-description-panel h3 .see-more:hover, #block-views-slideshow-block .slick-slider .banner-description-panel h3 .see-more:focus {
-  color: #313131;
-}
-
-#block-views-slideshow-block .slick-slider .banner-description-panel h3 span.placeholder-link {
-  color: rgba(255, 255, 255, 0.7);
-  border-bottom: none;
-  cursor: not-allowed;
-}
-
-#block-views-slideshow-block .slick-slider .banner-description-panel h3 span.placeholder-link:hover {
-  cursor: not-allowed;
-}
-
-#block-views-slideshow-block .slick-slider .banner-description-panel .field {
+#block-views-slideshow-block .slider-controls button:hover, #block-views-slideshow-block .slider-controls button:focus {
   color: white;
-  /*
-  See more link
-
-  Use see more links at the end of [lists](section-list-styles.html),
-  to take the user to a index page of all items.
-
-  Markup: <a class="see-more" href="#">See more</a>
-
-  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.2 See more link
-  */
-  /*
-  Placeholder links (prototyping)
-
-  Use placeholder links (greyed out links) to show actions that users can't currently take.
-
-  Your content should explain why the action isn't available and when it will be.
-
-  <p class="callout">Placeholders only work in `<span>` tags; not `<a>`.</p>
-
-  Markup: <p><span class="placeholder-link">Draft news item</span></p>
-  <p><a href="#">News item</a><p>
-
-  <details open data-label="placeholder-links-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.3 Placeholder links
-  */
+  border-bottom-color: white;
 }
 
-#block-views-slideshow-block .slick-slider .banner-description-panel .field a {
+#block-views-slideshow-block .slider-controls button.active {
   color: white;
-  text-decoration: none;
-  outline: none;
-  border-bottom: solid 1px #f0f3f5;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
-  transition-property: background-color, border-color, color;
 }
 
-#block-views-slideshow-block .slick-slider .banner-description-panel .field a:hover, #block-views-slideshow-block .slick-slider .banner-description-panel .field a:focus {
-  background-color: #f0f3f5;
-  color: #313131;
+#block-views-slideshow-block .slider-controls button.slider-prev {
+  overflow: hidden;
+  text-indent: 101%;
+  white-space: nowrap;
+  background-image: url(../images/svg/slider-prev.svg);
 }
 
-#block-views-slideshow-block .slick-slider .banner-description-panel .field a[rel~='external'] {
+#block-views-slideshow-block .slider-controls button.slider-prev:hover, #block-views-slideshow-block .slider-controls button.slider-prev:focus {
+  background-image: url(../images/svg/slider-prev-hover.svg);
+}
+
+#block-views-slideshow-block .slider-controls button.slider-next {
+  overflow: hidden;
+  text-indent: 101%;
+  white-space: nowrap;
+  background-image: url(../images/svg/slider-next.svg);
+}
+
+#block-views-slideshow-block .slider-controls button.slider-next:hover, #block-views-slideshow-block .slider-controls button.slider-next:focus {
+  background-image: url(../images/svg/slider-next-hover.svg);
+}
+
+#block-views-slideshow-block .slider-controls button.slider-play {
+  overflow: hidden;
+  text-indent: 101%;
+  white-space: nowrap;
+  background-image: url(../images/svg/slider-pause.svg);
+}
+
+#block-views-slideshow-block .slider-controls button.slider-play:hover, #block-views-slideshow-block .slider-controls button.slider-play:focus {
+  background-image: url(../images/svg/slider-pause-hover.svg);
+}
+
+#block-views-slideshow-block .slider-controls button.slider-play.paused {
+  background-image: url(../images/svg/slider-play.svg);
+}
+
+#block-views-slideshow-block .slider-controls button.slider-play.paused:hover, #block-views-slideshow-block .slider-controls button.slider-play.paused:focus {
+  background-image: url(../images/svg/slider-play-hover.svg);
+}
+
+#block-views-slideshow-block .slider-controls ul {
+  padding: 0;
+  margin: 0;
   display: inline;
-  position: relative;
-  margin-right: 1.6em;
 }
 
-#block-views-slideshow-block .slick-slider .banner-description-panel .field a[rel~='external']:hover {
-  border-color: transparent;
-}
-
-#block-views-slideshow-block .slick-slider .banner-description-panel .field a[rel~='external']::after {
-  background-size: 0.9em auto;
-}
-
-#block-views-slideshow-block .slick-slider .banner-description-panel .field .see-more {
-  display: inline-block;
-  position: relative;
-  margin-right: 1.6em;
-  font-weight: 700;
-  color: #18788d;
-}
-
-#block-views-slideshow-block .slick-slider .banner-description-panel .field .see-more::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: -1.2em;
-  display: block;
-  width: 1.2em;
-  height: 1.2em;
-  background-repeat: no-repeat;
-  background-position: right 0.4em;
-  background-size: 0.64em auto;
-}
-
-#block-views-slideshow-block .slick-slider .banner-description-panel .field .see-more:hover, #block-views-slideshow-block .slick-slider .banner-description-panel .field .see-more:focus {
-  color: #313131;
-}
-
-#block-views-slideshow-block .slick-slider .banner-description-panel .field span.placeholder-link {
-  color: rgba(255, 255, 255, 0.7);
-  border-bottom: none;
-  cursor: not-allowed;
-}
-
-#block-views-slideshow-block .slick-slider .banner-description-panel .field span.placeholder-link:hover {
-  cursor: not-allowed;
+#block-views-slideshow-block .slider-controls ul li {
+  display: inline;
 }
 
 .block-govcms-social-links {

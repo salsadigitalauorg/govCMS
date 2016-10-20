@@ -16,6 +16,14 @@
       @include breakpoint(desktop) {
         table-layout: fixed;
       }
+      // If JS is enabled - hide sub nav menus until superfish finishes loading.
+      &:not(.superfish-processed) {
+        &>li>ul {
+          html:not(.no-js) & {
+            visibility: hidden;
+          }
+        }
+      }
       li.sfHover {
         &>a {
           background-color: $main_menu_hover;

@@ -5,6 +5,8 @@ var desktop_breakpoint = 1200;
 var tablet_breakpoint = 768;
 var mobile_breakpoint = 420;
 
+var desktop_column = 1170;
+
 /**
  * govCMS general bootstrapping.
  */

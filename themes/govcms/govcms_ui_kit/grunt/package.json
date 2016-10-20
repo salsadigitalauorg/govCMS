@@ -17,5 +17,5 @@
     "grunt-svgmin": "^3.1.2",
     "postcss-cli": "^2.6.0",
     "postcss-object-fit-images": "^1.1.2"
-  },
+  }
 }
