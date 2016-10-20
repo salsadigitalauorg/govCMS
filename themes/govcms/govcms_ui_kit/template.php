@@ -165,3 +165,13 @@ function govcms_ui_kit_breadcrumb($variables) {
 
   return $output;
 }
+
+/**
+ * Implements hook_form_alter().
+ */
+function govcms_ui_kit_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id === 'search_api_page_search_form_default_search') {
+    $form['keys_1']['#attributes']['placeholder'] = 'Type search term here';
+    $form['keys_1']['#title'] = 'Search field';
+  }
+}
