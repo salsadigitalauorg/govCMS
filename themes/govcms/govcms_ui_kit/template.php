@@ -148,3 +148,20 @@ function govcms_ui_kit_preprocess_node(&$variables) {
     }
   }
 }
+
+/**
+ * Implements theme_breadcrumb().
+ */
+function govcms_ui_kit_breadcrumb($variables) {
+  $breadcrumb = $variables['breadcrumb'];
+  $output = '';
+
+  if (!empty($breadcrumb)) {
+    // Build the breadcrumb trail.
+    $output = '<nav class="breadcrumbs--inverted" role="navigation" aria-label="breadcrumb">';
+    $output .= '<ul><li>' . implode('</li><li>', $breadcrumb) . '</li></ul>';
+    $output .= '</nav>';
+  }
+
+  return $output;
+}

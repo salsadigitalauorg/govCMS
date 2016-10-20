@@ -7547,6 +7547,16 @@ body.not-front #content .content-header .content-header-inner {
   box-sizing: content-box;
 }
 
+body.not-front #content .content-header .content-header-inner h1, body.not-front #content .content-header .content-header-inner .hero .site-title, .hero body.not-front #content .content-header .content-header-inner .site-title, body.not-front #content .content-header .content-header-inner
+.hero-sml .site-title,
+.hero-sml body.not-front #content .content-header .content-header-inner .site-title, body.not-front #content .content-header .content-header-inner
+.hero-med .site-title,
+.hero-med body.not-front #content .content-header .content-header-inner .site-title {
+  font-weight: 300;
+  font-size: 3rem;
+  color: white;
+}
+
 #content .content-body > .messages {
   max-width: 73.125rem;
   margin-left: auto;
@@ -8389,13 +8399,25 @@ ul.tabs.primary {
   box-sizing: border-box;
 }
 
-.breadcrumb {
-  max-width: 73.125rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  box-sizing: content-box;
+.content-header .breadcrumbs--inverted {
+  background-color: transparent;
+}
+
+.content-header .breadcrumbs--inverted ul {
+  padding-top: 0.5rem;
+  padding-bottom: 0;
+}
+
+.content-header .breadcrumbs--inverted ul li {
+  font-size: 1rem;
+}
+
+.content-header .breadcrumbs--inverted ul li:not(:last-child) {
+  background-image: url(../../vendor/gov-au-ui-kit/assets/img/icons/arrow-right--white.svg);
+}
+
+.content-header .breadcrumbs--inverted ul li:last-child {
+  font-weight: 600;
 }
 
 .front .page__title {

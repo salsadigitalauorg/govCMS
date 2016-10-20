@@ -1,3 +1,19 @@
-.breadcrumb {
-  @include center-column($desktop_column);
+.content-header {
+  .breadcrumbs--inverted {
+    background-color: transparent;
+    ul {
+      padding-top: rem(8px);
+      padding-bottom: 0;
+      li {
+        font-size: rem(16px);
+        &:not(:last-child) {
+          // Override previously defined icon with new path.
+          background-image: url(../../vendor/gov-au-ui-kit/assets/img/icons/arrow-right--white.svg);
+        }
+        &:last-child {
+          font-weight: 600;
+        }
+      }
+    }
+  }
 }

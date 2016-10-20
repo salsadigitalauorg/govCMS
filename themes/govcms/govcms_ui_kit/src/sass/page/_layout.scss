@@ -15,6 +15,11 @@ html {
       margin-bottom: rem(103px);
       .content-header-inner {
         @include center-column($desktop_column);
+        h1 {
+          font-weight: 300;
+          font-size: rem(48px);
+          color: white;
+        }
       }
     }
   }
