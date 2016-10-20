@@ -209,8 +209,11 @@ var desktop_column = 1170;
   }
 
   function position_custom_controls() {
-    var left = ($(window).width() * 0.5) - (desktop_column * 0.5);
-    left = (left < 20) ? 20 : left;
+    // Positioning must also cater for html text_resize functionality.
+    var base_scale = parseInt($('html').css('font-size'));
+    var scale_perc = base_scale / 16;
+    var left = ($(window).width() * 0.5) - ((desktop_column * 0.5) * scale_perc);
+    left = (left < 20) ? '20px' : (left / base_scale) + 'rem';
     $('.slider-controls').css('left', left);
   }
 
@@ -265,7 +268,7 @@ var desktop_column = 1170;
 
   Drupal.behaviors.govcms_ui_kit_slider = {
     attach: function(context, settings) {
-      $slider = $('.view-slideshow > div > ul');
+      $slider = $('.view-slideshow > div > ul', context);
       if ($slider.length > 0) {
         $slider.owlCarousel(banner_settings).removeClass('mobile');
         owl = $slider.data('owlCarousel');
@@ -274,6 +277,9 @@ var desktop_column = 1170;
         $(window).unbind('resize', slider_responsive).bind('resize', slider_responsive);
         slider_responsive();
         objectFitImages($slider.find('img'));
+
+        // Add support for text resize widget.
+        $('html').on('font-size-change', position_custom_controls);
       }
     }
   };
@@ -287,12 +293,12 @@ var desktop_column = 1170;
 (function($, Drupal, window, document, undefined) {
 
   function increase_font() {
-    $('html').addClass('large-fonts');
+    $('html').addClass('large-fonts').trigger('font-size-change');
     return false;
   }
 
   function decrease_font() {
-    $('html').removeClass('large-fonts');
+    $('html').removeClass('large-fonts').trigger('font-size-change');
     return false;
   }
 

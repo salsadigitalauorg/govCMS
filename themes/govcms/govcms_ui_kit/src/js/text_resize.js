@@ -4,12 +4,12 @@
 (function($, Drupal, window, document, undefined) {
 
   function increase_font() {
-    $('html').addClass('large-fonts');
+    $('html').addClass('large-fonts').trigger('font-size-change');
     return false;
   }
 
   function decrease_font() {
-    $('html').removeClass('large-fonts');
+    $('html').removeClass('large-fonts').trigger('font-size-change');
     return false;
   }
 

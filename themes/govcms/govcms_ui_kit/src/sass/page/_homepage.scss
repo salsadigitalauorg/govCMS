@@ -31,10 +31,16 @@
   &>.content {
     @include center-column($desktop_column);
     @include link-colours($primary_1, $secondary_3, $neutral_1);
-    padding-top: $default_padding * 2;
-    padding-bottom: rem(50px);
+    padding-top: $default_padding;
+    padding-bottom: $default_padding;
     color: $neutral_1;
-    text-align: center;
+    @include breakpoint(tablet) {
+      padding-top: $default_padding * 2;
+      padding-bottom: rem(50px);
+    }
+    @include breakpoint(desktop) {
+      text-align: center;
+    }
     p {
       margin-bottom: 0;
     }
@@ -58,6 +64,7 @@
     position: relative;
     &>ul {
       padding: 0;
+      margin-bottom: 0;
       &:not(.owl-loaded) {
         &>li:not(.views-row-first) {
           @include breakpoint(tablet) {
@@ -92,7 +99,7 @@
       }
     }
     img {
-      height: 225px;
+      height: rem(225px);
       object-fit: cover;
       float: left;
       @include breakpoint(tablet) {
@@ -103,7 +110,7 @@
   }
   .banner-description-holder {
     color: white;
-    padding: 30px $default_padding;
+    padding: rem(30px) $default_padding;
     background-color: $primary_1;
     @include breakpoint(tablet) {
       @include center-column($desktop_column);
@@ -117,7 +124,7 @@
       margin-top: 0;
       font-weight: 400;
       @include breakpoint(tablet) {
-        margin-bottom: 21px;
+        margin-bottom: rem(21px);
         font-size: rem(48px);
         font-weight: 300;
       }
@@ -131,25 +138,25 @@
       position: relative;
       box-sizing: border-box;
       background-color: #0B3B46;
-      padding: 45px;
-      padding-top: 85px;
-      max-width: 524px;
-      min-height: 444px;
+      padding: rem(45px);
+      padding-top: rem(85px);
+      max-width: rem(524px);
+      min-height: rem(444px);
       color: white;
     }
   }
   .slider-controls {
     position: absolute;
     top: 0;
-    padding-top: 34px;
-    padding-left: 37px;
+    padding-top: rem(34px);
+    padding-left: rem(37px);
     button {
       color: $secondary_3;
       border: 0;
       margin: 0;
       display: inline;
-      width: 36px;
-      height: 36px;
+      width: rem(36px);
+      height: rem(36px);
       overflow: hidden;
       padding: 0;
       vertical-align: top;
