@@ -35,6 +35,7 @@ function govcms_ui_kit_js_alter(&$javascript) {
  */
 function govcms_ui_kit_preprocess_html(&$variables) {
   drupal_add_js("(function(h) {h.className = h.className.replace('no-js', '') })(document.documentElement);", array('type' => 'inline', 'scope' => 'header'));
+  drupal_add_js('jQuery.extend(Drupal.settings, { "pathToTheme": "' . path_to_theme() . '" });', 'inline');
 }
 
 /**

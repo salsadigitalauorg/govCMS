@@ -9810,4 +9810,23 @@ body.not-front #content .view .view-content .views-row .field-name-body {
 #block-menu-block-govcms-menu-block-sidebar h2, #block-menu-block-govcms-menu-block-sidebar .display {
   margin-top: 0;
 }
+
+.block-twitter-block {
+  max-width: 73.125rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  box-sizing: content-box;
+}
+
+.block-twitter-block h2, .block-twitter-block .display {
+  color: #224A61;
+  font-size: 1.875rem;
+  font-weight: 300;
+}
+
+.block-twitter-block iframe {
+  width: 100% !important;
+}
 /*# sourceMappingURL=styles.css.map */
