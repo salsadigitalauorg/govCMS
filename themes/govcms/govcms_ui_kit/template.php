@@ -35,6 +35,7 @@ function govcms_ui_kit_js_alter(&$javascript) {
  */
 function govcms_ui_kit_preprocess_html(&$variables) {
   drupal_add_js("(function(h) {h.className = h.className.replace('no-js', '') })(document.documentElement);", array('type' => 'inline', 'scope' => 'header'));
+  drupal_add_js('jQuery.extend(Drupal.settings, { "pathToTheme": "' . path_to_theme() . '" });', 'inline');
 }
 
 /**
@@ -146,5 +147,32 @@ function govcms_ui_kit_preprocess_node(&$variables) {
     if ($has_thumb || $has_image || $has_featured_image) {
       $variables['classes_array'][] = 'has-thumbnail';
     }
+  }
+}
+
+/**
+ * Implements theme_breadcrumb().
+ */
+function govcms_ui_kit_breadcrumb($variables) {
+  $breadcrumb = $variables['breadcrumb'];
+  $output = '';
+
+  if (!empty($breadcrumb)) {
+    // Build the breadcrumb trail.
+    $output = '<nav class="breadcrumbs--inverted" role="navigation" aria-label="breadcrumb">';
+    $output .= '<ul><li>' . implode('</li><li>', $breadcrumb) . '</li></ul>';
+    $output .= '</nav>';
+  }
+
+  return $output;
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function govcms_ui_kit_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id === 'search_api_page_search_form_default_search') {
+    $form['keys_1']['#attributes']['placeholder'] = 'Type search term here';
+    $form['keys_1']['#title'] = 'Search field';
   }
 }

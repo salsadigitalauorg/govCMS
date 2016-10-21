@@ -1,0 +1,11 @@
+.block-twitter-block {
+  @include center-column($desktop_column);
+  h2 {
+    color: $primary_1;
+    font-size: rem(30px);
+    font-weight: 300;
+  }
+  iframe {
+    width: 100% !important;
+  }
+}

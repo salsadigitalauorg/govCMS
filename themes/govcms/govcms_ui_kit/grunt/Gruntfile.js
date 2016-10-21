@@ -264,6 +264,7 @@ module.exports = function(grunt) {
       }
     };
     sass_config.dist.files[THEME_DIR + 'dist/css/styles.css'] = THEME_DIR + 'src/sass/styles.scss';
+    sass_config.dist.files[THEME_DIR + 'dist/css/custom_twitter_theme.css'] = THEME_DIR + 'src/sass/custom_twitter_theme.scss';
 
     GRUNT_CONFIG['sass'] = sass_config;
 
