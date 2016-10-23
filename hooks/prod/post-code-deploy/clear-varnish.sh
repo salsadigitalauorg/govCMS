@@ -7,5 +7,5 @@
 # repo_url="$5"
 # repo_type="$6"
 
-# drush @$target_env  ac-domain-purge <domain.com>
-# drush @$target_env cc all
+drush @$target_env ac-domain-purge govcmsnewthemeqc5gsdrz6m.devcloud.acquia-sites.com
+drush @$target_env cc all
