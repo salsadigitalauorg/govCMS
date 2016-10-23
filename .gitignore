@@ -49,7 +49,7 @@ behat.local.yml
 
 # Generated files #
 ###################
-hooks
+# hooks
 
 # Local dev tools #
 ###################
