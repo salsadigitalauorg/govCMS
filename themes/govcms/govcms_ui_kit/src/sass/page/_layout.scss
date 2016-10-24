@@ -70,9 +70,9 @@ html {
 }
 
 ul, ol, dl, p, dt, dd {
-  // Global override for 16px font-size pon tablet.
+  // Global override for 16px font-size on tablet.
   @include breakpoint(tablet) {
     font-size: inherit;
-    line-height: 1.875rem;
+    line-height: rem(30px);
   }
 }
