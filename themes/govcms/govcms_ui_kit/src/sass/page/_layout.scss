@@ -9,16 +9,24 @@ html {
   body.not-front & {
     .content-header {
       background-color: $secondary_1;
-      height: rem(235px);
-      padding-top: rem(40px);
-      padding-bottom: rem(40px);
-      margin-bottom: rem(103px);
+      padding-top: rem(19px);
+      padding-bottom: rem(25px);
+      margin-bottom: rem(25px);
+      @include breakpoint(tablet) {
+        height: rem(235px);
+        padding-top: rem(40px);
+        padding-bottom: rem(40px);
+        margin-bottom: rem(103px);
+      }
       .content-header-inner {
         @include center-column($desktop_column);
         h1 {
-          font-weight: 300;
-          font-size: rem(48px);
           color: white;
+          font-weight: 300;
+          font-size: rem(32px);
+          @include breakpoint(tablet) {
+            font-size: rem(48px);
+          }
         }
       }
     }
@@ -49,13 +57,22 @@ html {
 
 .sidebar-first {
   order: -1;
+  width: 100%;
   @include breakpoint(tablet) {
-    width: rem(240px);
-    min-width: rem(240px);
+    width: rem(330px);
+    min-width: rem(330px);
     padding-right: rem(60px);
   }
 }
 
 .more-link {
   @include link-colours($primary_1, $secondary_3, $neutral_1);
+}
+
+ul, ol, dl, p, dt, dd {
+  // Global override for 16px font-size pon tablet.
+  @include breakpoint(tablet) {
+    font-size: inherit;
+    line-height: 1.875rem;
+  }
 }

@@ -57,6 +57,12 @@
   width: 1px;
 }
 
+@mixin transition-fade() {
+  transition-timing-function: $transition-easing;
+  transition-duration: $transition-timing-fast;
+  transition-property: background-color, border-color, color;
+}
+
 // =========================================================
 // LISTING MIXINS
 // These mixins should be applied to in the following fashion:
