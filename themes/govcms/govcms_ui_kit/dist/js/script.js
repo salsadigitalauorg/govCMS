@@ -382,16 +382,19 @@ var desktop_column = 1170;
     attach: function(context, settings) {
       $slider = $('.view-slideshow > div > ul', context);
       if ($slider.length > 0) {
-        $slider.owlCarousel(banner_settings).removeClass('mobile');
-        owl = $slider.data('owlCarousel');
-        owl.stop();
-        create_custom_controls();
-        $(window).unbind('resize', slider_responsive).bind('resize', slider_responsive);
-        slider_responsive();
-        objectFitImages($slider.find('img'));
+        // Slider only initialized if more than 1 item present.
+        if ($slider.children().length > 1) {
+          $slider.owlCarousel(banner_settings).removeClass('mobile');
+          owl = $slider.data('owlCarousel');
+          owl.stop();
+          create_custom_controls();
+          $(window).unbind('resize', slider_responsive).bind('resize', slider_responsive);
+          slider_responsive();
+          objectFitImages($slider.find('img'));
 
-        // Add support for text resize widget.
-        $('html').on('font-size-change', position_custom_controls);
+          // Add support for text resize widget.
+          $('html').on('font-size-change', position_custom_controls);
+        }
       }
     }
   };
