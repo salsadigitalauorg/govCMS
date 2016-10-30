@@ -1,0 +1,1 @@
+DDG.page.showMessage('spelling',{'link':'regex%20phpstorm','suggestion':'regex <b>phpstorm</b>','type':'WHI','recourseLink':'regex%20%22phpstrom%22','qc':2,'exp':0});
