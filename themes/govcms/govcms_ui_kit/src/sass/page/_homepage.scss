@@ -65,6 +65,7 @@
     &>ul {
       padding: 0;
       margin-bottom: 0;
+      height: rem(444px);
       &:not(.owl-loaded) {
         &>li:not(.views-row-first) {
           @include breakpoint(tablet) {

@@ -5623,17 +5623,17 @@ table {
   margin-bottom: 1.6em;
 }
 
-.content-table {
+.content-table, .field-name-body table {
   width: 100%;
   border-collapse: collapse;
 }
 
-.content-table tr:nth-child(even) {
+.content-table tr:nth-child(even), .field-name-body table tr:nth-child(even) {
   background-color: #f0f3f5;
 }
 
-.content-table td,
-.content-table th {
+.content-table td, .field-name-body table td,
+.content-table th, .field-name-body table th {
   border-bottom: solid 1px #bbbbbb;
   padding: 0.4em;
   font-size: 87.5%;
@@ -5641,14 +5641,14 @@ table {
 }
 
 @media screen and (min-width: 768px) {
-  .content-table td,
-  .content-table th {
+  .content-table td, .field-name-body table td,
+  .content-table th, .field-name-body table th {
     padding: 0.8em;
     font-size: initial;
   }
 }
 
-.content-table thead {
+.content-table thead, .field-name-body table thead {
   border-bottom: solid 2px #6e6e6e;
 }
 
@@ -7409,9 +7409,11 @@ html:not(.no-js) .region-navigation .block-superfish ul.sf-menu:not(.superfish-p
   background-color: #224A61;
   color: white;
   text-decoration: none;
-  padding: 1.875rem;
-  padding-bottom: 1.625rem;
-  border-bottom: 4px solid transparent;
+  padding-left: 1.875rem;
+  padding-right: 1.875rem;
+  padding-top: 0.9375rem;
+  padding-bottom: 0.875rem;
+  border-bottom: 1px solid transparent;
 }
 
 .region-navigation .block-superfish ul.sf-menu > li > ul li a:hover, .region-navigation .block-superfish ul.sf-menu > li > ul li a:focus {
@@ -7542,7 +7544,7 @@ body.not-front #content .content-header {
     height: 14.6875rem;
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
-    margin-bottom: 6.4375rem;
+    margin-bottom: 5rem;
   }
 }
 
@@ -7575,10 +7577,12 @@ body.not-front #content .content-header .content-header-inner h1, body.not-front
   }
 }
 
-#content .content-body > .messages {
+.content-body > .messages {
   max-width: 73.125rem;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 1.375rem;
+  margin-bottom: 1.375rem;
 }
 
 .content-body .content {
@@ -7872,6 +7876,75 @@ body.not-front #content .content-header .content-header-inner h1, body.not-front
     font-size: inherit;
     line-height: 1.875rem;
   }
+}
+
+.content-body-inner.has-sidebar .region-content {
+  width: 100%;
+}
+
+.page-node .content-body-inner.no-sidebar .region-content .node > .submitted {
+  max-width: 48.75rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  box-sizing: content-box;
+}
+
+.page-node .content-body-inner.no-sidebar .region-content .node > .content {
+  max-width: 48.75rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  box-sizing: content-box;
+}
+
+.content-body-inner.no-sidebar .form-help-text {
+  max-width: 48.75rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  box-sizing: content-box;
+}
+
+.content-body-inner.no-sidebar .region-content form {
+  max-width: 48.75rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  box-sizing: content-box;
+}
+
+.content-body-inner.no-sidebar .panel-display.panel-1col {
+  max-width: 48.75rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  box-sizing: content-box;
+}
+
+.content-body-inner.no-sidebar #site-map {
+  max-width: 48.75rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  box-sizing: content-box;
+}
+
+.field-name-body .introduction {
+  font-weight: 300;
+  font-size: 1.375rem;
+  line-height: 2.25rem;
+}
+
+.page-node .region-content .field {
+  margin-top: 1.375rem;
+  margin-bottom: 1.375rem;
 }
 
 #block-views-footer-teaser-block {
@@ -8425,6 +8498,17 @@ ul.tabs.primary {
   box-sizing: border-box;
 }
 
+.block-workbench {
+  max-width: 73.125rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  box-sizing: content-box;
+  margin-top: 1.375rem;
+  margin-bottom: 1.375rem;
+}
+
 .content-header .breadcrumbs--inverted {
   display: block;
   background-color: transparent;
@@ -8437,7 +8521,7 @@ ul.tabs.primary {
 
 .content-header .breadcrumbs--inverted ul li {
   font-size: 1rem;
-  height: 30px;
+  height: 1.875rem;
 }
 
 .content-header .breadcrumbs--inverted ul li a {
@@ -8672,6 +8756,7 @@ ul.tabs.primary {
 #block-views-slideshow-block .view-content > ul {
   padding: 0;
   margin-bottom: 0;
+  height: 27.75rem;
 }
 
 @media (min-width: 768px) {
@@ -9853,11 +9938,11 @@ body.not-front #content .view .view-content .views-row .field-name-body {
   color: #313131;
 }
 
-#block-menu-block-govcms-menu-block-sidebar {
+.region-sidebar-first .block {
   margin-bottom: 1.375rem;
 }
 
-#block-menu-block-govcms-menu-block-sidebar h2, #block-menu-block-govcms-menu-block-sidebar .display {
+.region-sidebar-first .block h2, .region-sidebar-first .block .display {
   margin-top: 0;
   margin-bottom: 0;
   color: #313131;
@@ -9866,12 +9951,16 @@ body.not-front #content .view .view-content .views-row .field-name-body {
 }
 
 @media (min-width: 768px) {
-  #block-menu-block-govcms-menu-block-sidebar h2, #block-menu-block-govcms-menu-block-sidebar .display {
+  .region-sidebar-first .block h2, .region-sidebar-first .block .display {
     color: #224A61;
     font-weight: 300;
     font-size: 1.875rem;
     margin-bottom: 2rem;
   }
+}
+
+#block-menu-block-govcms-menu-block-sidebar {
+  margin-bottom: 1.375rem;
 }
 
 #block-menu-block-govcms-menu-block-sidebar h2 button, #block-menu-block-govcms-menu-block-sidebar .display button {
@@ -9900,7 +9989,7 @@ body.not-front #content .view .view-content .views-row .field-name-body {
   top: 0;
   bottom: 0;
   right: 0;
-  width: 50px;
+  width: 3.125rem;
   background-image: url(../images/svg/sidebar-mobile-arrow-down.svg);
   background-position: center;
   background-repeat: no-repeat;

@@ -132,3 +132,17 @@
 @mixin listing-component-body() {
   color: $neutral_1;
 }
+
+// =========================================================
+// WYSIWYG MIXIN
+// =========================================================
+@mixin wysiwyg() {
+  table {
+    @extend .content-table;
+  }
+  .introduction {
+    font-weight: 300;
+    font-size: rem(22px);
+    line-height: rem(36px);
+  }
+}
