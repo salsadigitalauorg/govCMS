@@ -117,6 +117,10 @@ ul, ol, dl, p, dt, dd {
   @include wysiwyg;
 }
 
+a[rel~='external']::after {
+  background-image: url("../../vendor/gov-au-ui-kit/assets/img/icons/external-link--aqua.svg") !important;
+}
+
 .page-node {
   .region-content {
     .field {
