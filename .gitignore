@@ -57,3 +57,6 @@ hooks
 .bundle
 node_modules
 .sass-cache
+
+docroot
+local/*
