@@ -7882,6 +7882,12 @@ body.not-front #content .content-header .content-header-inner h1, body.not-front
   width: 100%;
 }
 
+@media (min-width: 768px) {
+  .content-body-inner.has-sidebar .region-content {
+    max-width: 48.75rem;
+  }
+}
+
 .page-node .content-body-inner.no-sidebar .region-content .node > .submitted {
   max-width: 48.75rem;
   margin-left: auto;
@@ -8740,6 +8746,7 @@ ul.tabs.primary {
   color: #224A61;
   font-size: 2.25rem;
   font-weight: 300;
+  margin-top: 0;
 }
 
 #block-views-slideshow-block > h2, #block-views-slideshow-block > .display {
@@ -8760,7 +8767,12 @@ ul.tabs.primary {
 #block-views-slideshow-block .view-content > ul {
   padding: 0;
   margin-bottom: 0;
-  height: 27.75rem;
+}
+
+@media (min-width: 768px) {
+  #block-views-slideshow-block .view-content > ul {
+    height: 27.75rem;
+  }
 }
 
 @media (min-width: 768px) {

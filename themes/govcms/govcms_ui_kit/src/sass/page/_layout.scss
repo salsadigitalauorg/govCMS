@@ -81,6 +81,9 @@ ul, ol, dl, p, dt, dd {
   &.has-sidebar {
     .region-content {
       width: 100%;
+      @include breakpoint(tablet) {
+        max-width: $desktop_content_column;
+      }
     }
   }
   &.no-sidebar {
