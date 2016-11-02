@@ -11,10 +11,7 @@
       font-weight: 400;
       font-size: rem(18px);
       @include breakpoint(tablet) {
-        color: $primary_1;
-        font-weight: 300;
-        font-size: rem(30px);
-        margin-bottom: rem(32px);
+        @include medium-title;
       }
     }
   }

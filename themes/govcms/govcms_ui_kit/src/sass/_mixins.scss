@@ -146,3 +146,17 @@
     line-height: rem(36px);
   }
 }
+
+@mixin large-title() {
+  color: $primary_1;
+  font-size: rem(36px);
+  font-weight: 300;
+  margin-top: 0;
+}
+
+@mixin medium-title() {
+  color: $primary_1;
+  font-size: rem(30px);
+  font-weight: 300;
+  margin-top: 0;
+}

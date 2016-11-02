@@ -73,9 +73,11 @@ function govcms_ui_kit_views_pre_render(&$variables) {
     if ($variables->name === 'footer_teaser') {
       $len = count($variables->result);
       for ($i = 0; $i < $len; $i++) {
-        // Define custom image style for thumbnails on footer_teaser.
-        if ($variables->result[$i]->field_field_image[0]['rendered']['#image_style'] == 'blog_teaser_thumbnail') {
-          $variables->result[$i]->field_field_image[0]['rendered']['#image_style'] = 'govcms_ui_kit_thumbnail';
+        if (!empty($variables->result[$i]->field_field_image)) {
+          // Define custom image style for thumbnails on footer_teaser.
+          if ($variables->result[$i]->field_field_image[0]['rendered']['#image_style'] == 'blog_teaser_thumbnail') {
+            $variables->result[$i]->field_field_image[0]['rendered']['#image_style'] = 'govcms_ui_kit_thumbnail';
+          }
         }
       }
     }
