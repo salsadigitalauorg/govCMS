@@ -1,9 +1,15 @@
+// =========================================================
+// TEXT RESIZE
+// =========================================================
 html {
   &.large-fonts {
     font-size: $large-font-size;
   }
 }
 
+// =========================================================
+// GENERAL HEADING LAYOUT
+// =========================================================
 #content {
   @include button-colours($secondary_1, darken($secondary_1, 20%), #fff, darken($secondary_1, 40%), darken($secondary_1, 40%));
   body.not-front & {
@@ -33,6 +39,9 @@ html {
   }
 }
 
+// =========================================================
+// GENERAL BODY LAYOUT
+// =========================================================
 .content-body {
   &>.messages {
     max-width: $desktop_column;
@@ -65,18 +74,6 @@ html {
   }
 }
 
-.more-link {
-  @include link-colours($primary_1, $secondary_3, $neutral_1);
-}
-
-ul, ol, dl, p, dt, dd {
-  // Global override for 16px font-size on tablet.
-  @include breakpoint(tablet) {
-    font-size: inherit;
-    line-height: rem(30px);
-  }
-}
-
 .content-body-inner {
   &.has-sidebar {
     .region-content {
@@ -84,6 +81,9 @@ ul, ol, dl, p, dt, dd {
       @include breakpoint(tablet) {
         max-width: $desktop_content_column;
       }
+    }
+    .panel-display {
+      @include panel-display-layouts(desktop);
     }
   }
   &.no-sidebar {
@@ -108,8 +108,18 @@ ul, ol, dl, p, dt, dd {
         @include center-column($desktop_content_column);
       }
     }
-    .panel-display.panel-1col {
-      @include center-column($desktop_content_column);
+    .panel-display {
+      @include panel-display-layouts(tablet);
+      // All Columns - Over 2 panels columns to use full column.
+      @include center-column($desktop_column);
+      // One Column (100)
+      &.panel-1col, &.panel-1col-stacked {
+        @include center-column($desktop_content_column);
+      }
+      // Two Columns (50 50)
+      &.panel-2col, &.panel-2col-bricks, &.panel-2col-stacked {
+        @include center-column($desktop_content_column);
+      }
     }
     #site-map {
       @include center-column($desktop_content_column);
@@ -117,6 +127,21 @@ ul, ol, dl, p, dt, dd {
     .search-api-page-results {
       @include center-column($desktop_content_column);
     }
+  }
+}
+
+// =========================================================
+// MISC ELEMENT STYLING
+// =========================================================
+.more-link {
+  @include link-colours($primary_1, $secondary_3, $neutral_1);
+}
+
+ul, ol, dl, p, dt, dd {
+  // Global override for 16px font-size on tablet.
+  @include breakpoint(tablet) {
+    font-size: inherit;
+    line-height: rem(30px);
   }
 }
 
