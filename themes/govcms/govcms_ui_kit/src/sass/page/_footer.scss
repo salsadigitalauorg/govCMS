@@ -2,9 +2,12 @@
 // TEASER BLOCK VIEW
 // =========================================================
 #block-views-footer-teaser-block {
-  margin-top: $default_padding * 2;
+  background-color: $neutral_4;
+  padding-top: $default_padding * 2;
+  padding-bottom: $default_padding * 2;
   &>h2 {
-    @include visually-hidden;
+    @include center-column($desktop_column);
+    @include medium-title;
   }
   .content {
     @include center-column($desktop_column);
@@ -18,15 +21,14 @@
       }
       .views-row {
         @include listing-component-wrapper;
-        padding-top: $listing_component_image_height;
+        padding: 0;
+        background-color: transparent;
         @include breakpoint(tablet) {
           @include span-columns(4 of 12);
         }
         h2 {
           @include listing-component-heading;
-        }
-        .field-name-field-image {
-          @include listing-component-image;
+          margin-top: 0;
         }
         .field-name-field-description {
           @include listing-component-body;
@@ -45,8 +47,8 @@
 // GENERAL FOOTER MENUS
 // =========================================================
 .region-footer {
+  background-color: $primary_1;
   .block-menu, .block-menu-block {
-    background-color: $primary_1;
     &>h2 {
       @include visually-hidden;
     }

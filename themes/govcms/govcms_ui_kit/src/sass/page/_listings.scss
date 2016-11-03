@@ -20,7 +20,7 @@ body.not-front #content {
   }
   .has-sidebar {
     .view {
-      max-width: rem(770px);
+      max-width: $desktop_content_column;
     }
     .views-row {
       @include breakpoint(tablet) {
@@ -46,7 +46,7 @@ body.not-front #content {
           padding-left: 0;
           padding-right: 0;
           &.has-thumbnail {
-            padding-top: rem(275px);
+            padding-top: $listing_component_image_height;
             .field-type-image {
               @include listing-component-image;
               .field-item:nth-child(n + 2) {

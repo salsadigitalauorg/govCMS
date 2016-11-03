@@ -84,9 +84,11 @@
               background-color: $primary_1;
               color: white;
               text-decoration: none;
-              padding: rem(30px);
-              padding-bottom: rem((30px - 4px));
-              border-bottom: 4px solid transparent;
+              padding-left: rem(30px);
+              padding-right: rem(30px);
+              padding-top: rem(15px);
+              padding-bottom: rem((15px - 1px));
+              border-bottom: 1px solid transparent;
               &:hover, &:focus {
                 background-color: $main_menu_hover;
                 border-bottom-color: white;

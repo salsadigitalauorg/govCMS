@@ -9,30 +9,38 @@ html {
   body.not-front & {
     .content-header {
       background-color: $secondary_1;
-      height: rem(235px);
-      padding-top: rem(40px);
-      padding-bottom: rem(40px);
-      margin-bottom: rem(103px);
+      padding-top: rem(19px);
+      padding-bottom: rem(25px);
+      margin-bottom: rem(25px);
+      @include breakpoint(tablet) {
+        height: rem(235px);
+        padding-top: rem(40px);
+        padding-bottom: rem(40px);
+        margin-bottom: rem(80px);
+      }
       .content-header-inner {
         @include center-column($desktop_column);
         h1 {
-          font-weight: 300;
-          font-size: rem(48px);
           color: white;
+          font-weight: 300;
+          font-size: rem(32px);
+          @include breakpoint(tablet) {
+            font-size: rem(48px);
+          }
         }
       }
-    }
-  }
-  .content-body {
-    &>.messages {
-      max-width: $desktop_column;
-      margin-left: auto;
-      margin-right: auto;
     }
   }
 }
 
 .content-body {
+  &>.messages {
+    max-width: $desktop_column;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: $default_padding;
+    margin-bottom: $default_padding;
+  }
   .content {
     @include link-colours($primary_1, $secondary_3, $neutral_1);
   }
@@ -49,13 +57,86 @@ html {
 
 .sidebar-first {
   order: -1;
+  width: 100%;
   @include breakpoint(tablet) {
-    width: rem(240px);
-    min-width: rem(240px);
+    width: rem(330px);
+    min-width: rem(330px);
     padding-right: rem(60px);
   }
 }
 
 .more-link {
   @include link-colours($primary_1, $secondary_3, $neutral_1);
+}
+
+ul, ol, dl, p, dt, dd {
+  // Global override for 16px font-size on tablet.
+  @include breakpoint(tablet) {
+    font-size: inherit;
+    line-height: rem(30px);
+  }
+}
+
+.content-body-inner {
+  &.has-sidebar {
+    .region-content {
+      width: 100%;
+      @include breakpoint(tablet) {
+        max-width: $desktop_content_column;
+      }
+    }
+  }
+  &.no-sidebar {
+    .page-node & {
+      .region-content {
+        // Node Pages
+        .node {
+          &>.submitted {
+            @include center-column($desktop_content_column);
+          }
+          &>.content {
+            @include center-column($desktop_content_column);
+          }
+        }
+      }
+    }
+    .form-help-text {
+      @include center-column($desktop_content_column);
+    }
+    .region-content {
+      form {
+        @include center-column($desktop_content_column);
+      }
+    }
+    .panel-display.panel-1col {
+      @include center-column($desktop_content_column);
+    }
+    #site-map {
+      @include center-column($desktop_content_column);
+    }
+    .search-api-page-results {
+      @include center-column($desktop_content_column);
+    }
+  }
+}
+
+.field-name-body {
+  @include wysiwyg;
+}
+
+a[rel~='external']::after {
+  background-image: url("../../vendor/gov-au-ui-kit/assets/img/icons/external-link--aqua.svg") !important;
+}
+
+.page-node {
+  .region-content {
+    .field {
+      margin-top: $default-padding;
+      margin-bottom: $default-padding;
+    }
+  }
+}
+
+#content {
+  @include button-colours($secondary_1, #10505F, #0C3C47, white);
 }
