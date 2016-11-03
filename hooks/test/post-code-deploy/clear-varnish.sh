@@ -1,3 +1,4 @@
 #!/bin/bash
 
-../../prod/post-code-deploy.sh $1 $2 $3 $4 $5 $6
+pwd=`dirname "$0"`
+$pwd/../../prod/post-code-deploy/clear-varnish.sh $1 $2 $3 $4 $5 $6
