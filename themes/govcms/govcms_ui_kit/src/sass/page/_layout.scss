@@ -89,6 +89,7 @@ ul, ol, dl, p, dt, dd {
   &.no-sidebar {
     .page-node & {
       .region-content {
+        // Node Pages
         .node {
           &>.submitted {
             @include center-column($desktop_content_column);
@@ -113,6 +114,9 @@ ul, ol, dl, p, dt, dd {
     #site-map {
       @include center-column($desktop_content_column);
     }
+    .search-api-page-results {
+      @include center-column($desktop_content_column);
+    }
   }
 }
 
@@ -131,4 +135,8 @@ a[rel~='external']::after {
       margin-bottom: $default-padding;
     }
   }
+}
+
+#content {
+  @include button-colours($secondary_1, #10505F, #0C3C47, white);
 }

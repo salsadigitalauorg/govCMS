@@ -189,31 +189,11 @@
           box-sizing: border-box;
           flex: 1;
           input {
-            margin: 0;
-            height: rem(52px);
-            background-color: $neutral_4;
-            border: 1px solid $neutral_3;
-            z-index: 1;
-            position: relative;
+            @include search-text-field;
           }
         }
         input[type="submit"] {
-          @include hide-text;
-          border: 0;
-          margin: 0;
-          padding: 0;
-          width: rem(52px);
-          height: rem(52px);
-          box-sizing: border-box;
-          background-color: $neutral_4;
-          border: 1px solid $neutral_3;
-          border-left: 0;
-          background-repeat: no-repeat;
-          background-position: center;
-          background-image: url(../images/svg/magnifying_glass.svg);
-          &:hover, &:focus {
-            background-image: url(../images/svg/magnifying_glass_hover.svg);
-          }
+          @include search-submit-button;
         }
       }
     }

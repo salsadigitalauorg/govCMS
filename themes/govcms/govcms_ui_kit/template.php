@@ -178,3 +178,11 @@ function govcms_ui_kit_form_alter(&$form, &$form_state, $form_id) {
     $form['keys_1']['#title'] = 'Search field';
   }
 }
+
+/**
+ * Implements theme_preprocess_search_api_page_result().
+ */
+function govcms_ui_kit_preprocess_search_api_page_result(&$variables) {
+  // Strip out HTML tags from search results.
+  $variables['snippet'] = strip_tags($variables['snippet']);
+}

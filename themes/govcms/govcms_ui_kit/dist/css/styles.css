@@ -7303,6 +7303,7 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
   background-color: #f0f3f5;
   border: 1px solid #bbbbbb;
   border-left: 0;
+  border-radius: 0;
   background-repeat: no-repeat;
   background-position: center;
   background-image: url(../images/svg/magnifying_glass.svg);
@@ -7942,6 +7943,15 @@ body.not-front #content .content-header .content-header-inner h1, body.not-front
   box-sizing: content-box;
 }
 
+.content-body-inner.no-sidebar .search-api-page-results {
+  max-width: 48.75rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  box-sizing: content-box;
+}
+
 .field-name-body .introduction {
   font-weight: 300;
   font-size: 1.375rem;
@@ -7955,6 +7965,41 @@ a[rel~='external']::after {
 .page-node .region-content .field {
   margin-top: 1.375rem;
   margin-bottom: 1.375rem;
+}
+
+#content button,
+#content .button,
+#content [role='button'],
+#content [type='submit'],
+#content [type='reset'],
+#content [type='button'] {
+  background-color: #146577;
+  color: white;
+  border-color: #10505F;
+}
+
+#content button:hover, #content button:focus,
+#content .button:hover,
+#content .button:focus,
+#content [role='button']:hover,
+#content [role='button']:focus,
+#content [type='submit']:hover,
+#content [type='submit']:focus,
+#content [type='reset']:hover,
+#content [type='reset']:focus,
+#content [type='button']:hover,
+#content [type='button']:focus {
+  background-color: #10505F;
+  color: white;
+}
+
+#content button:active,
+#content .button:active,
+#content [role='button']:active,
+#content [type='submit']:active,
+#content [type='reset']:active,
+#content [type='button']:active {
+  background-color: #0C3C47;
 }
 
 #block-views-footer-teaser-block {
@@ -8438,6 +8483,10 @@ a[rel~='external']::after {
         -ms-flex-order: 1;
             order: 1;
   }
+}
+
+form > div {
+  box-sizing: border-box;
 }
 
 @media screen and (min-width: 768px) {
@@ -10247,5 +10296,65 @@ body.not-front #content .view .view-content .views-row .field-name-body {
 
 #block-menu-menu-quick-links span.placeholder-link:hover {
   cursor: not-allowed;
+}
+
+#content .search-form > div {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+#content .search-form .form-item {
+  margin: 0;
+  width: calc(100% - 3.25rem);
+}
+
+#content .search-form input.form-text {
+  margin: 0;
+  height: 3.25rem;
+  background-color: #f0f3f5;
+  border: 1px solid #bbbbbb;
+  z-index: 1;
+  position: relative;
+}
+
+#content .search-form input.form-submit {
+  overflow: hidden;
+  text-indent: 101%;
+  white-space: nowrap;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: 3.25rem;
+  height: 3.25rem;
+  box-sizing: border-box;
+  background-color: #f0f3f5;
+  border: 1px solid #bbbbbb;
+  border-left: 0;
+  border-radius: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../images/svg/magnifying_glass.svg);
+}
+
+#content .search-form input.form-submit:hover, #content .search-form input.form-submit:focus {
+  background-image: url(../images/svg/magnifying_glass_hover.svg);
+}
+
+.search-results {
+  padding: 0;
+}
+
+.search-results .search-result h3 {
+  font-size: 1.625rem;
+}
+
+.search-results .search-result .search-info {
+  font-size: 0.875rem;
+  color: #6e6e6e;
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=styles.css.map */
