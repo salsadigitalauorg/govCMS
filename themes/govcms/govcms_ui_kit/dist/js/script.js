@@ -1,4 +1,39 @@
 /**
+ * External Link detector.
+ */
+(function($, Drupal, window, document, undefined) {
+
+  var current_domain = '';
+  var domainRe = /https?:\/\/((?:[\w\d-]+\.)+[\w\d]{2,})/i;
+
+  function domain(url) {
+    var arr = domainRe.exec(url);
+    return (arr !== null) ? arr[1] : current_domain;
+  }
+
+  function isExternalRegexClosure(url) {
+    return current_domain !== domain(url);
+  }
+
+  Drupal.behaviors.govcms_ui_kit_external_links = {
+    attach: function(context, settings) {
+      // Get current domain.
+      current_domain = domain(location.href);
+
+      // Find all links and apply a rel if external.
+      $('a', context).each(function() {
+        var $this = $(this);
+        if (isExternalRegexClosure($this.attr('href'))) {
+          $this.attr('rel', 'external');
+        }
+      })
+    }
+  };
+
+})(jQuery, Drupal, this, this.document);
+
+
+/**
  * Mobile Menu.
  */
 (function($, Drupal, window, document, undefined) {
@@ -382,16 +417,19 @@ var desktop_column = 1170;
     attach: function(context, settings) {
       $slider = $('.view-slideshow > div > ul', context);
       if ($slider.length > 0) {
-        $slider.owlCarousel(banner_settings).removeClass('mobile');
-        owl = $slider.data('owlCarousel');
-        owl.stop();
-        create_custom_controls();
-        $(window).unbind('resize', slider_responsive).bind('resize', slider_responsive);
-        slider_responsive();
-        objectFitImages($slider.find('img'));
+        // Slider only initialized if more than 1 item present.
+        if ($slider.children().length > 1) {
+          $slider.owlCarousel(banner_settings).removeClass('mobile');
+          owl = $slider.data('owlCarousel');
+          owl.stop();
+          create_custom_controls();
+          $(window).unbind('resize', slider_responsive).bind('resize', slider_responsive);
+          slider_responsive();
+          objectFitImages($slider.find('img'));
 
-        // Add support for text resize widget.
-        $('html').on('font-size-change', position_custom_controls);
+          // Add support for text resize widget.
+          $('html').on('font-size-change', position_custom_controls);
+        }
       }
     }
   };

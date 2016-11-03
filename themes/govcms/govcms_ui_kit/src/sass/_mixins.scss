@@ -132,3 +132,63 @@
 @mixin listing-component-body() {
   color: $neutral_1;
 }
+
+// =========================================================
+// WYSIWYG MIXIN
+// =========================================================
+@mixin wysiwyg() {
+  table {
+    @extend .content-table;
+  }
+  .introduction {
+    font-weight: 300;
+    font-size: rem(22px);
+    line-height: rem(36px);
+  }
+}
+
+@mixin large-title() {
+  color: $primary_1;
+  font-size: rem(36px);
+  font-weight: 300;
+  margin-top: 0;
+}
+
+@mixin medium-title() {
+  color: $primary_1;
+  font-size: rem(30px);
+  font-weight: 300;
+  margin-top: 0;
+}
+
+// =========================================================
+// SEARCH
+// =========================================================
+@mixin search-text-field() {
+  margin: 0;
+  height: rem(52px);
+  background-color: $neutral_4;
+  border: 1px solid $neutral_3;
+  z-index: 1;
+  position: relative;
+}
+
+@mixin search-submit-button() {
+  @include hide-text;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: rem(52px);
+  height: rem(52px);
+  box-sizing: border-box;
+  background-color: $neutral_4;
+  border: 1px solid $neutral_3;
+  border-left: 0;
+  border-radius: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../images/svg/magnifying_glass.svg);
+  &:hover, &:focus {
+    background-image: url(../images/svg/magnifying_glass_hover.svg);
+  }
+}

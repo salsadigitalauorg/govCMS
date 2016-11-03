@@ -1,9 +1,9 @@
 .block-twitter-block {
   @include center-column($desktop_column);
+  padding-top: $default_padding * 2;
+  padding-bottom: $default_padding * 2;
   h2 {
-    color: $primary_1;
-    font-size: rem(30px);
-    font-weight: 300;
+    @include medium-title;
   }
   iframe {
     width: 100% !important;

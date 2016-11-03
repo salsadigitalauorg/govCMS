@@ -48,9 +48,7 @@
 }
 
 .pane-title {
-  color: $primary_1;
-  font-size: rem(36px);
-  font-weight: 300;
+  @include large-title;
 }
 
 // =========================================================
@@ -65,6 +63,9 @@
     &>ul {
       padding: 0;
       margin-bottom: 0;
+      @include breakpoint(tablet) {
+        height: rem(444px);
+      }
       &:not(.owl-loaded) {
         &>li:not(.views-row-first) {
           @include breakpoint(tablet) {

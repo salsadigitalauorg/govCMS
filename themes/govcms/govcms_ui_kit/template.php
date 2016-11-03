@@ -73,9 +73,11 @@ function govcms_ui_kit_views_pre_render(&$variables) {
     if ($variables->name === 'footer_teaser') {
       $len = count($variables->result);
       for ($i = 0; $i < $len; $i++) {
-        // Define custom image style for thumbnails on footer_teaser.
-        if ($variables->result[$i]->field_field_image[0]['rendered']['#image_style'] == 'blog_teaser_thumbnail') {
-          $variables->result[$i]->field_field_image[0]['rendered']['#image_style'] = 'govcms_ui_kit_thumbnail';
+        if (!empty($variables->result[$i]->field_field_image)) {
+          // Define custom image style for thumbnails on footer_teaser.
+          if ($variables->result[$i]->field_field_image[0]['rendered']['#image_style'] == 'blog_teaser_thumbnail') {
+            $variables->result[$i]->field_field_image[0]['rendered']['#image_style'] = 'govcms_ui_kit_thumbnail';
+          }
         }
       }
     }
@@ -175,4 +177,12 @@ function govcms_ui_kit_form_alter(&$form, &$form_state, $form_id) {
     $form['keys_1']['#attributes']['placeholder'] = 'Type search term here';
     $form['keys_1']['#title'] = 'Search field';
   }
+}
+
+/**
+ * Implements theme_preprocess_search_api_page_result().
+ */
+function govcms_ui_kit_preprocess_search_api_page_result(&$variables) {
+  // Strip out HTML tags from search results.
+  $variables['snippet'] = strip_tags($variables['snippet']);
 }
