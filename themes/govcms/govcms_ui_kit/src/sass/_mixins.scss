@@ -63,6 +63,10 @@
   transition-property: background-color, border-color, color;
 }
 
+@function ui-kit-icon($filename) {
+  @return url("../../vendor/gov-au-ui-kit/assets/img/icons/"+$filename);
+}
+
 // =========================================================
 // LISTING MIXINS
 // These mixins should be applied to in the following fashion:
@@ -87,6 +91,7 @@
   position: relative;
   padding: rem(30px);
   margin-bottom: rem(30px);
+  height: calc(100% - #{rem(30px)});
   background-color: white;
 }
 

@@ -258,7 +258,7 @@ Usage:
 main > article .see-more::after, footer[role='contentinfo'] .see-more::after, .list-horizontal .tags .see-more::after, .list-vertical .tags .see-more::after, .list-vertical--thirds .tags .see-more::after, .list-vertical--fourths .tags .see-more::after, .list-small .tags .see-more::after, .list-highlighted .tags .see-more::after, .primary-nav ul .see-more::after,
 .local-nav ul .see-more::after, [class^='breadcrumbs'] .see-more::after, [class^='breadcrumbs'][class$='--inverted'] .see-more::after, .skip-to .see-more::after, [class^='controls'] .see-more::after, .govau--header .see-more::after, .prerelease-govau--header .see-more::after, .hero .see-more::after,
 .hero-sml .see-more::after,
-.hero-med .see-more::after, .header__inner .header__secondary-menu .see-more::after, .content-body .content .see-more::after, .more-link .see-more::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 .see-more::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display .see-more::after, .region-footer .block-menu .content ul.menu > li .see-more::after, .region-footer .block-menu-block .content ul.menu > li .see-more::after, .bean-basic-content > .content .see-more::after, #block-views-slideshow-block .banner-description-holder h3 .see-more::after, #block-views-slideshow-block .banner-description-holder .field .see-more::after, .view-home-page-blog-articles .view-content .views-row h2 .see-more::after, .view-home-page-blog-articles .view-content .views-row .display .see-more::after, .view-latest-news .view-content .views-row h2 .see-more::after, .view-latest-news .view-content .views-row .display .see-more::after, body.not-front #content .view .view-content .views-row h2 .see-more::after, body.not-front #content .view .view-content .views-row .display .see-more::after, #block-menu-menu-quick-links .see-more::after {
+.hero-med .see-more::after, .header__inner .header__secondary-menu .see-more::after, .content-body .content .see-more::after, .more-link .see-more::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 .see-more::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display .see-more::after, .region-footer .block-menu .content ul.menu > li .see-more::after, .region-footer .block-menu-block .content ul.menu > li .see-more::after, .bean-basic-content > .content .see-more::after, #block-views-slideshow-block .banner-description-holder h3 .see-more::after, #block-views-slideshow-block .banner-description-holder .field .see-more::after, .view-home-page-blog-articles .view-content .views-row h2 .see-more::after, .view-home-page-blog-articles .view-content .views-row .display .see-more::after, .view-latest-news .view-content .views-row h2 .see-more::after, .view-latest-news .view-content .views-row .display .see-more::after, body.not-front #content .view .view-content .views-row h2 .see-more::after, body.not-front #content .view .view-content .views-row .display .see-more::after, #block-menu-menu-quick-links ul.menu li .see-more::after {
   background-image: url("../latest/img/icons/arrow-right--aqua.svg");
 }
 
@@ -278,7 +278,7 @@ summary::before, .accordion--controls summary::before, .nav-toggle::before {
 main > article a[rel~='external']::after, footer[role='contentinfo'] a[rel~='external']::after, .list-horizontal .tags a[rel~='external']::after, .list-vertical .tags a[rel~='external']::after, .list-vertical--thirds .tags a[rel~='external']::after, .list-vertical--fourths .tags a[rel~='external']::after, .list-small .tags a[rel~='external']::after, .list-highlighted .tags a[rel~='external']::after, .primary-nav ul a[rel~='external']::after,
 .local-nav ul a[rel~='external']::after, [class^='breadcrumbs'] a[rel~='external']::after, [class^='breadcrumbs'][class$='--inverted'] a[rel~='external']::after, .skip-to a[rel~='external']::after, [class^='controls'] a[rel~='external']::after, .govau--header a[rel~='external']::after, .prerelease-govau--header a[rel~='external']::after, .hero a[rel~='external']::after,
 .hero-sml a[rel~='external']::after,
-.hero-med a[rel~='external']::after, .header__inner .header__secondary-menu a[rel~='external']::after, .content-body .content a[rel~='external']::after, .more-link a[rel~='external']::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 a[rel~='external']::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display a[rel~='external']::after, .region-footer .block-menu .content ul.menu > li a[rel~='external']::after, .region-footer .block-menu-block .content ul.menu > li a[rel~='external']::after, .bean-basic-content > .content a[rel~='external']::after, #block-views-slideshow-block .banner-description-holder h3 a[rel~='external']::after, #block-views-slideshow-block .banner-description-holder .field a[rel~='external']::after, .view-home-page-blog-articles .view-content .views-row h2 a[rel~='external']::after, .view-home-page-blog-articles .view-content .views-row .display a[rel~='external']::after, .view-latest-news .view-content .views-row h2 a[rel~='external']::after, .view-latest-news .view-content .views-row .display a[rel~='external']::after, body.not-front #content .view .view-content .views-row h2 a[rel~='external']::after, body.not-front #content .view .view-content .views-row .display a[rel~='external']::after, #block-menu-menu-quick-links a[rel~='external']::after {
+.hero-med a[rel~='external']::after, .header__inner .header__secondary-menu a[rel~='external']::after, .content-body .content a[rel~='external']::after, .more-link a[rel~='external']::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 a[rel~='external']::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display a[rel~='external']::after, .region-footer .block-menu .content ul.menu > li a[rel~='external']::after, .region-footer .block-menu-block .content ul.menu > li a[rel~='external']::after, .bean-basic-content > .content a[rel~='external']::after, #block-views-slideshow-block .banner-description-holder h3 a[rel~='external']::after, #block-views-slideshow-block .banner-description-holder .field a[rel~='external']::after, .view-home-page-blog-articles .view-content .views-row h2 a[rel~='external']::after, .view-home-page-blog-articles .view-content .views-row .display a[rel~='external']::after, .view-latest-news .view-content .views-row h2 a[rel~='external']::after, .view-latest-news .view-content .views-row .display a[rel~='external']::after, body.not-front #content .view .view-content .views-row h2 a[rel~='external']::after, body.not-front #content .view .view-content .views-row .display a[rel~='external']::after, #block-menu-menu-quick-links ul.menu li a[rel~='external']::after {
   background-image: url("../latest/img/icons/external-link--aqua.svg");
 }
 
@@ -2077,7 +2077,7 @@ Style guide: Link styles.1 Hover links
 main > article a[rel~='external']::after, footer[role='contentinfo'] a[rel~='external']::after, .list-horizontal .tags a[rel~='external']::after, .list-vertical .tags a[rel~='external']::after, .list-vertical--thirds .tags a[rel~='external']::after, .list-vertical--fourths .tags a[rel~='external']::after, .list-small .tags a[rel~='external']::after, .list-highlighted .tags a[rel~='external']::after, .primary-nav ul a[rel~='external']::after,
 .local-nav ul a[rel~='external']::after, [class^='breadcrumbs'] a[rel~='external']::after, [class^='breadcrumbs'][class$='--inverted'] a[rel~='external']::after, .skip-to a[rel~='external']::after, [class^='controls'] a[rel~='external']::after, .govau--header a[rel~='external']::after, .prerelease-govau--header a[rel~='external']::after, .hero a[rel~='external']::after,
 .hero-sml a[rel~='external']::after,
-.hero-med a[rel~='external']::after, .header__inner .header__secondary-menu a[rel~='external']::after, .content-body .content a[rel~='external']::after, .more-link a[rel~='external']::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 a[rel~='external']::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display a[rel~='external']::after, .region-footer .block-menu .content ul.menu > li a[rel~='external']::after, .region-footer .block-menu-block .content ul.menu > li a[rel~='external']::after, .bean-basic-content > .content a[rel~='external']::after, #block-views-slideshow-block .banner-description-holder h3 a[rel~='external']::after, #block-views-slideshow-block .banner-description-holder .field a[rel~='external']::after, .view-home-page-blog-articles .view-content .views-row h2 a[rel~='external']::after, .view-home-page-blog-articles .view-content .views-row .display a[rel~='external']::after, .view-latest-news .view-content .views-row h2 a[rel~='external']::after, .view-latest-news .view-content .views-row .display a[rel~='external']::after, body.not-front #content .view .view-content .views-row h2 a[rel~='external']::after, body.not-front #content .view .view-content .views-row .display a[rel~='external']::after, #block-menu-menu-quick-links a[rel~='external']::after {
+.hero-med a[rel~='external']::after, .header__inner .header__secondary-menu a[rel~='external']::after, .content-body .content a[rel~='external']::after, .more-link a[rel~='external']::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 a[rel~='external']::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display a[rel~='external']::after, .region-footer .block-menu .content ul.menu > li a[rel~='external']::after, .region-footer .block-menu-block .content ul.menu > li a[rel~='external']::after, .bean-basic-content > .content a[rel~='external']::after, #block-views-slideshow-block .banner-description-holder h3 a[rel~='external']::after, #block-views-slideshow-block .banner-description-holder .field a[rel~='external']::after, .view-home-page-blog-articles .view-content .views-row h2 a[rel~='external']::after, .view-home-page-blog-articles .view-content .views-row .display a[rel~='external']::after, .view-latest-news .view-content .views-row h2 a[rel~='external']::after, .view-latest-news .view-content .views-row .display a[rel~='external']::after, body.not-front #content .view .view-content .views-row h2 a[rel~='external']::after, body.not-front #content .view .view-content .views-row .display a[rel~='external']::after, #block-menu-menu-quick-links ul.menu li a[rel~='external']::after {
   content: '';
   position: absolute;
   display: inline;
@@ -8198,6 +8198,7 @@ a[rel~='external']::after {
   position: relative;
   padding: 1.875rem;
   margin-bottom: 1.875rem;
+  height: calc(100% - 1.875rem);
   background-color: white;
   padding: 0;
   background-color: transparent;
@@ -8708,7 +8709,7 @@ ul.tabs.primary {
 }
 
 .content-header .breadcrumbs--inverted ul li:not(:last-child) {
-  background-image: url(../../vendor/gov-au-ui-kit/assets/img/icons/arrow-right--white.svg);
+  background-image: url("../../vendor/gov-au-ui-kit/assets/img/icons/arrow-right--white.svg");
   background-position: right top 7px;
 }
 
@@ -9458,6 +9459,7 @@ ul.tabs.primary {
   position: relative;
   padding: 1.875rem;
   margin-bottom: 1.875rem;
+  height: calc(100% - 1.875rem);
   background-color: white;
 }
 
@@ -9680,6 +9682,7 @@ ul.tabs.primary {
   position: relative;
   padding: 1.875rem;
   margin-bottom: 1.875rem;
+  height: calc(100% - 1.875rem);
   background-color: white;
 }
 
@@ -9933,6 +9936,7 @@ body.not-front #content .view .view-content .views-row .node {
   position: relative;
   padding: 1.875rem;
   margin-bottom: 1.875rem;
+  height: calc(100% - 1.875rem);
   background-color: white;
   padding-left: 0;
   padding-right: 0;
@@ -10319,7 +10323,49 @@ body.not-front #content .view .view-content .views-row .field-name-body {
 }
 
 #block-menu-menu-quick-links {
-  color: #146577;
+  max-width: 73.125rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  box-sizing: content-box;
+  margin-top: 2.75rem;
+  margin-bottom: 2.75rem;
+}
+
+#block-menu-menu-quick-links h2, #block-menu-menu-quick-links .display {
+  color: #224A61;
+  font-size: 1.875rem;
+  font-weight: 300;
+  margin-top: 0;
+}
+
+#block-menu-menu-quick-links ul.menu {
+  padding: 0;
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  #block-menu-menu-quick-links ul.menu {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #block-menu-menu-quick-links ul.menu::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
+#block-menu-menu-quick-links ul.menu li {
+  list-style: none;
+  margin: 0;
+  background-color: #146577;
+  padding: 1.875rem;
+  box-sizing: border-box;
+  margin-bottom: 1.375rem;
+  color: white;
   /*
   See more link
 
@@ -10378,36 +10424,72 @@ body.not-front #content .view .view-content .views-row .field-name-body {
   */
 }
 
-#block-menu-menu-quick-links a {
-  color: #146577;
+@media (min-width: 768px) {
+  #block-menu-menu-quick-links ul.menu li {
+    float: left;
+    display: block;
+    margin-right: 2.7461357194%;
+    width: 31.502576187%;
+  }
+  #block-menu-menu-quick-links ul.menu li:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  #block-menu-menu-quick-links ul.menu li {
+    float: left;
+    display: block;
+    margin-right: 2.7461357194%;
+    width: 22.9403982104%;
+  }
+  #block-menu-menu-quick-links ul.menu li:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  #block-menu-menu-quick-links ul.menu li:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  #block-menu-menu-quick-links ul.menu li:nth-child(4n) {
+    margin-right: 0;
+  }
+}
+
+#block-menu-menu-quick-links ul.menu li a {
+  color: white;
   text-decoration: none;
   outline: none;
-  border-bottom: solid 1px #5bcbe3;
+  border-bottom: solid 1px #f0f3f5;
   transition-timing-function: ease-in-out;
   transition-duration: 0.1s;
   transition-property: background-color, border-color, color;
 }
 
-#block-menu-menu-quick-links a:hover, #block-menu-menu-quick-links a:focus {
-  background-color: #5bcbe3;
+#block-menu-menu-quick-links ul.menu li a:hover, #block-menu-menu-quick-links ul.menu li a:focus {
+  background-color: #f0f3f5;
   color: #313131;
 }
 
-#block-menu-menu-quick-links a[rel~='external'] {
+#block-menu-menu-quick-links ul.menu li a[rel~='external'] {
   display: inline;
   position: relative;
   margin-right: 1.6em;
 }
 
-#block-menu-menu-quick-links a[rel~='external']:hover {
+#block-menu-menu-quick-links ul.menu li a[rel~='external']:hover {
   border-color: transparent;
 }
 
-#block-menu-menu-quick-links a[rel~='external']::after {
+#block-menu-menu-quick-links ul.menu li a[rel~='external']::after {
   background-size: 0.9em auto;
 }
 
-#block-menu-menu-quick-links .see-more {
+#block-menu-menu-quick-links ul.menu li .see-more {
   display: inline-block;
   position: relative;
   margin-right: 1.6em;
@@ -10415,7 +10497,7 @@ body.not-front #content .view .view-content .views-row .field-name-body {
   color: #18788d;
 }
 
-#block-menu-menu-quick-links .see-more::after {
+#block-menu-menu-quick-links ul.menu li .see-more::after {
   content: '';
   position: absolute;
   top: 0;
@@ -10428,18 +10510,22 @@ body.not-front #content .view .view-content .views-row .field-name-body {
   background-size: 0.64em auto;
 }
 
-#block-menu-menu-quick-links .see-more:hover, #block-menu-menu-quick-links .see-more:focus {
+#block-menu-menu-quick-links ul.menu li .see-more:hover, #block-menu-menu-quick-links ul.menu li .see-more:focus {
   color: #313131;
 }
 
-#block-menu-menu-quick-links span.placeholder-link {
-  color: rgba(20, 101, 119, 0.7);
+#block-menu-menu-quick-links ul.menu li span.placeholder-link {
+  color: rgba(255, 255, 255, 0.7);
   border-bottom: none;
   cursor: not-allowed;
 }
 
-#block-menu-menu-quick-links span.placeholder-link:hover {
+#block-menu-menu-quick-links ul.menu li span.placeholder-link:hover {
   cursor: not-allowed;
+}
+
+#block-menu-menu-quick-links ul.menu li a[rel~='external']::after {
+  background-image: url(../images/svg/external-link--white.svg) !important;
 }
 
 #content .search-form > div {
@@ -10507,6 +10593,7 @@ body.not-front #content .view .view-content .views-row .field-name-body {
   position: relative;
   padding: 1.875rem;
   margin-bottom: 1.875rem;
+  height: calc(100% - 1.875rem);
   background-color: white;
   padding-top: 17.1875rem;
   padding-left: 0;

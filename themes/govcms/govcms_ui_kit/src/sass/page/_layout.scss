@@ -150,7 +150,7 @@ ul, ol, dl, p, dt, dd {
 }
 
 a[rel~='external']::after {
-  background-image: url("../../vendor/gov-au-ui-kit/assets/img/icons/external-link--aqua.svg") !important;
+  background-image: ui-kit-icon("external-link--aqua.svg") !important;
 }
 
 .page-node {
