@@ -131,6 +131,24 @@ html {
 }
 
 // =========================================================
+// ABOVE FOOTER (SECOND SIDEBAR)
+// =========================================================
+.region-sidebar-second {
+  &>.block {
+    border-top: 1px solid #9B9B9B;
+    &:nth-child(3n+1) {
+      background-color: white;
+    }
+    &:nth-child(3n+2) {
+      background-color: $non-white;
+    }
+    &:nth-child(3n+3) {
+      background-color: #E6E6E6;
+    }
+  }
+}
+
+// =========================================================
 // MISC ELEMENT STYLING
 // =========================================================
 .more-link {
