@@ -36,6 +36,8 @@ function govcms_ui_kit_js_alter(&$javascript) {
 function govcms_ui_kit_preprocess_html(&$variables) {
   drupal_add_js("(function(h) {h.className = h.className.replace('no-js', '') })(document.documentElement);", array('type' => 'inline', 'scope' => 'header'));
   drupal_add_js('jQuery.extend(Drupal.settings, { "pathToTheme": "' . path_to_theme() . '" });', 'inline');
+  // Drupal forms.js does not support later jQuery versions. Migrate library needed.
+  drupal_add_js(drupal_get_path('theme', 'govcms_ui_kit') . '/vendor/jquery/jquery-migrate-1.2.1.min.js');
 }
 
 /**

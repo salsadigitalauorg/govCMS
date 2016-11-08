@@ -1,5 +1,6 @@
 #content {
   .search-form {
+    @include center-column($desktop_content_column);
     &>div {
       display: flex;
       align-items: flex-end;
