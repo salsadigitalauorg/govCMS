@@ -184,6 +184,10 @@ function govcms_ui_kit_form_alter(&$form, &$form_state, $form_id) {
     // Search page (above results) form.
     $form['form']['keys_1']['#title'] = 'Type search term here';
   }
+  if ($form_id === 'search_form') {
+    // Search form on page not found (404 page).
+    $form['basic']['keys']['#title'] = 'Type search term here';
+  }
 }
 
 /**
@@ -191,5 +195,13 @@ function govcms_ui_kit_form_alter(&$form, &$form_state, $form_id) {
  */
 function govcms_ui_kit_preprocess_search_api_page_result(&$variables) {
   // Strip out HTML tags from search results.
+  $variables['snippet'] = strip_tags($variables['snippet']);
+}
+
+/**
+ * Implements theme_preprocess_search_result().
+ */
+function govcms_ui_kit_preprocess_search_result(&$variables) {
+  // Strip out HTML tags from search results (404 page).
   $variables['snippet'] = strip_tags($variables['snippet']);
 }

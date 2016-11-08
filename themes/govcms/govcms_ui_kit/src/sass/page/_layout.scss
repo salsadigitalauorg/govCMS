@@ -122,6 +122,11 @@ html {
     .search-api-page-results {
       @include center-column($desktop_content_column);
     }
+    .page-search404 & {
+      .block-system {
+        @include center-column($desktop_content_column);
+      }
+    }
   }
 }
 
