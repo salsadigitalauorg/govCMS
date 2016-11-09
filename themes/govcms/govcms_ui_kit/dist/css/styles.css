@@ -8432,7 +8432,7 @@ form.webform-client-form .webform-component-select select[multiple="multiple"] {
 
 form.webform-client-form .webform-component-date select {
   width: 25%;
-  min-width: 90px;
+  min-width: 5.625rem;
 }
 
 form.webform-client-form .webform-component-date input.webform-calendar {
@@ -8443,6 +8443,8 @@ form.webform-client-form .webform-component-date input.webform-calendar {
   color: transparent !important;
   border: 0;
   background-image: url(../images/svg/icon_calendar.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 form.webform-client-form .webform-component-date input.webform-calendar:hover, form.webform-client-form .webform-component-date input.webform-calendar:focus {
@@ -8551,10 +8553,10 @@ form.webform-client-form .webform-progressbar {
 form.webform-client-form .webform-progressbar-page {
   border-color: transparent;
   background-color: #bbbbbb;
-  width: 23px;
-  height: 23px;
+  width: 1.4375rem;
+  height: 1.4375rem;
   border-radius: 50%;
-  margin: -18px -11.5px;
+  margin: -1.125rem -11.5px;
 }
 
 form.webform-client-form .webform-progressbar-page.completed {
@@ -8567,23 +8569,23 @@ form.webform-client-form .webform-progressbar-page.current {
 
 form.webform-client-form .webform-progressbar-outer {
   border-color: transparent;
-  height: 12px;
+  height: 0.75rem;
   background-color: #f0f3f5;
 }
 
 form.webform-client-form .webform-progressbar-inner {
   background-color: #18788d;
-  height: 12px;
+  height: 0.75rem;
 }
 
 form.webform-client-form .webform-progressbar-page-label {
-  margin-top: 15px;
+  margin-top: 0.9375rem;
   display: inline-block;
   color: #313131;
 }
 
 form.webform-client-form .webform-previous {
-  margin-right: 10px;
+  margin-right: 0.625rem;
 }
 
 form.webform-client-form .webform-next {

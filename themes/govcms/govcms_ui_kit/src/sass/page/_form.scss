@@ -57,7 +57,7 @@ form.webform-client-form {
   .webform-component-date {
     select {
       width: 25%;
-      min-width: 90px;
+      min-width: rem(90px);
     }
     input.webform-calendar {
       padding: 0;
@@ -67,6 +67,8 @@ form.webform-client-form {
       color: transparent !important;
       border: 0;
       background-image: url(../images/svg/icon_calendar.svg);
+      background-repeat: no-repeat;
+      background-position: center;
       &:hover, &:focus {
         background-image: url(../images/svg/icon_calendar_hover.svg);
       }
@@ -169,10 +171,10 @@ form.webform-client-form {
   .webform-progressbar-page {
     border-color: transparent;
     background-color: $neutral_3;
-    width: 23px;
-    height: 23px;
+    width: rem(23px);
+    height: rem(23px);
     border-radius: 50%;
-    margin: -18px (23px * -0.5);
+    margin: rem(-18px) (23px * -0.5);
     &.completed {
       background-color: $secondary_2;
     }
@@ -182,20 +184,20 @@ form.webform-client-form {
   }
   .webform-progressbar-outer {
     border-color: transparent;
-    height: 12px;
+    height: rem(12px);
     background-color: $neutral_4;
   }
   .webform-progressbar-inner {
     background-color: $secondary_2;
-    height: 12px;
+    height: rem(12px);
   }
   .webform-progressbar-page-label {
-    margin-top: 15px;
+    margin-top: rem(15px);
     display: inline-block;
     color: $neutral_1;
   }
   .webform-previous {
-    margin-right: 10px;
+    margin-right: rem(10px);
   }
   .webform-next {
     margin-left: auto;
