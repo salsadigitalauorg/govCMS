@@ -36,6 +36,8 @@ function govcms_ui_kit_js_alter(&$javascript) {
 function govcms_ui_kit_preprocess_html(&$variables) {
   drupal_add_js("(function(h) {h.className = h.className.replace('no-js', '') })(document.documentElement);", array('type' => 'inline', 'scope' => 'header'));
   drupal_add_js('jQuery.extend(Drupal.settings, { "pathToTheme": "' . path_to_theme() . '" });', 'inline');
+  // Drupal forms.js does not support later jQuery versions. Migrate library needed.
+  drupal_add_js(drupal_get_path('theme', 'govcms_ui_kit') . '/vendor/jquery/jquery-migrate-1.2.1.min.js');
 }
 
 /**
@@ -182,6 +184,10 @@ function govcms_ui_kit_form_alter(&$form, &$form_state, $form_id) {
     // Search page (above results) form.
     $form['form']['keys_1']['#title'] = 'Type search term here';
   }
+  if ($form_id === 'search_form') {
+    // Search form on page not found (404 page).
+    $form['basic']['keys']['#title'] = 'Type search term here';
+  }
 }
 
 /**
@@ -189,5 +195,13 @@ function govcms_ui_kit_form_alter(&$form, &$form_state, $form_id) {
  */
 function govcms_ui_kit_preprocess_search_api_page_result(&$variables) {
   // Strip out HTML tags from search results.
+  $variables['snippet'] = strip_tags($variables['snippet']);
+}
+
+/**
+ * Implements theme_preprocess_search_result().
+ */
+function govcms_ui_kit_preprocess_search_result(&$variables) {
+  // Strip out HTML tags from search results (404 page).
   $variables['snippet'] = strip_tags($variables['snippet']);
 }

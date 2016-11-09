@@ -103,11 +103,6 @@ html {
     .form-help-text {
       @include center-column($desktop_content_column);
     }
-    .region-content {
-      form {
-        @include center-column($desktop_content_column);
-      }
-    }
     .panel-display {
       @include panel-display-layouts(tablet);
       // All Columns - Over 2 panels columns to use full column.
@@ -126,6 +121,11 @@ html {
     }
     .search-api-page-results {
       @include center-column($desktop_content_column);
+    }
+    .page-search404 & {
+      .block-system {
+        @include center-column($desktop_content_column);
+      }
     }
   }
 }

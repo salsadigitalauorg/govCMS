@@ -1,8 +1,23 @@
 #content {
   .search-form {
+    @include center-column($desktop_content_column);
+    // 'Page not found' form has small differences from the search page version.
+    .page-search404 & {
+      padding-left: 0;
+      padding-right: 0;
+      .container-inline {
+        display: flex;
+        align-items: flex-end;
+        label {
+          display: block;
+        }
+      }
+    }
     &>div {
-      display: flex;
-      align-items: flex-end;
+      .page-search & {
+        display: flex;
+        align-items: flex-end;
+      }
     }
     .form-item {
       margin: 0;
