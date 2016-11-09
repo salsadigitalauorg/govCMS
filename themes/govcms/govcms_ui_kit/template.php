@@ -174,8 +174,13 @@ function govcms_ui_kit_breadcrumb($variables) {
  */
 function govcms_ui_kit_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id === 'search_api_page_search_form_default_search') {
+    // Global header form.
     $form['keys_1']['#attributes']['placeholder'] = 'Type search term here';
     $form['keys_1']['#title'] = 'Search field';
+  }
+  elseif ($form_id === 'search_api_page_search_form') {
+    // Search page (above results) form.
+    $form['form']['keys_1']['#title'] = 'Type search term here';
   }
 }
 

@@ -13,7 +13,7 @@
         }
         &:not(:last-child) {
           // Override previously defined icon with new path.
-          background-image: url(../../vendor/gov-au-ui-kit/assets/img/icons/arrow-right--white.svg);
+          background-image: ui-kit-icon("arrow-right--white.svg");
           background-position: right top 7px;
         }
         &:last-child {

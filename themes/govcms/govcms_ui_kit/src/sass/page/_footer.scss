@@ -1,49 +1,4 @@
 // =========================================================
-// TEASER BLOCK VIEW
-// =========================================================
-#block-views-footer-teaser-block {
-  background-color: $neutral_4;
-  padding-top: $default_padding * 2;
-  padding-bottom: $default_padding * 2;
-  &>h2 {
-    @include center-column($desktop_column);
-    @include medium-title;
-  }
-  .content {
-    @include center-column($desktop_column);
-  }
-  .view-footer-teaser {
-    .view-content {
-      @include breakpoint(tablet) {
-        @include outer-container(100%);
-        display: flex;
-        flex-wrap: wrap;
-      }
-      .views-row {
-        @include listing-component-wrapper;
-        padding: 0;
-        background-color: transparent;
-        @include breakpoint(tablet) {
-          @include span-columns(4 of 12);
-        }
-        h2 {
-          @include listing-component-heading;
-          margin-top: 0;
-        }
-        .field-name-field-description {
-          @include listing-component-body;
-        }
-        &:nth-child(3n) {
-          @include breakpoint(tablet) {
-            @include omega();
-          }
-        }
-      }
-    }
-  }
-}
-
-// =========================================================
 // GENERAL FOOTER MENUS
 // =========================================================
 .region-footer {
@@ -112,48 +67,6 @@
             }
           }
         }
-      }
-    }
-  }
-}
-
-// =========================================================
-// DISCLAIMER FOOTER
-// =========================================================
-#block-menu-menu-footer-sub-menu {
-  border-top: 1px solid darken($primary_1, 10%);
-  .content {
-    @include breakpoint(tablet) {
-      padding-top: rem(38px);
-      padding-bottom: rem(38px);
-      display: flex;
-      justify-content: space-between;
-      align-content: center;
-    }
-    ul.menu {
-      @include breakpoint(tablet) {
-        order: 2;
-        text-align: right;
-        width: auto;
-        display: block;
-      }
-      &>li {
-        margin-bottom: rem(15px);
-        @include breakpoint(tablet) {
-          display: inline-block;
-          margin-left: rem(15px);
-        }
-        @include breakpoint(desktop) {
-          margin-left: rem(30px);
-        }
-        a {
-          font-weight: 400;
-        }
-      }
-    }
-    .footer-copyright {
-      @include breakpoint(tablet) {
-        order: 1;
       }
     }
   }
