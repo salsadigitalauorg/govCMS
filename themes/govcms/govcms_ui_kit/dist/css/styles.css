@@ -8519,13 +8519,14 @@ form.webform-client-form .webform-component-grid table.webform-grid .form-type-r
   text-align: center;
 }
 
-form.webform-client-form .webform-component-grid table.webform-grid .form-type-radio input[type="radio"] {
-  width: auto;
+form.webform-client-form .webform-component-grid table.webform-grid .form-type-radio label {
+  clip: auto;
+  position: relative !important;
   height: auto;
-  left: initial;
-  position: static;
-  padding: initial;
-  border: initial;
+  overflow: auto;
+  overflow: hidden;
+  width: 3.75rem;
+  color: transparent;
 }
 
 form.webform-client-form .webform-component-fieldset {

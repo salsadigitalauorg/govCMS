@@ -124,13 +124,14 @@ form.webform-client-form {
       .form-type-radio {
         margin: 0;
         text-align: center;
-        input[type="radio"] {
-          width: auto;
+        label {
+          clip: auto;
+          position: relative !important;
           height: auto;
-          left: initial;
-          position: static;
-          padding: initial;
-          border: initial;
+          overflow: auto;
+          overflow: hidden;
+          width: rem(60px);
+          color: transparent;
         }
       }
     }
