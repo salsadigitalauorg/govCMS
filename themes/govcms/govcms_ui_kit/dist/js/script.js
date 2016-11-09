@@ -96,6 +96,7 @@
  * Global variables.
  */
 var desktop_breakpoint = 1200;
+var large_tablet_breakpoint = 1024;
 var tablet_breakpoint = 768;
 var mobile_breakpoint = 420;
 
@@ -259,14 +260,14 @@ var desktop_column = 1170;
   function side_menu_responsive() {
     var w = window.innerWidth || document.documentElement.clientWidth;
     // Mobile (No toggles).
-    if (w < tablet_breakpoint && is_menu_desktop) {
+    if (w < large_tablet_breakpoint && is_menu_desktop) {
       // Disable menu toggles.
       is_menu_desktop = false;
       remove_toggle_buttons();
       enable_mobile_accordion();
     }
     // Desktop (Toggles).
-    else if (w >= tablet_breakpoint && !is_menu_desktop) {
+    else if (w >= large_tablet_breakpoint && !is_menu_desktop) {
       is_menu_desktop = true;
       add_toggle_buttons();
       disable_mobile_accordion();

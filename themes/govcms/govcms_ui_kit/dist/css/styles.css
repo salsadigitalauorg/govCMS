@@ -7725,7 +7725,7 @@ body.not-front #content .content-header .content-header-inner h1, body.not-front
           flex-wrap: wrap;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .content-body-inner.has-sidebar {
     -webkit-flex-wrap: nowrap;
         -ms-flex-wrap: nowrap;
@@ -7740,7 +7740,7 @@ body.not-front #content .content-header .content-header-inner h1, body.not-front
   width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .sidebar-first {
     width: 20.625rem;
     min-width: 20.625rem;
@@ -7752,7 +7752,7 @@ body.not-front #content .content-header .content-header-inner h1, body.not-front
   width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .content-body-inner.has-sidebar .region-content {
     max-width: 48.75rem;
   }
@@ -10054,7 +10054,7 @@ body.not-front #content .view .view-content .views-row .field-name-body {
   font-size: 1.125rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .region-sidebar-first .block h2, .region-sidebar-first .block .display {
     color: #224A61;
     font-size: 1.875rem;
@@ -10080,9 +10080,11 @@ body.not-front #content .view .view-content .views-row .field-name-body {
   border: 1px solid #bbbbbb;
   text-align: left;
   background-color: #F4F4F4;
+  color: #313131;
 }
 
 #block-menu-block-govcms-menu-block-sidebar h2 button:hover, #block-menu-block-govcms-menu-block-sidebar .display button:hover, #block-menu-block-govcms-menu-block-sidebar h2 button:focus, #block-menu-block-govcms-menu-block-sidebar .display button:focus {
+  color: #313131;
   background-color: #bbbbbb;
 }
 
@@ -10110,7 +10112,7 @@ body.not-front #content .view .view-content .views-row .field-name-body {
   display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   #block-menu-block-govcms-menu-block-sidebar .content {
     display: block;
   }
