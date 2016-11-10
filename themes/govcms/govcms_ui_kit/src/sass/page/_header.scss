@@ -3,9 +3,12 @@
   padding-top: rem(16px);
   padding-bottom: $default_padding;
   .header__secondary-menu {
-    @include link-colours($primary_1, $secondary_3, $neutral_1);
-    display: block;
-    text-align: right;
+    display: none;
+    @include breakpoint(tablet) {
+      @include link-colours($primary_1, $secondary_3, $neutral_1);
+      display: block;
+      text-align: right;
+    }
     ul.links {
       li {
         display: inline-block;
@@ -24,9 +27,6 @@
     .logo-wrapper {
       display: flex;
       align-items: center;
-      @include breakpoint(tablet) {
-        display: block;
-      }
       a {
         display: inline-block;
         vertical-align: middle;
@@ -42,6 +42,7 @@
         padding-left: rem(5px);
         margin-right: auto;
         font-size: rem(18px);
+        line-height: 1em;
         color: $primary_1;
         font-weight: 400;
         @include breakpoint(tablet) {
@@ -106,11 +107,13 @@
     display: none;
     @include breakpoint(tablet) {
       display: block;
-      margin-right: rem(36px);
+      margin-right: $default-padding;
     }
     ul.text-resize {
-      margin: 0;
+      display: flex;
       padding: 0;
+      margin: 0;
+      margin-left: 5px;
       li {
         display: inline-block;
         vertical-align: middle;

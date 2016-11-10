@@ -11,5 +11,11 @@
       @include listing-component-body;
       margin-top: $default_padding;
     }
+    .field-name-field-link-to {
+      .field-item {
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
   }
 }

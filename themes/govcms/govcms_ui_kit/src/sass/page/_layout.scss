@@ -98,10 +98,16 @@ html {
             @include center-column($desktop_content_column);
           }
         }
+        // Node Webforms
+        .node-webform {
+          &>.submitted {
+            max-width: $form_width;
+          }
+          &>.content {
+            max-width: $form_width;
+          }
+        }
       }
-    }
-    .form-help-text {
-      @include center-column($desktop_content_column);
     }
     .panel-display {
       @include panel-display-layouts(tablet);
@@ -122,7 +128,17 @@ html {
     .search-api-page-results {
       @include center-column($desktop_content_column);
     }
+    .page-contact & {
+      .block-system {
+        @include center-column($form_width);
+      }
+    }
     .page-search404 & {
+      .block-system {
+        @include center-column($desktop_content_column);
+      }
+    }
+    .page-node-done & {
       .block-system {
         @include center-column($desktop_content_column);
       }
@@ -134,6 +150,7 @@ html {
 // ABOVE FOOTER (SECOND SIDEBAR)
 // =========================================================
 .region-sidebar-second {
+  margin-top: $default_padding;
   &>.block {
     border-top: 1px solid #9B9B9B;
     &:nth-child(3n+1) {

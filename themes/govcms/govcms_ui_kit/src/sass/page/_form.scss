@@ -4,17 +4,19 @@ form {
   }
 }
 
+.block-webform {
+  @include center-column($form_width);
+  &>h2 {
+    @include block-heading;
+    margin-top: 0;
+    margin-bottom: $default-padding;
+  }
+}
+
 // =========================================================
 // WEBFORMS
 // =========================================================
 form.webform-client-form {
-  padding-left: 0;
-  padding-right: 0;
-  &>div {
-    max-width: rem(540px);
-    margin-left: auto;
-    margin-right: auto;
-  }
   .form-item {
     color: $neutral_1;
     margin-top: $default-padding;
@@ -163,11 +165,23 @@ form.webform-client-form {
   // =========================================================
   // PROGRESS BAR
   // =========================================================
-  .webform-progressbar {
-    box-sizing: border-box;
-    margin-bottom: $default_padding;
-    padding: 1px;
+  .webform-previous {
+    margin-right: rem(10px);
   }
+  .webform-next {
+    margin-left: auto;
+  }
+}
+
+// =========================================================
+// PROGRESS BAR
+// This also exists on complete pages, where it does not
+// exist within a form element.
+// =========================================================
+.webform-progressbar {
+  box-sizing: border-box;
+  margin-bottom: $default_padding;
+  padding: 1px;
   .webform-progressbar-page {
     border-color: transparent;
     background-color: $neutral_3;
@@ -195,11 +209,5 @@ form.webform-client-form {
     margin-top: rem(15px);
     display: inline-block;
     color: $neutral_1;
-  }
-  .webform-previous {
-    margin-right: rem(10px);
-  }
-  .webform-next {
-    margin-left: auto;
   }
 }

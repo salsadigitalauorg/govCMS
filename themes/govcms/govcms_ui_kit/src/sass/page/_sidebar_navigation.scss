@@ -4,15 +4,10 @@
 .region-sidebar-first {
   .block {
     margin-bottom: $default-padding;
-    h2 {
+    &>h2 {
+      @include block-heading;
       margin-top: 0;
       margin-bottom: 0;
-      color: $neutral_1;
-      font-weight: 400;
-      font-size: rem(18px);
-      @include breakpoint(large_tablet) {
-        @include medium-title;
-      }
     }
   }
 }
