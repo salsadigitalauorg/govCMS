@@ -171,6 +171,15 @@
   margin-top: 0;
 }
 
+@mixin block-heading() {
+  color: $neutral_1;
+  font-size: rem(18px);
+  font-weight: 400;
+  @include breakpoint(large_tablet) {
+    @include medium-title;
+  }
+}
+
 // =========================================================
 // SEARCH
 // =========================================================
