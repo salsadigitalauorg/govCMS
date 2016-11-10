@@ -31,6 +31,9 @@
         @include breakpoint(tablet) {
           @include omega();
         }
+        @include breakpoint(desktop) {
+          margin-right: flex-gutter(12);
+        }
       }
       &:nth-child(4n) {
         @include breakpoint(desktop) {

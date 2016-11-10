@@ -10397,6 +10397,12 @@ body.not-front #content .view .view-content .views-row .field-name-body {
 }
 
 @media (min-width: 1200px) {
+  #block-menu-menu-quick-links ul.menu li:nth-child(3n) {
+    margin-right: 2.7461357194%;
+  }
+}
+
+@media (min-width: 1200px) {
   #block-menu-menu-quick-links ul.menu li:nth-child(4n) {
     margin-right: 0;
   }
