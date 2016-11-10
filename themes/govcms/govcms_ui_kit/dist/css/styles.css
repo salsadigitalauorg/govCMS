@@ -10751,6 +10751,11 @@ body.not-front #content .view .view-content .views-row .field-name-body {
   margin-top: 1.375rem;
 }
 
+.page-news-media .bean-image-and-text .field-name-field-link-to .field-item {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .page-contact form.contact-form {
   max-width: 33.75rem;
   margin-left: auto;
