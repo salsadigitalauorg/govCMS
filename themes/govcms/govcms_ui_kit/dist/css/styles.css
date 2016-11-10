@@ -6886,8 +6886,13 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
 }
 
 .header__inner .header__secondary-menu {
-  color: #224A61;
-  /*
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .header__inner .header__secondary-menu {
+    color: #224A61;
+    /*
   See more link
 
   Use see more links at the end of [lists](section-list-styles.html),
@@ -6913,7 +6918,7 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
 
   Style guide: Link styles.2 See more link
   */
-  /*
+    /*
   Placeholder links (prototyping)
 
   Use placeholder links (greyed out links) to show actions that users can't currently take.
@@ -6943,72 +6948,63 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
 
   Style guide: Link styles.3 Placeholder links
   */
-  display: block;
-  text-align: right;
-}
-
-.header__inner .header__secondary-menu a {
-  color: #224A61;
-  text-decoration: none;
-  outline: none;
-  border-bottom: solid 1px #5bcbe3;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
-  transition-property: background-color, border-color, color;
-}
-
-.header__inner .header__secondary-menu a:hover, .header__inner .header__secondary-menu a:focus {
-  background-color: #5bcbe3;
-  color: #313131;
-}
-
-.header__inner .header__secondary-menu a[rel~='external'] {
-  display: inline;
-  position: relative;
-  margin-right: 1.6em;
-}
-
-.header__inner .header__secondary-menu a[rel~='external']:hover {
-  border-color: transparent;
-}
-
-.header__inner .header__secondary-menu a[rel~='external']::after {
-  background-size: 0.9em auto;
-}
-
-.header__inner .header__secondary-menu .see-more {
-  display: inline-block;
-  position: relative;
-  margin-right: 1.6em;
-  font-weight: 700;
-  color: #18788d;
-}
-
-.header__inner .header__secondary-menu .see-more::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: -1.2em;
-  display: block;
-  width: 1.2em;
-  height: 1.2em;
-  background-repeat: no-repeat;
-  background-position: right 0.4em;
-  background-size: 0.64em auto;
-}
-
-.header__inner .header__secondary-menu .see-more:hover, .header__inner .header__secondary-menu .see-more:focus {
-  color: #313131;
-}
-
-.header__inner .header__secondary-menu span.placeholder-link {
-  color: rgba(34, 74, 97, 0.7);
-  border-bottom: none;
-  cursor: not-allowed;
-}
-
-.header__inner .header__secondary-menu span.placeholder-link:hover {
-  cursor: not-allowed;
+    display: block;
+    text-align: right;
+  }
+  .header__inner .header__secondary-menu a {
+    color: #224A61;
+    text-decoration: none;
+    outline: none;
+    border-bottom: solid 1px #5bcbe3;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.1s;
+    transition-property: background-color, border-color, color;
+  }
+  .header__inner .header__secondary-menu a:hover, .header__inner .header__secondary-menu a:focus {
+    background-color: #5bcbe3;
+    color: #313131;
+  }
+  .header__inner .header__secondary-menu a[rel~='external'] {
+    display: inline;
+    position: relative;
+    margin-right: 1.6em;
+  }
+  .header__inner .header__secondary-menu a[rel~='external']:hover {
+    border-color: transparent;
+  }
+  .header__inner .header__secondary-menu a[rel~='external']::after {
+    background-size: 0.9em auto;
+  }
+  .header__inner .header__secondary-menu .see-more {
+    display: inline-block;
+    position: relative;
+    margin-right: 1.6em;
+    font-weight: 700;
+    color: #18788d;
+  }
+  .header__inner .header__secondary-menu .see-more::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -1.2em;
+    display: block;
+    width: 1.2em;
+    height: 1.2em;
+    background-repeat: no-repeat;
+    background-position: right 0.4em;
+    background-size: 0.64em auto;
+  }
+  .header__inner .header__secondary-menu .see-more:hover, .header__inner .header__secondary-menu .see-more:focus {
+    color: #313131;
+  }
+  .header__inner .header__secondary-menu span.placeholder-link {
+    color: rgba(34, 74, 97, 0.7);
+    border-bottom: none;
+    cursor: not-allowed;
+  }
+  .header__inner .header__secondary-menu span.placeholder-link:hover {
+    cursor: not-allowed;
+  }
 }
 
 .header__inner .header__secondary-menu ul.links li {
@@ -7041,12 +7037,6 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
           align-items: center;
 }
 
-@media (min-width: 768px) {
-  .header__inner .logo-and-search .logo-wrapper {
-    display: block;
-  }
-}
-
 .header__inner .logo-and-search .logo-wrapper a {
   display: inline-block;
   vertical-align: middle;
@@ -7067,6 +7057,7 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
   padding-left: 0.3125rem;
   margin-right: auto;
   font-size: 1.125rem;
+  line-height: 1em;
   color: #224A61;
   font-weight: 400;
 }
@@ -7150,13 +7141,17 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
 @media (min-width: 768px) {
   .header__inner .block-govcms-text-resize {
     display: block;
-    margin-right: 2.25rem;
+    margin-right: 1.375rem;
   }
 }
 
 .header__inner .block-govcms-text-resize ul.text-resize {
-  margin: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   padding: 0;
+  margin: 0;
+  margin-left: 5px;
 }
 
 .header__inner .block-govcms-text-resize ul.text-resize li {
