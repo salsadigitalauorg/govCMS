@@ -17,6 +17,11 @@
       @content;
     }
   }
+  @else if $class==large_tablet {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  }
   @else if $class==tablet {
     @media (min-width: 768px) {
       @content;
@@ -28,7 +33,7 @@
     }
   }
   @else {
-    @warn "Breakpoint mixin supports: desktop, tablet, mobile";
+    @warn "Breakpoint mixin supports: desktop, large_tablet, tablet, mobile";
   }
 }
 

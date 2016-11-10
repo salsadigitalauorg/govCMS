@@ -59,7 +59,7 @@ html {
   @include center-column($desktop_column);
   display: flex;
   flex-wrap: wrap;
-  @include breakpoint(tablet) {
+  @include breakpoint(large_tablet) {
     flex-wrap: nowrap;
   }
 }
@@ -67,7 +67,7 @@ html {
 .sidebar-first {
   order: -1;
   width: 100%;
-  @include breakpoint(tablet) {
+  @include breakpoint(large_tablet) {
     width: rem(330px);
     min-width: rem(330px);
     padding-right: rem(60px);
@@ -78,7 +78,7 @@ html {
   &.has-sidebar {
     .region-content {
       width: 100%;
-      @include breakpoint(tablet) {
+      @include breakpoint(large_tablet) {
         max-width: $desktop_content_column;
       }
     }

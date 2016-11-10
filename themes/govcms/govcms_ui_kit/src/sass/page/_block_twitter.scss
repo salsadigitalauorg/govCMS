@@ -6,7 +6,10 @@
     @include medium-title;
   }
   &>.content {
-    @include center-column($desktop_column);
+    @include center-column($mobile_column);
+    @include breakpoint(large_tablet) {
+      max-width: $desktop_column;
+    }
   }
   iframe {
     width: 100% !important;

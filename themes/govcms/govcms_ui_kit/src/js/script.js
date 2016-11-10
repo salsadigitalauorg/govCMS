@@ -2,6 +2,7 @@
  * Global variables.
  */
 var desktop_breakpoint = 1200;
+var large_tablet_breakpoint = 1024;
 var tablet_breakpoint = 768;
 var mobile_breakpoint = 420;
 

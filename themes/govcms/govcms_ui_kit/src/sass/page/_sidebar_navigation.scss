@@ -10,7 +10,7 @@
       color: $neutral_1;
       font-weight: 400;
       font-size: rem(18px);
-      @include breakpoint(tablet) {
+      @include breakpoint(large_tablet) {
         @include medium-title;
       }
     }
@@ -35,7 +35,9 @@
       border: 1px solid $neutral_3;
       text-align: left;
       background-color: #F4F4F4;
+      color: $neutral_1;
       &:hover, &:focus {
+        color: $neutral_1;
         background-color: $neutral_3;
       }
       &:after {
@@ -60,7 +62,7 @@
   }
   .content {
     display: none;
-    @include breakpoint(tablet) {
+    @include breakpoint(large_tablet) {
       display: block;
     }
     &.showing {
