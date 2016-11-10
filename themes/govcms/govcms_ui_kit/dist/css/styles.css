@@ -8890,6 +8890,7 @@ ul.tabs.primary {
 
 #block-views-slideshow-block .view-content {
   position: relative;
+  background-color: #0B3B46;
 }
 
 #block-views-slideshow-block .view-content > ul {
