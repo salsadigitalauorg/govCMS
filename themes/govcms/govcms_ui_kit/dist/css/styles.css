@@ -7977,10 +7977,6 @@ body.not-front #content .content-header .content-header-inner h1, body.not-front
   box-sizing: content-box;
 }
 
-.region-sidebar-second {
-  margin-top: 1.375rem;
-}
-
 .region-sidebar-second > .block {
   border-top: 1px solid #9B9B9B;
 }
@@ -8425,10 +8421,18 @@ form > div {
   }
 }
 
-form.webform-client-form .form-item {
-  color: #313131;
+form .form-item {
   margin-top: 1.375rem;
   margin-bottom: 1.375rem;
+}
+
+form .form-actions {
+  margin-top: 1.375rem;
+  margin-bottom: 1.375rem;
+}
+
+form.webform-client-form .form-item {
+  color: #313131;
 }
 
 form.webform-client-form .form-item label {
@@ -9873,6 +9877,11 @@ body.not-front #content .view .view-content .views-row .field-name-field-date, b
 
 body.not-front #content .view .view-content .views-row .field-name-body {
   color: #313131;
+}
+
+body.not-front #content .view .pager {
+  margin-top: 1.375rem;
+  margin-bottom: 1.375rem;
 }
 
 .region-sidebar-first .block {

@@ -14,13 +14,25 @@ form {
 }
 
 // =========================================================
+// GENERAL FORMS
+// =========================================================
+form {
+  .form-item {
+    margin-top: $default-padding;
+    margin-bottom: $default-padding;
+  }
+  .form-actions {
+    margin-top: $default-padding;
+    margin-bottom: $default-padding;
+  }
+}
+
+// =========================================================
 // WEBFORMS
 // =========================================================
 form.webform-client-form {
   .form-item {
     color: $neutral_1;
-    margin-top: $default-padding;
-    margin-bottom: $default-padding;
     label {
       color: $neutral_1;
       box-sizing: border-box;

@@ -75,5 +75,9 @@ body.not-front #content {
         }
       }
     }
+    .pager {
+      margin-top: $default-padding;
+      margin-bottom: $default-padding;
+    }
   }
 }
