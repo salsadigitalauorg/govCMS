@@ -36,7 +36,7 @@ function govcms_ui_kit_js_alter(&$javascript) {
 function govcms_ui_kit_preprocess_html(&$variables) {
   drupal_add_js("(function(h) {h.className = h.className.replace('no-js', '') })(document.documentElement);", array('type' => 'inline', 'scope' => 'header'));
   drupal_add_js('jQuery.extend(Drupal.settings, { "pathToTheme": "' . path_to_theme() . '" });', 'inline');
-  // Drupal forms.js does not support later jQuery versions. Migrate library needed.
+  // Drupal forms.js does not support new jQuery. Migrate library needed.
   drupal_add_js(drupal_get_path('theme', 'govcms_ui_kit') . '/vendor/jquery/jquery-migrate-1.2.1.min.js');
 }
 
@@ -44,6 +44,15 @@ function govcms_ui_kit_preprocess_html(&$variables) {
  * Implements hook_preprocess_field().
  */
 function govcms_ui_kit_preprocess_field(&$variables) {
+  // Bean 'Image and Text' field 'Link To' to show 'Read [title]' text.
+  if ($variables['element']['#field_name'] === 'field_link_to' && $variables['element']['#bundle'] === 'image_and_text') {
+    if (!empty($variables['items'][0]) && !empty($variables['element']['#object']->title)) {
+      // This only applies if field has a non-configurable title.
+      if ($variables['items'][0]['#field']['settings']['title'] === 'none') {
+        $variables['items'][0]['#element']['title'] = t('Read !title', array('!title' => $variables['element']['#object']->title));
+      }
+    }
+  }
   if (theme_get_setting('govcms_ui_kit_override_image_styles') == 1) {
     // Define custom image style for image banners on home page.
     if ($variables['element']['#field_name'] === 'field_slide_image') {
@@ -177,16 +186,16 @@ function govcms_ui_kit_breadcrumb($variables) {
 function govcms_ui_kit_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id === 'search_api_page_search_form_default_search') {
     // Global header form.
-    $form['keys_1']['#attributes']['placeholder'] = 'Type search term here';
-    $form['keys_1']['#title'] = 'Search field';
+    $form['keys_1']['#attributes']['placeholder'] = t('Type search term here');
+    $form['keys_1']['#title'] = t('Search field');
   }
   elseif ($form_id === 'search_api_page_search_form') {
     // Search page (above results) form.
-    $form['form']['keys_1']['#title'] = 'Type search term here';
+    $form['form']['keys_1']['#title'] = t('Type search term here');
   }
   if ($form_id === 'search_form') {
     // Search form on page not found (404 page).
-    $form['basic']['keys']['#title'] = 'Type search term here';
+    $form['basic']['keys']['#title'] = t('Type search term here');
   }
 }
 
@@ -196,6 +205,8 @@ function govcms_ui_kit_form_alter(&$form, &$form_state, $form_id) {
 function govcms_ui_kit_preprocess_search_api_page_result(&$variables) {
   // Strip out HTML tags from search results.
   $variables['snippet'] = strip_tags($variables['snippet']);
+  // Remove the author / date from the result display.
+  unset($variables['info']);
 }
 
 /**
@@ -204,4 +215,6 @@ function govcms_ui_kit_preprocess_search_api_page_result(&$variables) {
 function govcms_ui_kit_preprocess_search_result(&$variables) {
   // Strip out HTML tags from search results (404 page).
   $variables['snippet'] = strip_tags($variables['snippet']);
+  // Remove the author / date from the result display (404 page).
+  unset($variables['info']);
 }
