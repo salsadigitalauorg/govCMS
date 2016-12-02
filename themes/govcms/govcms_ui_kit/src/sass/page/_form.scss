@@ -119,11 +119,9 @@ form.webform-client-form {
     }
     .form-radios {
       display: flex;
-      @include breakpoint(tablet) {
-        display: inline-block;
-      }
       .form-item {
         margin-top: 0;
+        margin-bottom: 0;
       }
     }
     input[type='radio']+label {

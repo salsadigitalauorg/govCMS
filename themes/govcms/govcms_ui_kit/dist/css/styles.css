@@ -8538,14 +8538,9 @@ form.webform-client-form .webform-component-time .form-radios {
   display: flex;
 }
 
-@media (min-width: 768px) {
-  form.webform-client-form .webform-component-time .form-radios {
-    display: inline-block;
-  }
-}
-
 form.webform-client-form .webform-component-time .form-radios .form-item {
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 @media (min-width: 768px) {
