@@ -190,8 +190,8 @@ a[rel~='external']::after {
 .page-node {
   .region-content {
     .field {
-      margin-top: $default-padding;
-      margin-bottom: $default-padding;
+      margin-top: $default_padding;
+      margin-bottom: $default_padding;
     }
   }
 }

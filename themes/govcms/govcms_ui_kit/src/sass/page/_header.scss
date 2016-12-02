@@ -13,7 +13,7 @@
       li {
         display: inline-block;
         margin-bottom: 0;
-        margin-left: $default-padding;
+        margin-left: $default_padding;
         margin-right: 0;
       }
     }
@@ -107,7 +107,7 @@
     display: none;
     @include breakpoint(tablet) {
       display: block;
-      margin-right: $default-padding;
+      margin-right: $default_padding;
     }
     ul.text-resize {
       display: flex;

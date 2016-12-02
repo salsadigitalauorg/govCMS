@@ -3,7 +3,7 @@
 // =========================================================
 .region-sidebar-first {
   .block {
-    margin-bottom: $default-padding;
+    margin-bottom: $default_padding;
     &>h2 {
       @include block-heading;
       margin-top: 0;

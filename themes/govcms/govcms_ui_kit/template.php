@@ -161,6 +161,11 @@ function govcms_ui_kit_preprocess_node(&$variables) {
       $variables['classes_array'][] = 'has-thumbnail';
     }
   }
+
+  if ($variables['type'] === 'webform') {
+    // Hide submitted date on webforms.
+    $variables['display_submitted'] = FALSE;
+  }
 }
 
 /**

@@ -8466,8 +8466,16 @@ form.webform-client-form .webform-component-select select[multiple="multiple"] {
 }
 
 form.webform-client-form .webform-component-date select {
-  width: 25%;
-  min-width: 5.625rem;
+  width: 100%;
+  margin-top: 0.6875rem;
+}
+
+@media (min-width: 768px) {
+  form.webform-client-form .webform-component-date select {
+    margin-top: auto;
+    width: 25%;
+    min-width: 5.625rem;
+  }
 }
 
 form.webform-client-form .webform-component-date input.webform-calendar {
@@ -8480,6 +8488,13 @@ form.webform-client-form .webform-component-date input.webform-calendar {
   background-image: url(../images/svg/icon_calendar.svg);
   background-repeat: no-repeat;
   background-position: center;
+  margin-top: 0.6875rem;
+}
+
+@media (min-width: 768px) {
+  form.webform-client-form .webform-component-date input.webform-calendar {
+    margin-top: auto;
+  }
 }
 
 form.webform-client-form .webform-component-date input.webform-calendar:hover, form.webform-client-form .webform-component-date input.webform-calendar:focus {
@@ -8523,20 +8538,50 @@ form.webform-client-form .webform-component-time .form-radios {
   display: flex;
 }
 
-@media (min-width: 768px) {
-  form.webform-client-form .webform-component-time .form-radios {
-    display: inline-block;
-  }
-}
-
 form.webform-client-form .webform-component-time .form-radios .form-item {
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 @media (min-width: 768px) {
   form.webform-client-form .webform-component-time input[type='radio'] + label {
     display: inline;
   }
+}
+
+form.webform-client-form .webform-component-grid {
+  overflow-x: auto;
+}
+
+form.webform-client-form .webform-component-grid.is-overflowing table.sticky-header {
+  display: none;
+}
+
+form.webform-client-form .webform-component-grid table.sticky-header {
+  background-color: white;
+  z-index: 1;
+}
+
+form.webform-client-form .webform-component-grid table.sticky-header th {
+  border-bottom: solid 1px #bbbbbb;
+  padding: 0.4em;
+  font-size: 87.5%;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  form.webform-client-form .webform-component-grid table.sticky-header th {
+    padding: 0.8em;
+    font-size: initial;
+  }
+}
+
+form.webform-client-form .webform-component-grid table.sticky-header thead {
+  border-bottom: solid 2px #6e6e6e;
+}
+
+form.webform-client-form .webform-component-grid th.webform-grid-option {
+  font-size: initial;
 }
 
 form.webform-client-form .webform-component-grid table.webform-grid {
@@ -8566,6 +8611,44 @@ form.webform-client-form .webform-component-grid table.webform-grid .form-type-r
   color: transparent;
 }
 
+@media (min-width: 768px) {
+  form.webform-client-form .webform-component-file .form-managed-file {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+form.webform-client-form .webform-component-file .form-managed-file input[type="file"] {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  form.webform-client-form .webform-component-file .form-managed-file input[type="file"] {
+    width: auto;
+  }
+}
+
+form.webform-client-form .webform-component-file .form-managed-file input[type="submit"] {
+  width: 100%;
+  margin-top: 0.6875rem;
+  margin-bottom: 0.6875rem;
+}
+
+@media (min-width: 768px) {
+  form.webform-client-form .webform-component-file .form-managed-file input[type="submit"] {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: auto;
+  }
+}
+
 form.webform-client-form .webform-component-fieldset {
   border: 1px solid #6e6e6e;
   padding: 1.375rem;
@@ -8580,7 +8663,7 @@ form.webform-client-form .webform-component-fieldset .form-item {
 }
 
 form.webform-client-form .webform-previous {
-  margin-right: 0.625rem;
+  margin-right: 0.6875rem;
 }
 
 form.webform-client-form .webform-next {
