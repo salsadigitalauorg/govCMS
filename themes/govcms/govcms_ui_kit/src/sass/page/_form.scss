@@ -191,6 +191,11 @@ form.webform-client-form {
   // =========================================================
   .webform-component-file {
     .form-managed-file {
+      @include breakpoint(tablet) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
       input[type="file"] {
         width: 100%;
         @include breakpoint(tablet) {

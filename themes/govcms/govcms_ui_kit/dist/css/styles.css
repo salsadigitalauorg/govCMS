@@ -8611,6 +8611,20 @@ form.webform-client-form .webform-component-grid table.webform-grid .form-type-r
   color: transparent;
 }
 
+@media (min-width: 768px) {
+  form.webform-client-form .webform-component-file .form-managed-file {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 form.webform-client-form .webform-component-file .form-managed-file input[type="file"] {
   width: 100%;
 }
