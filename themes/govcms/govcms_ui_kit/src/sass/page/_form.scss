@@ -9,7 +9,7 @@ form {
   &>h2 {
     @include block-heading;
     margin-top: 0;
-    margin-bottom: $default-padding;
+    margin-bottom: $default_padding;
   }
 }
 
@@ -18,12 +18,12 @@ form {
 // =========================================================
 form {
   .form-item {
-    margin-top: $default-padding;
-    margin-bottom: $default-padding;
+    margin-top: $default_padding;
+    margin-bottom: $default_padding;
   }
   .form-actions {
-    margin-top: $default-padding;
-    margin-bottom: $default-padding;
+    margin-top: $default_padding;
+    margin-bottom: $default_padding;
   }
 }
 
@@ -70,8 +70,13 @@ form.webform-client-form {
   // =========================================================
   .webform-component-date {
     select {
-      width: 25%;
-      min-width: rem(90px);
+      width: 100%;
+      margin-top: $small_padding;
+      @include breakpoint(tablet) {
+        margin-top: auto;
+        width: 25%;
+        min-width: rem(90px);
+      }
     }
     input.webform-calendar {
       padding: 0;
@@ -83,6 +88,10 @@ form.webform-client-form {
       background-image: url(../images/svg/icon_calendar.svg);
       background-repeat: no-repeat;
       background-position: center;
+      margin-top: $small_padding;
+      @include breakpoint(tablet) {
+        margin-top: auto;
+      }
       &:hover, &:focus {
         background-image: url(../images/svg/icon_calendar_hover.svg);
       }
@@ -127,6 +136,33 @@ form.webform-client-form {
   // GRID
   // =========================================================
   .webform-component-grid {
+    overflow-x: auto;
+    &.is-overflowing {
+      table.sticky-header {
+        display: none;
+      }
+    }
+    table.sticky-header {
+      background-color: white;
+      z-index: 1;
+      // Values below taken directly from `vendor/gov-au-ui-kit/assets/sass/components/_tables.scss`
+      th {
+        border-bottom: solid 1px $light-grey;
+        padding: $tiny-spacing;
+        font-size: $small-font-size;
+        text-align: center;
+        @include media($tablet) {
+          padding: $small-spacing;
+          font-size: initial;
+        }
+      }
+      thead {
+        border-bottom: solid 2px $grey;
+      }
+    }
+    th.webform-grid-option {
+      font-size: initial;
+    }
     table.webform-grid {
       @extend .content-table;
       width: 100%;
@@ -157,8 +193,22 @@ form.webform-client-form {
   // =========================================================
   .webform-component-file {
     .form-managed-file {
-      input[type="file"] {}
-      input[type="submit"] {}
+      input[type="file"] {
+        width: 100%;
+        @include breakpoint(tablet) {
+          width: auto;
+        }
+      }
+      input[type="submit"] {
+        width: 100%;
+        margin-top: $small_padding;
+        margin-bottom: $small_padding;
+        @include breakpoint(tablet) {
+          margin-top: auto;
+          margin-bottom: auto;
+          width: auto;
+        }
+      }
     }
   }
   // =========================================================
@@ -166,7 +216,7 @@ form.webform-client-form {
   // =========================================================
   .webform-component-fieldset {
     border: 1px solid $neutral_2;
-    padding: $default-padding;
+    padding: $default_padding;
     .fieldset-legend {
       color: $neutral_1;
     }
@@ -178,7 +228,7 @@ form.webform-client-form {
   // PROGRESS BAR
   // =========================================================
   .webform-previous {
-    margin-right: rem(10px);
+    margin-right: $small_padding;
   }
   .webform-next {
     margin-left: auto;

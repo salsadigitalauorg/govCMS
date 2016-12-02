@@ -1,6 +1,6 @@
 #block-menu-menu-quick-links {
-  padding-top: $default-padding * 2;
-  padding-bottom: $default-padding * 2;
+  padding-top: $default_padding * 2;
+  padding-bottom: $default_padding * 2;
   h2 {
     @include center-column($desktop_column);
     @include medium-title;
@@ -20,7 +20,7 @@
       background-color: $secondary_1;
       padding: rem(30px);
       box-sizing: border-box;
-      margin-bottom: $default-padding;
+      margin-bottom: $default_padding;
       @include breakpoint(tablet) {
         @include span-columns(4 of 12);
       }
