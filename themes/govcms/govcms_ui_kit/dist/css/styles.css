@@ -7080,60 +7080,6 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
   margin-right: auto;
 }
 
-.header__inner .mobile_expand_search {
-  overflow: hidden;
-  text-indent: 101%;
-  white-space: nowrap;
-  width: 2.1875rem;
-  padding: 0;
-  margin: 0;
-  border: 0;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: center;
-  outline: inherit;
-  background-image: url(../images/svg/mobile_search_open.svg);
-}
-
-.header__inner .mobile_expand_search:hover, .header__inner .mobile_expand_search:focus {
-  background-image: url(../images/svg/mobile_search_open_hover.svg);
-}
-
-.header__inner .mobile_expand_search.search-open {
-  background-image: url(../images/svg/mobile_search_close.svg);
-}
-
-.header__inner .mobile_expand_search.search-open:hover, .header__inner .mobile_expand_search.search-open:focus {
-  background-image: url(../images/svg/mobile_search_close_hover.svg);
-}
-
-.header__inner .mobile_expand_menu {
-  overflow: hidden;
-  text-indent: 101%;
-  white-space: nowrap;
-  width: 2.1875rem;
-  padding: 0;
-  margin: 0;
-  border: 0;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: center;
-  outline: inherit;
-  background-image: url(../images/svg/mobile_menu_open.svg);
-}
-
-.header__inner .mobile_expand_menu:hover, .header__inner .mobile_expand_menu:focus {
-  background-image: url(../images/svg/mobile_menu_open_hover.svg);
-}
-
-.header__inner .mobile_expand_menu.menu-open {
-  background-image: url(../images/svg/mobile_search_close.svg);
-}
-
-.header__inner .mobile_expand_menu.menu-open:hover, .header__inner .mobile_expand_menu.menu-open:focus {
-  background-image: url(../images/svg/mobile_search_close_hover.svg);
-}
-
 .header__inner .block-govcms-text-resize {
   display: none;
 }
@@ -7306,6 +7252,65 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
 
 .header__inner .region-header .search-form-widget > div input[type="submit"]:hover, .header__inner .region-header .search-form-widget > div input[type="submit"]:focus {
   background-image: url(../images/svg/magnifying_glass_hover.svg);
+}
+
+.mobile-expand-search {
+  overflow: hidden;
+  text-indent: 101%;
+  white-space: nowrap;
+  width: 2.1875rem;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  outline: inherit;
+  background-image: url(../images/svg/mobile_search_open.svg);
+  margin-right: 2.1875rem;
+}
+
+.mobile-expand-search:hover, .mobile-expand-search:focus {
+  background-image: url(../images/svg/mobile_search_open_hover.svg);
+}
+
+.mobile-expand-search.search-open {
+  background-image: url(../images/svg/mobile_search_close.svg);
+}
+
+.mobile-expand-search.search-open:hover, .mobile-expand-search.search-open:focus {
+  background-image: url(../images/svg/mobile_search_close_hover.svg);
+}
+
+.mobile-expand-menu {
+  overflow: hidden;
+  text-indent: 101%;
+  white-space: nowrap;
+  width: 2.1875rem;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  outline: inherit;
+  background-image: url(../images/svg/mobile_menu_open.svg);
+  position: absolute;
+  z-index: 1;
+  right: 1.25rem;
+  top: 1rem;
+}
+
+.mobile-expand-menu:hover, .mobile-expand-menu:focus {
+  background-image: url(../images/svg/mobile_menu_open_hover.svg);
+}
+
+.mobile-expand-menu.menu-open {
+  background-image: url(../images/svg/mobile_search_close.svg);
+}
+
+.mobile-expand-menu.menu-open:hover, .mobile-expand-menu.menu-open:focus {
+  background-image: url(../images/svg/mobile_search_close_hover.svg);
 }
 
 .region-navigation {

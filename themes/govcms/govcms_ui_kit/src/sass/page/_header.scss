@@ -61,48 +61,6 @@
       margin-right: auto;
     }
   }
-  .mobile_expand_search {
-    @include hide-text;
-    width: rem(35px);
-    padding: 0;
-    margin: 0;
-    border: 0;
-    background-color: transparent;
-    background-repeat: no-repeat;
-    background-position: center;
-    outline: inherit;
-    background-image: url(../images/svg/mobile_search_open.svg);
-    &:hover, &:focus {
-      background-image: url(../images/svg/mobile_search_open_hover.svg);
-    }
-    &.search-open {
-      background-image: url(../images/svg/mobile_search_close.svg);
-      &:hover, &:focus {
-        background-image: url(../images/svg/mobile_search_close_hover.svg);
-      }
-    }
-  }
-  .mobile_expand_menu {
-    @include hide-text;
-    width: rem(35px);
-    padding: 0;
-    margin: 0;
-    border: 0;
-    background-color: transparent;
-    background-repeat: no-repeat;
-    background-position: center;
-    outline: inherit;
-    background-image: url(../images/svg/mobile_menu_open.svg);
-    &:hover, &:focus {
-      background-image: url(../images/svg/mobile_menu_open_hover.svg);
-    }
-    &.menu-open {
-      background-image: url(../images/svg/mobile_search_close.svg);
-      &:hover, &:focus {
-        background-image: url(../images/svg/mobile_search_close_hover.svg);
-      }
-    }
-  }
   .block-govcms-text-resize {
     display: none;
     @include breakpoint(tablet) {
@@ -199,6 +157,58 @@
           @include search-submit-button;
         }
       }
+    }
+  }
+}
+
+// =========================================================
+// MOBILE SEARCH / MENU BUTTONS
+// =========================================================
+.mobile-expand-search {
+  @include hide-text;
+  width: rem(35px);
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  outline: inherit;
+  background-image: url(../images/svg/mobile_search_open.svg);
+  margin-right: $mobile_expand_search_width;
+  &:hover, &:focus {
+    background-image: url(../images/svg/mobile_search_open_hover.svg);
+  }
+  &.search-open {
+    background-image: url(../images/svg/mobile_search_close.svg);
+    &:hover, &:focus {
+      background-image: url(../images/svg/mobile_search_close_hover.svg);
+    }
+  }
+}
+
+.mobile-expand-menu {
+  @include hide-text;
+  width: $mobile_expand_search_width;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  outline: inherit;
+  background-image: url(../images/svg/mobile_menu_open.svg);
+  position: absolute;
+  z-index: 1;
+  right: $mobile_column_padding;
+  top: rem(16px);
+  &:hover, &:focus {
+    background-image: url(../images/svg/mobile_menu_open_hover.svg);
+  }
+  &.menu-open {
+    background-image: url(../images/svg/mobile_search_close.svg);
+    &:hover, &:focus {
+      background-image: url(../images/svg/mobile_search_close_hover.svg);
     }
   }
 }

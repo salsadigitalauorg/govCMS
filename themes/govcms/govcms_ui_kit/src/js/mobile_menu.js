@@ -5,7 +5,7 @@
 
   var $widget = null;
   var $button = null;
-  var $logo_wrapper = null;
+  var $nav_wrapper = null;
   var menu_toggle_enabled = false;
 
   function menu_bar_resize() {
@@ -20,7 +20,7 @@
       // Mobile.
       menu_toggle_enabled = true;
       $widget.addClass('menu-toggle');
-      $logo_wrapper.append($button);
+      $nav_wrapper.prepend($button);
     }
   }
 
@@ -45,8 +45,8 @@
     attach: function(context, settings) {
       $widget = $('#mobile-nav', context);
       if ($widget.length > 0) {
-        $button = $('<button class="mobile_expand_menu" aria-controls="' + $widget.attr('id') + '" aria-expanded="false">Toggle menu navigation</button>');
-        $logo_wrapper = $('.logo-wrapper');
+        $button = $('<button class="mobile-expand-menu" aria-controls="' + $widget.attr('id') + '" aria-expanded="false">Toggle menu navigation</button>');
+        $nav_wrapper = $('#nav');
         $button.unbind('click', toggle_menu).bind('click', toggle_menu);
         $(window).unbind('resize', menu_bar_resize).bind('resize', menu_bar_resize);
         menu_bar_resize();
