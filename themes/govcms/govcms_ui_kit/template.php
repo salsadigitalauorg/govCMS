@@ -211,7 +211,7 @@ function govcms_ui_kit_preprocess_search_api_page_result(&$variables) {
   // Strip out HTML tags from search results.
   $variables['snippet'] = strip_tags($variables['snippet']);
   // Remove the author / date from the result display.
-  unset($variables['info']);
+  $variables['info'] = '';
 }
 
 /**
@@ -221,5 +221,5 @@ function govcms_ui_kit_preprocess_search_result(&$variables) {
   // Strip out HTML tags from search results (404 page).
   $variables['snippet'] = strip_tags($variables['snippet']);
   // Remove the author / date from the result display (404 page).
-  unset($variables['info']);
+  $variables['info'] = '';
 }
