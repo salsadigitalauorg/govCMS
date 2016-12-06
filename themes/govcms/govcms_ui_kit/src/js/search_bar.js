@@ -45,7 +45,7 @@
     attach: function(context, settings) {
       $widget = $('header .search-form-widget', context);
       if ($widget.length > 0) {
-        $button = $('<button class="mobile_expand_search" aria-controls="' + $widget.attr('id') + '" aria-expanded="false">Toggle search form</button>');
+        $button = $('<button class="mobile-expand-search" aria-controls="' + $widget.attr('id') + '" aria-expanded="false">Toggle search form</button>');
         $logo_wrapper = $('.logo-wrapper .header-title');
         $button.unbind('click', toggle_search).bind('click', toggle_search);
         $(window).unbind('resize', search_bar_resize).bind('resize', search_bar_resize);
