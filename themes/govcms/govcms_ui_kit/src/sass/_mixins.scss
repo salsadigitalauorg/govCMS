@@ -1,0 +1,121 @@
+// =========================================================
+// For creating breakpoints.
+// Use in order of smallest to largest:
+// div {
+//   font-size: rem(24);
+//   @include breakpoint(tablet) {
+//     font-size: rem(32);
+//   }
+//   @include breakpoint(desktop) {
+//     font-size: rem(48);
+//   }
+// }
+// =========================================================
+@mixin breakpoint($class) {
+  @if $class==desktop {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+  @else if $class==tablet {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+  @else if $class==mobile {
+    @media (max-width: 420px) {
+      @content;
+    }
+  }
+  @else {
+    @warn "Breakpoint mixin supports: desktop, tablet, mobile";
+  }
+}
+
+// =========================================================
+// For use on full width containers.
+// Centres the content using a max-width as specified.
+// Adds a padding for mobile margins.
+// =========================================================
+@mixin center-column($width) {
+  max-width: $width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $mobile_column_padding;
+  padding-right: $mobile_column_padding;
+  box-sizing: content-box;
+}
+
+@mixin visually-hidden() {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+// =========================================================
+// LISTING MIXINS
+// These mixins should be applied to in the following fashion:
+// .view-row {
+//   @include listing-component-wrapper;
+//   h2 {
+//     @include listing-component-heading;
+//   }
+//   .date {
+//     @include listing-component-subtext;
+//   }
+//   .image {
+//     @include listing-component-image;
+//   }
+// }
+// =========================================================
+@mixin listing-component-wrapper() {
+  box-sizing: border-box;
+  position: relative;
+  padding: rem(30px);
+  margin-bottom: rem(30px);
+  background-color: white;
+}
+
+@mixin listing-component-image() {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  a {
+    display: block;
+    border-bottom: 0;
+    transition: none;
+    &:hover, &:focus {
+      background-color: black;
+      img {
+        opacity: 0.6;
+      }
+    }
+  }
+  img {
+    display: table;
+    object-fit: cover;
+    object-position: center;
+    height: $listing_component_image_height;
+    width: 100%;
+  }
+}
+
+@mixin listing-component-heading() {
+  font-size: rem(24px);
+  line-height: 1.5em;
+  @include link-colours($secondary_1, $secondary_3, $neutral_1);
+}
+
+@mixin listing-component-subtext() {
+  font-size: rem(14px);
+  color: $neutral_2;
+  text-transform: uppercase;
+  margin-top: $default_padding;
+  margin-bottom: $default_padding;
+}
