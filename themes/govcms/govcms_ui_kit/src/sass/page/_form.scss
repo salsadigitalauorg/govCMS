@@ -44,6 +44,19 @@ form.webform-client-form {
       font-size: rem(14px);
     }
   }
+  input, textarea {
+    &.error {
+      border: 1px solid red;
+      background-color: #fef5f1; // default drupal error colour.
+    }
+  }
+  label.error {
+    padding: 5px;
+    color: red;
+    background-color: white;
+    border-radius: 4px;
+    margin-top: 4px;
+  }
   // =========================================================
   // SELECTORS - CHECKBOX, SELECT, RADIO, LIST
   // =========================================================
