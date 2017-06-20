@@ -108,13 +108,13 @@
           <ul class="action-links"><?php print render($action_links); ?></ul>
         <?php endif; ?>
         <div class="content-body-inner<?php print $sidebar_first ? ' has-sidebar' : ' no-sidebar'; ?>">
-          <?php print render($page['content']); ?>
-          <?php print $feed_icons; ?>
           <?php if ($sidebar_first): ?>
             <aside class="sidebar-first">
               <?php print $sidebar_first; ?>
             </aside>
           <?php endif; ?>
+          <?php print render($page['content']); ?>
+          <?php print $feed_icons; ?>
         </div>
       </div>
     </div>
