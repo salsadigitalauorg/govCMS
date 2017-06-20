@@ -160,6 +160,10 @@ function govcms_ui_kit_preprocess_node(&$variables) {
     if ($has_thumb || $has_image || $has_featured_image) {
       $variables['classes_array'][] = 'has-thumbnail';
     }
+
+    if ($variables['type'] == 'blog_article') {
+      $variables['submitted'] = strip_tags($variables['submitted']);
+    }
   }
 
   if ($variables['type'] === 'webform') {
