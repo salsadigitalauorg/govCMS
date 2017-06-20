@@ -202,6 +202,13 @@ function govcms_ui_kit_form_alter(&$form, &$form_state, $form_id) {
     // Search form on page not found (404 page).
     $form['basic']['keys']['#title'] = t('Type search term here');
   }
+
+  if (strpos($form_id, 'webform_client_form') !== FALSE) {
+    $form['submitted']['asda'] = array(
+      '#weight' => -1,
+      '#markup' => '<p class="form-help-text">' . t('Fields marked <span class="form-required">*</span> are required.') . '</p>',
+    );
+  }
 }
 
 /**
