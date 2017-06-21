@@ -223,3 +223,23 @@ function govcms_ui_kit_preprocess_search_result(&$variables) {
   // Remove the author / date from the result display (404 page).
   $variables['info'] = '';
 }
+
+/**
+ * Implements theme_image().
+ */
+function govcms_ui_kit_image($variables) {
+  $attributes = $variables['attributes'];
+  $attributes['src'] = file_create_url($variables['path']);
+
+  foreach (array('width', 'height', 'alt', 'title') as $key) {
+    if (isset($variables[$key])) {
+      $attributes[$key] = $variables[$key];
+    }
+  }
+
+  if (empty($attributes['alt'])) {
+    $attributes['alt'] = '';
+  }
+
+  return '<img' . drupal_attributes($attributes) . ' />';
+}

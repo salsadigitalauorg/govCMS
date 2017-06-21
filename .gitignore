@@ -60,3 +60,4 @@ node_modules
 
 docroot
 local/*
+themes/govcms/govcms_ui_kit/grunt/.local_grunt_settings.json
