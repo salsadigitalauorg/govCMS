@@ -204,7 +204,7 @@ function govcms_ui_kit_form_alter(&$form, &$form_state, $form_id) {
   }
 
   if (strpos($form_id, 'webform_client_form') !== FALSE) {
-    $form['submitted']['asda'] = array(
+    $form['submitted']['required_fields_notification'] = array(
       '#weight' => -1,
       '#markup' => '<p class="form-help-text">' . t('Fields marked <span class="form-required">*</span> are required.') . '</p>',
     );
