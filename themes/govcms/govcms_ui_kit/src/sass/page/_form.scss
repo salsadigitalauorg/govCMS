@@ -20,10 +20,23 @@ form {
   .form-item {
     margin-top: $default_padding;
     margin-bottom: $default_padding;
+    input, textarea, select {
+      &.error {
+        border-color: $red_error;
+      }
+    }
   }
   .form-actions {
     margin-top: $default_padding;
     margin-bottom: $default_padding;
+  }
+  .form-required, .error {
+    color: $red_error;
+  }
+  input {
+    @include placeholder {
+      color: $neutral_1;
+    }
   }
 }
 
