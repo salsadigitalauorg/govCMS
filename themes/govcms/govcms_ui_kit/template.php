@@ -202,6 +202,16 @@ function govcms_ui_kit_form_alter(&$form, &$form_state, $form_id) {
     // Search form on page not found (404 page).
     $form['basic']['keys']['#title'] = t('Type search term here');
   }
+
+  // Show webform assistance message.
+  if (strpos($form_id, 'webform_client_form') !== FALSE) {
+    if (theme_get_setting('govcms_ui_kit_show_webform_assistance') === 1) {
+      $form['submitted']['required_fields_notification'] = array(
+        '#weight' => -1,
+        '#markup' => '<p class="form-help-text">' . t('Fields marked <span class="form-required">*</span> are required.') . '</p>',
+      );
+    }
+  }
 }
 
 /**
