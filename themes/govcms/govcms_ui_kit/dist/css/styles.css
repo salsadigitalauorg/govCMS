@@ -8481,6 +8481,19 @@ form.webform-client-form .form-item .description {
   font-size: 0.875rem;
 }
 
+form.webform-client-form input.error, form.webform-client-form textarea.error {
+  border: 1px solid red;
+  background-color: #fef5f1;
+}
+
+form.webform-client-form label.error {
+  padding: 5px;
+  color: red;
+  background-color: white;
+  border-radius: 4px;
+  margin-top: 4px;
+}
+
 form.webform-client-form .webform-component-checkboxes .form-item {
   margin: 0;
 }
