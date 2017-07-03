@@ -9,10 +9,10 @@
  */
 ?>
 
-<header class="header" id="header" role="banner">
+<header class="header" id="header">
   <div class="header__inner">
     <?php if ($secondary_menu): ?>
-      <nav class="header__secondary-menu" id="secondary-menu" role="navigation">
+      <nav class="header__secondary-menu" id="secondary-menu">
         <?php print theme('links__system_secondary_menu', array(
           'links' => $secondary_menu,
           'attributes' => array(
@@ -21,11 +21,6 @@
               'inlineLinks--bordered--double',
               'clearfix',
             ),
-          ),
-          'heading' => array(
-            'text' => isset($secondary_menu_heading) ? $secondary_menu_heading : '',
-            'level' => 'h2',
-            'class' => array('element-invisible'),
           ),
         )); ?>
       </nav>
@@ -108,20 +103,20 @@
           <ul class="action-links"><?php print render($action_links); ?></ul>
         <?php endif; ?>
         <div class="content-body-inner<?php print $sidebar_first ? ' has-sidebar' : ' no-sidebar'; ?>">
-          <?php print render($page['content']); ?>
-          <?php print $feed_icons; ?>
           <?php if ($sidebar_first): ?>
             <aside class="sidebar-first">
               <?php print $sidebar_first; ?>
             </aside>
           <?php endif; ?>
+          <?php print render($page['content']); ?>
+          <?php print $feed_icons; ?>
         </div>
       </div>
     </div>
   </div>
 
   <?php if ($sidebar_second): ?>
-    <aside class="sidebar-second" role="complementary">
+    <aside class="sidebar-second">
       <?php print $sidebar_second; ?>
     </aside>
   <?php endif; ?>
