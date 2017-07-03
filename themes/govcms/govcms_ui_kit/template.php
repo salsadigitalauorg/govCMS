@@ -153,16 +153,13 @@ function govcms_ui_kit_image_styles_alter(&$styles) {
  */
 function govcms_ui_kit_preprocess_node(&$variables) {
   if ($variables['view_mode'] === 'teaser' || $variables['view_mode'] === 'compact') {
+    $variables['classes_array'][] = 'listing-component';
     // Apply thumbnail class to node teaser view if image exists.
     $has_thumb = !empty($variables['content']['field_thumbnail']);
     $has_image = !empty($variables['content']['field_image']);
     $has_featured_image = !empty($variables['content']['field_feature_image']);
     if ($has_thumb || $has_image || $has_featured_image) {
       $variables['classes_array'][] = 'has-thumbnail';
-    }
-
-    if ($variables['type'] == 'blog_article') {
-      $variables['submitted'] = strip_tags($variables['submitted']);
     }
   }
 
