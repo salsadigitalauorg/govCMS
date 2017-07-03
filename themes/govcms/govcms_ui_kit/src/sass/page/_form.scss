@@ -20,11 +20,31 @@ form {
   .form-item {
     margin-top: $default_padding;
     margin-bottom: $default_padding;
+    input, textarea, select {
+      &:invalid {
+        outline: 2px solid $red_error;
+      }
+      &.error {
+        border-color: $red_error;
+      }
+    }
   }
   .form-actions {
     margin-top: $default_padding;
     margin-bottom: $default_padding;
   }
+  .error {
+    color: $red_error;
+  }
+  input {
+    &::placeholder {
+      color: $neutral_1;
+    }
+  }
+}
+
+.form-required {
+  color: $red_error;
 }
 
 // =========================================================
@@ -43,6 +63,19 @@ form.webform-client-form {
     .description {
       font-size: rem(14px);
     }
+  }
+  input, textarea {
+    &.error {
+      border: 1px solid red;
+      background-color: #fef5f1; // default drupal error colour.
+    }
+  }
+  label.error {
+    padding: 5px;
+    color: red;
+    background-color: white;
+    border-radius: 4px;
+    margin-top: 4px;
   }
   // =========================================================
   // SELECTORS - CHECKBOX, SELECT, RADIO, LIST
