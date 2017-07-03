@@ -49,6 +49,6 @@ function govcms_ui_kit_form_system_theme_settings_alter(&$form, $form_state) {
     '#type'          => 'checkbox',
     '#title'         => t('Show webform assistance'),
     '#default_value' => theme_get_setting('govcms_ui_kit_show_webform_assistance'),
-    '#description'   => t("Enable this to display show \"Fields marked * are required.\" on webform."),
+    '#description'   => t("Display \"Fields marked * are required.\" message on all webforms."),
   );
 }
