@@ -20,11 +20,31 @@ form {
   .form-item {
     margin-top: $default_padding;
     margin-bottom: $default_padding;
+    input, textarea, select {
+      &:invalid {
+        outline: 2px solid $red_error;
+      }
+      &.error {
+        border-color: $red_error;
+      }
+    }
   }
   .form-actions {
     margin-top: $default_padding;
     margin-bottom: $default_padding;
   }
+  .error {
+    color: $red_error;
+  }
+  input {
+    &::placeholder {
+      color: $neutral_1;
+    }
+  }
+}
+
+.form-required {
+  color: $red_error;
 }
 
 // =========================================================
