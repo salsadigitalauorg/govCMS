@@ -8431,9 +8431,37 @@ form .form-item {
   margin-bottom: 1.375rem;
 }
 
+form .form-item input:invalid, form .form-item textarea:invalid, form .form-item select:invalid {
+  outline: 2px solid #b30000;
+}
+
+form .form-item input.error, form .form-item textarea.error, form .form-item select.error {
+  border-color: #b30000;
+}
+
 form .form-actions {
   margin-top: 1.375rem;
   margin-bottom: 1.375rem;
+}
+
+form .error {
+  color: #b30000;
+}
+
+form input::-webkit-input-placeholder {
+  color: #313131;
+}
+
+form input:-ms-input-placeholder {
+  color: #313131;
+}
+
+form input::placeholder {
+  color: #313131;
+}
+
+.form-required {
+  color: #b30000;
 }
 
 form.webform-client-form .form-item {
