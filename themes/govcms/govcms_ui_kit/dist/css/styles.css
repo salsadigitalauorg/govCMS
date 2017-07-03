@@ -255,7 +255,7 @@ Usage:
   background-image: url("../latest/img/icons/arrow-right--white.svg");
 }
 
-main > article .see-more::after, footer[role='contentinfo'] .see-more::after, .list-horizontal .tags .see-more::after, .list-vertical .tags .see-more::after, .list-vertical--thirds .tags .see-more::after, .list-vertical--fourths .tags .see-more::after, footer[role='contentinfo'] .footer-top nav .tags .see-more::after, .list-small .tags .see-more::after, .list-highlighted .tags .see-more::after, .primary-nav ul .see-more::after,
+main > article .see-more::after, footer[role='contentinfo'] .see-more::after, .list-horizontal .tags .see-more::after, .list-vertical .tags .see-more::after, .list-vertical--thirds .tags .see-more::after, .list-vertical--fourths .tags .see-more::after, .list-small .tags .see-more::after, .list-highlighted .tags .see-more::after, .primary-nav ul .see-more::after,
 .local-nav ul .see-more::after, [class^='breadcrumbs'] .see-more::after, [class^='breadcrumbs'][class$='--inverted'] .see-more::after, .skip-to .see-more::after, [class^='controls'] .see-more::after, .govau--header .see-more::after, .prerelease-govau--header .see-more::after, .hero .see-more::after,
 .hero-sml .see-more::after,
 .hero-med .see-more::after, .header__inner .header__secondary-menu .see-more::after, .content-body .content .see-more::after, .more-link .see-more::after, .region-footer .block-menu .content ul.menu > li .see-more::after, .region-footer .block-menu-block .content ul.menu > li .see-more::after, .bean-basic-content > .content .see-more::after, #block-views-slideshow-block .banner-description-holder h3 .see-more::after, #block-views-slideshow-block .banner-description-holder .field .see-more::after, .view-home-page-blog-articles .view-content .views-row h2 .see-more::after, .view-home-page-blog-articles .view-content .views-row .display .see-more::after, .view-latest-news .view-content .views-row h2 .see-more::after, .view-latest-news .view-content .views-row .display .see-more::after, body.not-front #content .view .view-content .views-row h2 .see-more::after, body.not-front #content .view .view-content .views-row .display .see-more::after, #block-menu-menu-quick-links ul.menu li .see-more::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 .see-more::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display .see-more::after {
@@ -275,7 +275,7 @@ summary::before, .accordion--controls summary::before, .nav-toggle::before {
   background-image: url("../latest/img/icons/chevron-down--navy.svg");
 }
 
-main > article a[rel~='external']::after, footer[role='contentinfo'] a[rel~='external']::after, .list-horizontal .tags a[rel~='external']::after, .list-vertical .tags a[rel~='external']::after, .list-vertical--thirds .tags a[rel~='external']::after, .list-vertical--fourths .tags a[rel~='external']::after, footer[role='contentinfo'] .footer-top nav .tags a[rel~='external']::after, .list-small .tags a[rel~='external']::after, .list-highlighted .tags a[rel~='external']::after, .primary-nav ul a[rel~='external']::after,
+main > article a[rel~='external']::after, footer[role='contentinfo'] a[rel~='external']::after, .list-horizontal .tags a[rel~='external']::after, .list-vertical .tags a[rel~='external']::after, .list-vertical--thirds .tags a[rel~='external']::after, .list-vertical--fourths .tags a[rel~='external']::after, .list-small .tags a[rel~='external']::after, .list-highlighted .tags a[rel~='external']::after, .primary-nav ul a[rel~='external']::after,
 .local-nav ul a[rel~='external']::after, [class^='breadcrumbs'] a[rel~='external']::after, [class^='breadcrumbs'][class$='--inverted'] a[rel~='external']::after, .skip-to a[rel~='external']::after, [class^='controls'] a[rel~='external']::after, .govau--header a[rel~='external']::after, .prerelease-govau--header a[rel~='external']::after, .hero a[rel~='external']::after,
 .hero-sml a[rel~='external']::after,
 .hero-med a[rel~='external']::after, .header__inner .header__secondary-menu a[rel~='external']::after, .content-body .content a[rel~='external']::after, .more-link a[rel~='external']::after, .region-footer .block-menu .content ul.menu > li a[rel~='external']::after, .region-footer .block-menu-block .content ul.menu > li a[rel~='external']::after, .bean-basic-content > .content a[rel~='external']::after, #block-views-slideshow-block .banner-description-holder h3 a[rel~='external']::after, #block-views-slideshow-block .banner-description-holder .field a[rel~='external']::after, .view-home-page-blog-articles .view-content .views-row h2 a[rel~='external']::after, .view-home-page-blog-articles .view-content .views-row .display a[rel~='external']::after, .view-latest-news .view-content .views-row h2 a[rel~='external']::after, .view-latest-news .view-content .views-row .display a[rel~='external']::after, body.not-front #content .view .view-content .views-row h2 a[rel~='external']::after, body.not-front #content .view .view-content .views-row .display a[rel~='external']::after, #block-menu-menu-quick-links ul.menu li a[rel~='external']::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 a[rel~='external']::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display a[rel~='external']::after {
@@ -348,7 +348,7 @@ main > article a[rel~='external']::after, footer[role='contentinfo'] a[rel~='ext
   }
   pre,
   blockquote {
-    border: 1px solid #bbbaba;
+    border: 1px solid #bbbbbb;
     page-break-inside: avoid;
   }
   thead {
@@ -1023,7 +1023,7 @@ summary:last-child {
 .accordion-button:hover,
 summary:hover, .accordion-button:focus,
 summary:focus {
-  background-color: #bbbaba;
+  background-color: #bbbbbb;
   outline: none;
 }
 
@@ -1070,7 +1070,7 @@ summary::before {
 
 details,
 .accordion {
-  border-color: #bbbaba;
+  border-color: #bbbbbb;
   border-width: 1px 0;
   border-style: solid;
 }
@@ -1086,7 +1086,7 @@ details + details,
 
 [aria-expanded='true'] .accordion-button, [aria-expanded='true']
 summary {
-  border-bottom: 1px solid #bbbaba;
+  border-bottom: 1px solid #bbbbbb;
 }
 
 .accordion--controls {
@@ -1233,8 +1233,8 @@ button[disabled], button[disabled]:hover, button[disabled]:active, button[disabl
 [type='button'].disabled:active,
 [type='button'].disabled:focus {
   cursor: not-allowed;
-  border-color: #bbbaba;
-  background-color: #bbbaba;
+  border-color: #bbbbbb;
+  background-color: #bbbbbb;
   color: #313131;
 }
 
@@ -1338,7 +1338,7 @@ form [type='email'],
 form [type='password'], form textarea, form input[type='radio'], form input[type='checkbox'] {
   width: 100%;
   outline-offset: 0;
-  border: 2px solid #bbbaba;
+  border: 2px solid #bbbbbb;
   border-radius: 0;
   background-color: #fff;
   padding: 0.4em;
@@ -1383,7 +1383,7 @@ form [disabled][type='email'],
 form [disabled][type='password'], form textarea[disabled], form input[disabled][type='radio'], form input[disabled][type='checkbox'] {
   cursor: not-allowed;
   background: #f0f3f5;
-  border: 2px solid #bbbaba;
+  border: 2px solid #bbbbbb;
 }
 
 form {
@@ -1521,7 +1521,7 @@ form input[type='radio'], form input[type='checkbox'] {
 }
 
 form input[type='radio']:focus + label, form input[type='checkbox']:focus + label {
-  outline: 1px solid #bbbaba;
+  outline: 1px solid #bbbbbb;
 }
 
 form input[type='radio']:invalid + label, form input[type='checkbox']:invalid + label {
@@ -2074,7 +2074,7 @@ Markup: templates/basic-links.hbs
 
 Style guide: Link styles.1 Hover links
 */
-main > article a[rel~='external']::after, footer[role='contentinfo'] a[rel~='external']::after, .list-horizontal .tags a[rel~='external']::after, .list-vertical .tags a[rel~='external']::after, .list-vertical--thirds .tags a[rel~='external']::after, .list-vertical--fourths .tags a[rel~='external']::after, footer[role='contentinfo'] .footer-top nav .tags a[rel~='external']::after, .list-small .tags a[rel~='external']::after, .list-highlighted .tags a[rel~='external']::after, .primary-nav ul a[rel~='external']::after,
+main > article a[rel~='external']::after, footer[role='contentinfo'] a[rel~='external']::after, .list-horizontal .tags a[rel~='external']::after, .list-vertical .tags a[rel~='external']::after, .list-vertical--thirds .tags a[rel~='external']::after, .list-vertical--fourths .tags a[rel~='external']::after, .list-small .tags a[rel~='external']::after, .list-highlighted .tags a[rel~='external']::after, .primary-nav ul a[rel~='external']::after,
 .local-nav ul a[rel~='external']::after, [class^='breadcrumbs'] a[rel~='external']::after, [class^='breadcrumbs'][class$='--inverted'] a[rel~='external']::after, .skip-to a[rel~='external']::after, [class^='controls'] a[rel~='external']::after, .govau--header a[rel~='external']::after, .prerelease-govau--header a[rel~='external']::after, .hero a[rel~='external']::after,
 .hero-sml a[rel~='external']::after,
 .hero-med a[rel~='external']::after, .header__inner .header__secondary-menu a[rel~='external']::after, .content-body .content a[rel~='external']::after, .more-link a[rel~='external']::after, .region-footer .block-menu .content ul.menu > li a[rel~='external']::after, .region-footer .block-menu-block .content ul.menu > li a[rel~='external']::after, .bean-basic-content > .content a[rel~='external']::after, #block-views-slideshow-block .banner-description-holder h3 a[rel~='external']::after, #block-views-slideshow-block .banner-description-holder .field a[rel~='external']::after, .view-home-page-blog-articles .view-content .views-row h2 a[rel~='external']::after, .view-home-page-blog-articles .view-content .views-row .display a[rel~='external']::after, .view-latest-news .view-content .views-row h2 a[rel~='external']::after, .view-latest-news .view-content .views-row .display a[rel~='external']::after, body.not-front #content .view .view-content .views-row h2 a[rel~='external']::after, body.not-front #content .view .view-content .views-row .display a[rel~='external']::after, #block-menu-menu-quick-links ul.menu li a[rel~='external']::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row h2 a[rel~='external']::after, #block-views-footer-teaser-block .view-footer-teaser .view-content .views-row .display a[rel~='external']::after {
@@ -2703,7 +2703,7 @@ Style guide: List styles.4 Highlighted word style
 
 .list-horizontal > li, .list-vertical > li, .list-vertical--thirds > li, .list-vertical--fourths > li, footer[role='contentinfo'] .footer-top nav > li, .list-small > li, .list-highlighted > li {
   padding: 2.7461357194% 0;
-  border-bottom: solid 1px #bbbaba;
+  border-bottom: solid 1px #bbbbbb;
   margin-bottom: 0;
 }
 
@@ -2757,7 +2757,7 @@ Style guide: List styles.4 Highlighted word style
 }
 
 .list-horizontal > li.hero-item {
-  border-top: solid 1px #bbbaba;
+  border-top: solid 1px #bbbbbb;
 }
 
 @media screen and (min-width: 768px) {
@@ -2933,7 +2933,7 @@ Style guide: List styles.4 Highlighted word style
 }
 
 .list-small {
-  border-top: solid 1px #bbbaba;
+  border-top: solid 1px #bbbbbb;
 }
 
 .list-small a {
@@ -3231,11 +3231,11 @@ Style guide: Navigation.6 Footer navigation
 
 .global-nav li {
   margin: 0;
-  border-bottom: 1px solid rgba(187, 186, 186, 0.5);
+  border-bottom: 1px solid rgba(187, 187, 187, 0.5);
 }
 
 .global-nav li:first-child {
-  border-top: 1px solid rgba(187, 186, 186, 0.5);
+  border-top: 1px solid rgba(187, 187, 187, 0.5);
 }
 
 @media screen and (min-width: 768px) {
@@ -3255,7 +3255,7 @@ Style guide: Navigation.6 Footer navigation
     clear: left;
   }
   .global-nav li:nth-child(2) {
-    border-top: 1px solid rgba(187, 186, 186, 0.5);
+    border-top: 1px solid rgba(187, 187, 187, 0.5);
   }
 }
 
@@ -3313,7 +3313,7 @@ Style guide: Navigation.6 Footer navigation
 }
 
 .nav-toggle:focus, .nav-toggle:hover {
-  background-color: #bbbaba;
+  background-color: #bbbbbb;
 }
 
 .nav-toggle::before {
@@ -3533,12 +3533,12 @@ Style guide: Navigation.6 Footer navigation
 .local-nav ul li {
   margin: 0;
   padding: 0;
-  border-bottom: 1px solid #bbbaba;
+  border-bottom: 1px solid #bbbbbb;
 }
 
 .primary-nav ul li:first-child,
 .local-nav ul li:first-child {
-  border-top: 1px solid #bbbaba;
+  border-top: 1px solid #bbbbbb;
 }
 
 .primary-nav ul a,
@@ -4453,7 +4453,7 @@ footer[role='contentinfo'] .footer-links a {
 footer[role='contentinfo'] .footer-top {
   margin-bottom: 3.2em;
   padding-bottom: 3.2em;
-  border-bottom: 1px solid #bbbaba;
+  border-bottom: 1px solid #bbbbbb;
 }
 
 @media screen and (min-width: 768px) {
@@ -5634,7 +5634,7 @@ table {
 
 .content-table td, .field-name-body table td, form.webform-client-form .webform-component-grid table.webform-grid td,
 .content-table th, .field-name-body table th, form.webform-client-form .webform-component-grid table.webform-grid th {
-  border-bottom: solid 1px #bbbaba;
+  border-bottom: solid 1px #bbbbbb;
   padding: 0.4em;
   font-size: 87.5%;
   text-align: left;
@@ -5877,7 +5877,7 @@ summary:last-child {
 .accordion-button:hover,
 summary:hover, .accordion-button:focus,
 summary:focus {
-  background-color: #bbbaba;
+  background-color: #bbbbbb;
   outline: none;
 }
 
@@ -5924,7 +5924,7 @@ summary::before {
 
 details,
 .accordion {
-  border-color: #bbbaba;
+  border-color: #bbbbbb;
   border-width: 1px 0;
   border-style: solid;
 }
@@ -5940,7 +5940,7 @@ details + details,
 
 [aria-expanded='true'] .accordion-button, [aria-expanded='true']
 summary {
-  border-bottom: 1px solid #bbbaba;
+  border-bottom: 1px solid #bbbbbb;
 }
 
 .accordion--controls {
@@ -6453,7 +6453,7 @@ strong.very-bold {
 
 .abstract {
   margin: 1.2em 0 2em;
-  border-bottom: 1px solid #bbbaba;
+  border-bottom: 1px solid #bbbbbb;
 }
 
 .abstract p {
@@ -6476,7 +6476,7 @@ strong.very-bold {
 p.abstract {
   margin: 0.8em 0 1.5em;
   padding-bottom: 1.2em;
-  border-bottom: 1px solid #bbbaba;
+  border-bottom: 1px solid #bbbbbb;
   font-size: 1.1875rem;
 }
 
@@ -6493,7 +6493,7 @@ p.abstract {
 }
 
 hr {
-  border-color: #bbbaba;
+  border-color: #bbbbbb;
   border-style: solid;
   border-bottom: none;
   margin-top: 1.6em;
@@ -6603,7 +6603,7 @@ Style guide: Typography.7 Callouts & warnings
   margin: 1.6em 0.8em;
   padding: 1.2em 1.2em 1.2em 1.6em;
   border-radius: 1px;
-  box-shadow: 0 0 8px #bbbaba;
+  box-shadow: 0 0 8px #bbbbbb;
 }
 
 .callout--warning {
@@ -6813,7 +6813,7 @@ blockquote::after {
 blockquote footer {
   margin-top: 1.2em;
   padding-top: 0.4em;
-  border-top: 1px solid #bbbaba;
+  border-top: 1px solid #bbbbbb;
 }
 
 blockquote cite {
@@ -7226,7 +7226,7 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
   margin: 0;
   height: 3.25rem;
   background-color: #f0f3f5;
-  border: 1px solid #bbbaba;
+  border: 1px solid #bbbbbb;
   z-index: 1;
   position: relative;
 }
@@ -7242,7 +7242,7 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
   height: 3.25rem;
   box-sizing: border-box;
   background-color: #f0f3f5;
-  border: 1px solid #bbbaba;
+  border: 1px solid #bbbbbb;
   border-left: 0;
   border-radius: 0;
   background-repeat: no-repeat;
@@ -7455,7 +7455,7 @@ html:not(.no-js) .region-navigation .block-superfish ul.sf-menu:not(.superfish-p
 }
 
 .mobile-nav ul.links {
-  border-top: 1px solid #bbbaba;
+  border-top: 1px solid #bbbbbb;
   padding-left: 0;
   padding-top: 1.375rem;
   padding-bottom: 1.375rem;
@@ -8431,6 +8431,10 @@ form .form-item {
   margin-bottom: 1.375rem;
 }
 
+form .form-item input:invalid, form .form-item textarea:invalid, form .form-item select:invalid {
+  outline: 2px solid #b30000;
+}
+
 form .form-item input.error, form .form-item textarea.error, form .form-item select.error {
   border-color: #b30000;
 }
@@ -8440,7 +8444,7 @@ form .form-actions {
   margin-bottom: 1.375rem;
 }
 
-form .form-required, form .error {
+form .error {
   color: #b30000;
 }
 
@@ -8448,16 +8452,16 @@ form input::-webkit-input-placeholder {
   color: #313131;
 }
 
-form input::-moz-placeholder {
-  color: #313131;
-}
-
-form input:-moz-placeholder {
-  color: #313131;
-}
-
 form input:-ms-input-placeholder {
   color: #313131;
+}
+
+form input::placeholder {
+  color: #313131;
+}
+
+.form-required {
+  color: #b30000;
 }
 
 form.webform-client-form .form-item {
@@ -8592,7 +8596,7 @@ form.webform-client-form .webform-component-grid table.sticky-header {
 }
 
 form.webform-client-form .webform-component-grid table.sticky-header th {
-  border-bottom: solid 1px #bbbaba;
+  border-bottom: solid 1px #bbbbbb;
   padding: 0.4em;
   font-size: 87.5%;
   text-align: center;
@@ -8707,7 +8711,7 @@ form.webform-client-form .webform-next {
 
 .webform-progressbar .webform-progressbar-page {
   border-color: transparent;
-  background-color: #bbbaba;
+  background-color: #bbbbbb;
   width: 1.4375rem;
   height: 1.4375rem;
   border-radius: 50%;
@@ -10031,7 +10035,7 @@ body.not-front #content .view .pager {
   margin: 0;
   box-sizing: border-box;
   font-weight: 400;
-  border: 1px solid #bbbaba;
+  border: 1px solid #bbbbbb;
   text-align: left;
   background-color: #F4F4F4;
   color: #313131;
@@ -10039,7 +10043,7 @@ body.not-front #content .view .pager {
 
 #block-menu-block-govcms-menu-block-sidebar h2 button:hover, #block-menu-block-govcms-menu-block-sidebar .display button:hover, #block-menu-block-govcms-menu-block-sidebar h2 button:focus, #block-menu-block-govcms-menu-block-sidebar .display button:focus {
   color: #313131;
-  background-color: #bbbaba;
+  background-color: #bbbbbb;
 }
 
 #block-menu-block-govcms-menu-block-sidebar h2 button:after, #block-menu-block-govcms-menu-block-sidebar .display button:after {
@@ -10783,7 +10787,7 @@ body.not-front #content .view .pager {
   margin: 0;
   height: 3.25rem;
   background-color: #f0f3f5;
-  border: 1px solid #bbbaba;
+  border: 1px solid #bbbbbb;
   z-index: 1;
   position: relative;
 }
@@ -10799,7 +10803,7 @@ body.not-front #content .view .pager {
   height: 3.25rem;
   box-sizing: border-box;
   background-color: #f0f3f5;
-  border: 1px solid #bbbaba;
+  border: 1px solid #bbbbbb;
   border-left: 0;
   border-radius: 0;
   background-repeat: no-repeat;
