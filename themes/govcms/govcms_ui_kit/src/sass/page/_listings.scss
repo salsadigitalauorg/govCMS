@@ -81,3 +81,33 @@ body.not-front #content {
     }
   }
 }
+
+.view-home-page-blog-articles, body.not-front #content .view-home-page-blog-articles, body.not-front #content .view-id-publications {
+  .view-content {
+    .views-row {
+      a {
+        .node {
+          padding-left: rem(30px);
+          padding-right: rem(30px);
+        }
+        &:hover, &:focus {
+          .node {
+            background-color: $secondary_3;
+            color: white;
+            &.has-thumbnail {
+              .field-type-image {
+                background-color: black;
+                img {
+                  opacity: 0.6;
+                }
+              }
+            }
+            h2, .field-type-datetime, .submitted, .field-name-field-subtitle, .field-name-body {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

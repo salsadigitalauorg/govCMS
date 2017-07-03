@@ -1,5 +1,7 @@
 @import '../../vendor/gov-au-ui-kit/assets/sass/vendor/bourbon/bourbon';
 @import '../../vendor/gov-au-ui-kit/assets/sass/vendor/neat/neat';
+@import '../../vendor/gov-au-ui-kit/assets/sass/utils/colours';
+@import 'variables';
 @import 'mixins';
 .timeline-Viewport {
   width: 100% !important;
@@ -22,6 +24,14 @@
       .timeline-Tweet-text {
         font-size: 16px;
         line-height: 1.5;
+        a {
+          color: $primary_1;
+          border-bottom: 1px solid $secondary_3;
+          &:hover {
+            color: $neutral_1;
+            background-color: $secondary_3;
+          }
+        }
       }
     }
   }
