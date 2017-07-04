@@ -8740,6 +8740,10 @@ form.webform-client-form .webform-next {
   background-color: #193748;
 }
 
+.webform-progressbar .webform-progressbar-page.current .webform-progressbar-page-label {
+  font-weight: 700;
+}
+
 .webform-progressbar .webform-progressbar-outer {
   border-color: transparent;
   height: 0.75rem;
