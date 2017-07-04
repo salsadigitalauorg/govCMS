@@ -64,7 +64,7 @@ html {
   }
 }
 
-.sidebar-first {
+.content-sidebar-first {
   order: -1;
   width: 100%;
   @include breakpoint(large_tablet) {
