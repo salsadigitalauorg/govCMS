@@ -281,17 +281,26 @@ form.webform-client-form {
   margin-bottom: $default_padding;
   padding: 1px;
   .webform-progressbar-page {
+    list-style: none;
     border-color: transparent;
     background-color: $neutral_3;
-    width: rem(23px);
-    height: rem(23px);
     border-radius: 50%;
-    margin: rem(-18px) (23px * -0.5);
+    width: rem(16px);
+    height: rem(16px);
+    margin: rem(-15px) (16px * -0.5);
+    &.completed, &.current {
+      width: rem(23px);
+      height: rem(23px);
+      margin: rem(-18px) (23px * -0.5);
+    }
     &.completed {
       background-color: $secondary_2;
     }
     &.current {
       background-color: $primary_2;
+      .webform-progressbar-page-label {
+        font-weight: 700;
+      }
     }
   }
   .webform-progressbar-outer {

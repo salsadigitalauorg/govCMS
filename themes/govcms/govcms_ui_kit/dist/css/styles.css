@@ -8723,11 +8723,18 @@ form.webform-client-form .webform-next {
 }
 
 .webform-progressbar .webform-progressbar-page {
+  list-style: none;
   border-color: transparent;
   background-color: #bbbbbb;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  margin: -0.9375rem -8px;
+}
+
+.webform-progressbar .webform-progressbar-page.completed, .webform-progressbar .webform-progressbar-page.current {
   width: 1.4375rem;
   height: 1.4375rem;
-  border-radius: 50%;
   margin: -1.125rem -11.5px;
 }
 
@@ -8737,6 +8744,10 @@ form.webform-client-form .webform-next {
 
 .webform-progressbar .webform-progressbar-page.current {
   background-color: #193748;
+}
+
+.webform-progressbar .webform-progressbar-page.current .webform-progressbar-page-label {
+  font-weight: 700;
 }
 
 .webform-progressbar .webform-progressbar-outer {
