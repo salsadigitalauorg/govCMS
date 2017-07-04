@@ -7754,7 +7754,7 @@ body.not-front #content .content-header .content-header-inner h1, body.not-front
 
 @media (min-width: 1024px) {
   .content-body-inner.has-sidebar .region-content {
-    max-width: 48.75rem;
+    max-width: 73.125rem;
   }
 }
 
@@ -7822,7 +7822,7 @@ body.not-front #content .content-header .content-header-inner h1, body.not-front
 }
 
 .page-node .content-body-inner.no-sidebar .region-content .node > .submitted {
-  max-width: 48.75rem;
+  max-width: 73.125rem;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1.25rem;
@@ -7831,7 +7831,7 @@ body.not-front #content .content-header .content-header-inner h1, body.not-front
 }
 
 .page-node .content-body-inner.no-sidebar .region-content .node > .content {
-  max-width: 48.75rem;
+  max-width: 73.125rem;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1.25rem;
@@ -7920,7 +7920,7 @@ body.not-front #content .content-header .content-header-inner h1, body.not-front
 }
 
 .content-body-inner.no-sidebar .panel-display.panel-1col, .content-body-inner.no-sidebar .panel-display.panel-1col-stacked {
-  max-width: 48.75rem;
+  max-width: 73.125rem;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1.25rem;
@@ -7929,7 +7929,7 @@ body.not-front #content .content-header .content-header-inner h1, body.not-front
 }
 
 .content-body-inner.no-sidebar .panel-display.panel-2col, .content-body-inner.no-sidebar .panel-display.panel-2col-bricks, .content-body-inner.no-sidebar .panel-display.panel-2col-stacked {
-  max-width: 48.75rem;
+  max-width: 73.125rem;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1.25rem;
@@ -7938,7 +7938,7 @@ body.not-front #content .content-header .content-header-inner h1, body.not-front
 }
 
 .content-body-inner.no-sidebar #site-map {
-  max-width: 48.75rem;
+  max-width: 73.125rem;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1.25rem;
@@ -7947,7 +7947,7 @@ body.not-front #content .content-header .content-header-inner h1, body.not-front
 }
 
 .content-body-inner.no-sidebar .search-api-page-results {
-  max-width: 48.75rem;
+  max-width: 73.125rem;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1.25rem;
@@ -7965,7 +7965,7 @@ body.not-front #content .content-header .content-header-inner h1, body.not-front
 }
 
 .page-search404 .content-body-inner.no-sidebar .block-system {
-  max-width: 48.75rem;
+  max-width: 73.125rem;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1.25rem;
@@ -7974,7 +7974,7 @@ body.not-front #content .content-header .content-header-inner h1, body.not-front
 }
 
 .page-node-done .content-body-inner.no-sidebar .block-system {
-  max-width: 48.75rem;
+  max-width: 73.125rem;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1.25rem;
@@ -8127,6 +8127,10 @@ body.not-front #content .content-header .content-header-inner h1, body.not-front
     font-size: inherit;
     line-height: 1.875rem;
   }
+}
+
+.field-name-body {
+  max-width: 48.75rem;
 }
 
 .field-name-body .introduction {

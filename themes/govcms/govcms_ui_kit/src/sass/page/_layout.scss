@@ -79,7 +79,7 @@ html {
     .region-content {
       width: 100%;
       @include breakpoint(large_tablet) {
-        max-width: $desktop_content_column;
+        max-width: $desktop_column;
       }
     }
     .panel-display {
@@ -92,10 +92,10 @@ html {
         // Node Pages
         .node {
           &>.submitted {
-            @include center-column($desktop_content_column);
+            @include center-column($desktop_column);
           }
           &>.content {
-            @include center-column($desktop_content_column);
+            @include center-column($desktop_column);
           }
         }
         // Node Webforms
@@ -115,18 +115,18 @@ html {
       @include center-column($desktop_column);
       // One Column (100)
       &.panel-1col, &.panel-1col-stacked {
-        @include center-column($desktop_content_column);
+        @include center-column($desktop_column);
       }
       // Two Columns (50 50)
       &.panel-2col, &.panel-2col-bricks, &.panel-2col-stacked {
-        @include center-column($desktop_content_column);
+        @include center-column($desktop_column);
       }
     }
     #site-map {
-      @include center-column($desktop_content_column);
+      @include center-column($desktop_column);
     }
     .search-api-page-results {
-      @include center-column($desktop_content_column);
+      @include center-column($desktop_column);
     }
     .page-contact & {
       .block-system {
@@ -135,12 +135,12 @@ html {
     }
     .page-search404 & {
       .block-system {
-        @include center-column($desktop_content_column);
+        @include center-column($desktop_column);
       }
     }
     .page-node-done & {
       .block-system {
-        @include center-column($desktop_content_column);
+        @include center-column($desktop_column);
       }
     }
   }
@@ -181,6 +181,7 @@ ul, ol, dl, p, dt, dd {
 
 .field-name-body {
   @include wysiwyg;
+  max-width: $desktop_content_column;
 }
 
 a[rel~='external']::after {
