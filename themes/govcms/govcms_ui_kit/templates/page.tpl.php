@@ -120,7 +120,7 @@
       <?php print $sidebar_second; ?>
     </aside>
   <?php endif; ?>
-  
+
   <div id="footer">
     <?php print render($page['footer']); ?>
   </div>

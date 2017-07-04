@@ -39,6 +39,10 @@ function govcms_ui_kit_preprocess_html(&$variables) {
   // Drupal forms.js does not support new jQuery. Migrate library needed.
   drupal_add_js(drupal_get_path('theme', 'govcms_ui_kit') . '/vendor/jquery/jquery-migrate-1.2.1.min.js', array('weight' => -1));
   drupal_add_js(drupal_get_path('theme', 'govcms_ui_kit') . '/vendor/jquery/jquery.polyfills.js', array('group' => 'JS_LIBRARY', 'weight' => -1));
+
+  if (theme_get_setting('govcms_ui_kit_fix_site_width') == 1) {
+    $variables['classes_array'][] = 'fixed-width';
+  }
 }
 
 /**

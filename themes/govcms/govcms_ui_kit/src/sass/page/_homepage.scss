@@ -223,25 +223,8 @@
       flex-wrap: wrap;
     }
     .views-row {
-      @include breakpoint(tablet) {
-        @include span-columns(6 of 12);
-      }
-      @include breakpoint(large_tablet) {
-        @include span-columns(4 of 12);
-      }
-      &:nth-child(2n) {
-        @include breakpoint(tablet) {
-          @include omega();
-        }
-        @include breakpoint(large_tablet) {
-          margin-right: flex-gutter(12);
-        }
-      }
-      &:nth-child(3n) {
-        @include breakpoint(large_tablet) {
-          @include omega();
-        }
-      }
+      @include generic-view-row-base;
+      @include generic-view-row-3;
       .node {
         @include listing-component-wrapper;
         &.has-thumbnail {

@@ -1,6 +1,6 @@
 #content {
   .search-form {
-    @include center-column($desktop_content_column);
+    @include center-column($desktop_column);
     // 'Page not found' form has small differences from the search page version.
     .page-search404 & {
       padding-left: 0;
@@ -17,6 +17,8 @@
       .page-search & {
         display: flex;
         align-items: flex-end;
+        max-width: $desktop_content_column;
+        position: relative;
       }
     }
     .form-item {
@@ -29,6 +31,9 @@
     }
     input.form-submit {
       @include search-submit-button;
+      position: absolute;
+      bottom: 0;
+      right: 0;
     }
   }
 }
@@ -36,6 +41,7 @@
 .search-results {
   padding: 0;
   .search-result {
+    max-width: $desktop_content_column;
     h3 {
       font-size: rem(26px);
     }
