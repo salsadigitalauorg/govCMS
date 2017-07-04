@@ -281,6 +281,7 @@ form.webform-client-form {
   margin-bottom: $default_padding;
   padding: 1px;
   .webform-progressbar-page {
+    list-style: none;
     border-color: transparent;
     background-color: $neutral_3;
     width: rem(23px);

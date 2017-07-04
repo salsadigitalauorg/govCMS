@@ -8723,6 +8723,7 @@ form.webform-client-form .webform-next {
 }
 
 .webform-progressbar .webform-progressbar-page {
+  list-style: none;
   border-color: transparent;
   background-color: #bbbbbb;
   width: 1.4375rem;
