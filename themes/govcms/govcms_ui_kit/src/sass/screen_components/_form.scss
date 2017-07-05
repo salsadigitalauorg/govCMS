@@ -113,7 +113,7 @@ form.webform-client-form {
     }
     input.webform-calendar {
       padding: 0;
-      width: rem(25px);
+      width: rem(24px);
       height: rem(28px);
       background-color: transparent !important;
       color: transparent !important;
@@ -289,9 +289,9 @@ form.webform-client-form {
     height: rem(16px);
     margin: rem(-15px) (16px * -0.5);
     &.completed, &.current {
-      width: rem(23px);
-      height: rem(23px);
-      margin: rem(-18px) (23px * -0.5);
+      width: rem(24px);
+      height: rem(24px);
+      margin: rem(-18px) (24px * -0.5);
     }
     &.completed {
       background-color: $secondary_2;
@@ -313,7 +313,7 @@ form.webform-client-form {
     height: rem(12px);
   }
   .webform-progressbar-page-label {
-    margin-top: rem(15px);
+    margin-top: rem(16px);
     display: inline-block;
     color: $neutral_1;
   }

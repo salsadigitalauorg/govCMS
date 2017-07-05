@@ -16,10 +16,10 @@
         display: block;
       }
       &>li {
-        margin-bottom: rem(15px);
+        margin-bottom: rem(16px);
         @include breakpoint(tablet) {
           display: inline-block;
-          margin-left: rem(15px);
+          margin-left: rem(16px);
         }
         @include breakpoint(desktop) {
           margin-left: rem(30px);

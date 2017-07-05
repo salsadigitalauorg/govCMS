@@ -72,6 +72,10 @@
   @return url("../../vendor/gov-au-ui-kit/assets/img/icons/"+$filename);
 }
 
+@mixin ui-kit-external-light() {
+  background-image: url(../images/svg/external-link--white.svg) !important;
+}
+
 @mixin body-column() {
   max-width: $desktop_max_slideshow_width;
   min-width: auto;

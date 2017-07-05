@@ -42,7 +42,7 @@
       }
       @include link-colours(white, $neutral_4, $neutral_1);
       a[rel~='external']::after {
-        background-image: url(../images/svg/external-link--white.svg) !important;
+        @include ui-kit-external-light;
       }
     }
   }

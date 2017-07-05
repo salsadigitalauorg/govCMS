@@ -39,9 +39,9 @@
             background-image: url(../images/svg/nav_down_arrow.svg);
             background-position: center;
             background-repeat: no-repeat;
-            width: rem(11px);
-            height: rem(7px);
-            margin-left: rem(5px);
+            width: rem(12px);
+            height: rem(8px);
+            margin-left: rem(4px);
             vertical-align: middle;
           }
         }
@@ -86,8 +86,8 @@
               text-decoration: none;
               padding-left: rem(30px);
               padding-right: rem(30px);
-              padding-top: rem(15px);
-              padding-bottom: rem((15px - 1px));
+              padding-top: rem(16px);
+              padding-bottom: rem((16px - 1px));
               border-bottom: 1px solid transparent;
               &:hover, &:focus {
                 background-color: $main_menu_hover;

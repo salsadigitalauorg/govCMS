@@ -101,7 +101,7 @@
       }
     }
     img {
-      height: rem(225px);
+      height: rem(224px);
       object-fit: cover;
       float: left;
       @include breakpoint(tablet) {
@@ -126,7 +126,7 @@
       margin-top: 0;
       font-weight: 400;
       @include breakpoint(tablet) {
-        margin-bottom: rem(21px);
+        margin-bottom: rem(20px);
         font-size: rem(48px);
         font-weight: 300;
       }
@@ -140,18 +140,21 @@
       position: relative;
       box-sizing: border-box;
       background-color: #0B3B46;
-      padding: rem(45px);
-      padding-top: rem(85px);
+      padding: rem(44px);
+      padding-top: rem(84px);
       max-width: rem(524px);
       min-height: rem(444px);
       color: white;
+    }
+    a[rel~='external']::after {
+      @include ui-kit-external-light;
     }
   }
   .slider-controls {
     position: absolute;
     top: 0;
     padding-top: rem(34px);
-    padding-left: rem(37px);
+    padding-left: rem(36px);
     button {
       color: $secondary_3;
       border: 0;

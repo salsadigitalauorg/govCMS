@@ -21,7 +21,7 @@
     // Button is only on mobile.
     button {
       @include transition-fade;
-      padding: rem(13px) rem(50px) rem(13px) rem(15px);
+      padding: rem(12px) rem(50px) rem(12px) rem(16px);
       position: relative;
       width: 100%;
       margin: 0;
@@ -63,7 +63,7 @@
     &.showing {
       display: block;
       background-color: #FAFAFA;
-      padding: rem(26px) rem(15px);
+      padding: rem(26px) rem(16px);
     }
   }
   .menu-block-wrapper {
@@ -114,9 +114,9 @@
         width: 100%;
         display: inline-block;
         box-sizing: border-box;
-        padding-top: rem(13px);
-        padding-bottom: rem(13px);
-        padding-right: rem(35px);
+        padding-top: rem(12px);
+        padding-bottom: rem(12px);
+        padding-right: rem(36px);
         border-left: 4px solid transparent;
         border-bottom: 0;
         &:hover, &:focus {

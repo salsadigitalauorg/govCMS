@@ -46,7 +46,7 @@
         }
       }
       .header-title {
-        padding-left: rem(5px);
+        padding-left: rem(4px);
         margin-right: auto;
         font-size: rem(18px);
         line-height: 1em;
@@ -78,7 +78,7 @@
       display: table;
       padding: 0;
       margin: 0;
-      margin-left: rem(5px);
+      margin-left: rem(4px);
       li {
         display: table-cell;
         vertical-align: middle;
@@ -202,7 +202,7 @@
 // =========================================================
 .mobile-expand-search {
   @include hide-text;
-  width: rem(35px);
+  width: rem(36px);
   padding: 0;
   margin: 0;
   border: 0;
@@ -247,5 +247,9 @@
     &:hover, &:focus {
       background-image: url(../images/svg/mobile_search_close_hover.svg);
     }
+  }
+  // For admin.
+  .navbar-vertical & {
+    top: rem(16px + 38px);
   }
 }
