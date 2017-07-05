@@ -1,0 +1,29 @@
+.view-home-page-blog-articles, .view-latest-news, body.page-events .view, body.page-publications .view, body.page-news-media .view, body.page-news .view {
+  .view-content {
+    display: flex;
+    flex-wrap: wrap;
+    .views-row {
+      width: 50%;
+      box-sizing: border-box;
+      margin-bottom: 1em;
+      &:nth-child(2n + 1) {
+        padding-right: 1em;
+      }
+      &:nth-child(2n) {
+        padding-left: 1em;
+      }
+    }
+  }
+}
+
+.field-name-field-thumbnail, .field-name-field-image {
+  a::after {
+    display: none;
+  }
+}
+
+.item-list {
+  .pager {
+    display: none;
+  }
+}

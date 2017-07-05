@@ -1,0 +1,85 @@
+.skip-to {
+  display: none;
+}
+
+.region-header {
+  display: none;
+}
+
+.menu.sf-menu {
+  display: none;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+.mobile-expand-search {
+  display: none;
+}
+
+.mobile-expand-menu {
+  display: none;
+}
+
+.header__secondary-menu {
+  display: none;
+}
+
+.block-menu-block {
+  display: none;
+}
+
+.slider-controls {
+  display: none;
+}
+
+// Based on UI Kit typography, but removed spacings
+// and converted font sizes to pt.
+body {
+  font-family: $base-serif;
+  font-size: 12pt;
+}
+
+h1, h2, h3, h4 {
+  font-weight: $base-font-weight;
+}
+
+h1 {
+  font-weight: $bold-font-weight;
+  font-size: 30pt;
+  &:first-of-type {
+    margin-top: $tiny-spacing;
+  }
+}
+
+h2 {
+  line-height: $small-leading;
+  font-size: 30pt;
+}
+
+h3 {
+  font-weight: $heading-font-weight;
+  font-size: 19.5pt;
+}
+
+h4, h5, h6 {
+  font-size: 13.5pt;
+  font-weight: $heading-font-weight;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  a::after {
+    display: block;
+    font-size: 10pt;
+    font-weight: normal;
+  }
+}
+
+img {
+  height: auto;
+}
+
+ul.inline li {
+  padding-left: 0;
+}

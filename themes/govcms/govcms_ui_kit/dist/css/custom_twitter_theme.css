@@ -206,8 +206,12 @@ Style guide: Colours.3 Accessibility
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 
 .timeline-Viewport .timeline-TweetList::after {
@@ -253,5 +257,4 @@ Style guide: Colours.3 Accessibility
   color: #313131;
   background-color: #5bcbe3;
 }
-
 /*# sourceMappingURL=custom_twitter_theme.css.map */

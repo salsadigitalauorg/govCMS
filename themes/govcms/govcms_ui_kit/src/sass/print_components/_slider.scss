@@ -1,0 +1,17 @@
+.view-content {
+  ul {
+    padding-left: 0;
+    li {
+      list-style: none;
+      margin-bottom: 1em;
+      .field-name-field-slide-image {
+        a::after {
+          display: none;
+        }
+        img {
+          height: auto;
+        }
+      }
+    }
+  }
+}

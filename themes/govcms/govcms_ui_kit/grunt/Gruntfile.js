@@ -263,7 +263,8 @@ module.exports = function(grunt) {
         files: {}
       }
     };
-    sass_config.dist.files[THEME_DIR + 'dist/css/styles.css'] = THEME_DIR + 'src/sass/styles.scss';
+    sass_config.dist.files[THEME_DIR + 'dist/css/screen_styles.css'] = THEME_DIR + 'src/sass/screen_styles.scss';
+    sass_config.dist.files[THEME_DIR + 'dist/css/print_styles.css'] = THEME_DIR + 'src/sass/print_styles.scss';
     sass_config.dist.files[THEME_DIR + 'dist/css/custom_twitter_theme.css'] = THEME_DIR + 'src/sass/custom_twitter_theme.scss';
 
     GRUNT_CONFIG['sass'] = sass_config;
@@ -287,7 +288,7 @@ module.exports = function(grunt) {
         ]
       },
       dist: {
-        src: THEME_DIR + 'dist/css/styles.css'
+        src: THEME_DIR + 'dist/css/*.css'
       }
     };
 

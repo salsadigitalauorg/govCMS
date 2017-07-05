@@ -1,0 +1,1084 @@
+/*
+Colours
+
+A basic palette of colours that are clear and accessible.
+
+We are finalising the colours &mdash; for help <a href="https://github.com/AusDTO/gov-au-ui-kit/issues" rel="external">log a GitHub issue</a>.
+
+Style guide: Colours
+*/
+/*
+Colours palette
+
+Lighter and darker versions are percentage variations of the original colours (Sass variables are provided for reference).
+
+<div class="guide-colour-examples">
+  <div class="guide-colour">
+    <div class="swatch bg-non-black"></div>
+    <p class="text"><strong>Non-black</strong><br/>
+      <small>$non-black<br/>#313131</small></p>
+  </div>
+
+  <div class="guide-colour">
+    <div class="swatch bg-grey"></div>
+    <p class="text"><strong>Grey</strong><br/>
+      <small>$grey<br/> #717171</small></p>
+  </div>
+
+  <div class="guide-colour">
+    <div class="swatch bg-light-grey"></div>
+    <p class="text"><strong>Light-grey</strong><br/>
+      <small>$light-grey<br/> #BEBEBE</small></p>
+  </div>
+
+  <div class="guide-colour">
+    <div class="swatch bg-non-white"></div>
+    <p class="text"><strong>Non-white</strong><br/>
+      <small>$non-white<br/> #F0F3F5</small></p>
+  </div>
+
+  <div class="guide-colour">
+    <div class="swatch bg-darker-aqua"></div>
+    <p class="text"><strong>Darker-aqua</strong><br/>
+      <small>$darker-aqua<br/> #115361</small></p>
+  </div>
+
+  <div class="guide-colour">
+    <div class="swatch bg-dark-aqua"></div>
+    <p class="text"><strong>Dark-aqua</strong><br/>
+      <small>$dark-aqua<br/> #146577</small></p>
+  </div>
+
+  <div class="guide-colour">
+    <div class="swatch bg-aqua"></div>
+    <p class="text"><strong>Aqua</strong><br/>
+      <small>$aqua<br/> #18788D</small></p>
+  </div>
+
+  <div class="guide-colour">
+    <div class="swatch bg-light-aqua"></div>
+    <p class="text"><strong>Light-aqua</strong><br/>
+      <small>$light-aqua<br/> #5BCBE3</small></p>
+  </div>
+
+  <div class="guide-colour">
+    <div class="swatch bg-lighter-aqua"></div>
+    <p class="text"><strong>Lighter-aqua</strong><br/>
+      <small>$lighter-aqua<br/> #5BCBE3</small></p>
+  </div>
+
+  <div class="guide-colour">
+    <div class="swatch bg-dark-navy"></div>
+    <p class="text"><strong>Dark-navy</strong><br/>
+      <small>$dark-navy<br/> #152D3B</small></p>
+  </div>
+
+  <div class="guide-colour">
+    <div class="swatch bg-navy"></div>
+    <p class="text"><strong>Navy</strong><br/>
+      <small>$navy<br/> #224A61</small></p>
+  </div>
+
+  <div class="guide-colour">
+    <div class="swatch bg-maroon"></div>
+    <p class="text"><strong>Maroon</strong><br/>
+      <small>$maroon<br/> #880E48</small></p>
+  </div>
+</div>
+
+
+Style guide: Colours.1 Colours palette
+*/
+/*
+Contextual colours palette
+
+These colours are reserved to help show specific changes in status.
+
+<div class="guide-colour-examples">
+  <div class="guide-colour">
+    <div class="swatch bg-success-green"></div>
+    <p class="text"><strong>Success-green</strong><br/>
+      <small>$success-colour<br/> #007554</small></p>
+  </div>
+
+  <div class="guide-colour">
+    <div class="swatch bg-light-green"></div>
+    <p class="text"><strong>Light-green</strong><br/>
+      <small>$light-green<br/> #e6efc2</small></p>
+  </div>
+
+  <div class="guide-colour">
+    <div class="swatch bg-error-red"></div>
+    <p class="text"><strong>Error-red</strong><br/>
+      <small>$error-colour<br/> #cc0000</small></p>
+  </div>
+
+  <div class="guide-colour">
+    <div class="swatch bg-light-red"></div>
+    <p class="text"><strong>Light-red</strong><br/>
+      <small>$light-red<br/> #f9dede</small></p>
+  </div>
+
+  <div class="guide-colour">
+    <div class="swatch bg-warning-yellow"></div>
+    <p class="text"><strong>Warning-yellow</strong><br/>
+      <small>$warning-colour<br/> #f9c642</small></p>
+  </div>
+
+  <div class="guide-colour">
+    <div class="swatch bg-light-yellow"></div>
+    <p class="text"><strong>Light-yellow</strong><br/>
+      <small>$light-yellow<br/> #fdf7dc</small></p>
+  </div>
+
+  <div class="guide-colour">
+    <div class="swatch bg-info-blue"></div>
+    <p class="text"><strong>Info-blue</strong><br/>
+      <small>$info-colour<br/> #00Bfe9</small></p>
+  </div>
+
+  <div class="guide-colour">
+    <div class="swatch bg-light-blue"></div>
+    <p class="text"><strong>Light-blue</strong><br/>
+      <small>$light-blue<br/> #e8f5fa</small></p>
+  </div>
+</div>
+
+Style guide: Colours.2 Contextual colours palette
+*/
+/*
+Accessibility
+
+The <a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html" rel="external">recommended colour contrast ratio</a> for text and interactive elements should be at least 4.5:1.
+
+### Accessible combinations
+<p class="guide-colour-block bg-non-black">non-white on non-black<span class="invert">AAA</span></p>
+<p class="guide-colour-block bg-grey">white on grey <span class="invert">AA</span></p>
+<p class="guide-colour-block bg-light-grey">non-black on light-grey <span class="invert">AAA</span></p>
+<p class="guide-colour-block bg-non-white">non-black on non-white <span class="invert">AAA</span></p>
+<p class="guide-colour-block bg-white">non-black on white <span class="invert">AAA</span></p>
+<p class="guide-colour-block bg-darker-aqua">non-white on darker-aqua <span class="invert">AAA</span></p>
+<p class="guide-colour-block bg-dark-aqua">non-white on dark-aqua <span class="invert">AA</span></p>
+<p class="guide-colour-block bg-aqua">white on aqua <span class="invert">AA</span></p>
+<p class="guide-colour-block bg-light-aqua">non-black on light-aqua <span class="invert">AAA</span></p>
+<p class="guide-colour-block bg-dark-navy">non-white on dark-navy <span class="invert">AAA</span></p>
+<p class="guide-colour-block bg-navy">non-white on navy <span class="invert">AAA</span></p>
+<p class="guide-colour-block bg-maroon">white on maroon <span class="invert">AAA</span></p>
+<p class="guide-colour-block bg-error-red">white on error-red  <span class="invert">AA</span></p>
+<p class="guide-colour-block bg-light-red">error-red on light-red <span class="invert">AA</span></p>
+<p class="guide-colour-block bg-success-green">white on success-green <span class="invert">AA</span></p>
+<p class="guide-colour-block bg-light-green">success-green on light-green <span class="invert">AAA</span></p>
+<p class="guide-colour-block bg-light-yellow">non-black on light-yellow <span class="invert">AA</span></p>
+<p class="guide-colour-block bg-light-blue">non-black on light-blue <span class="invert">AA</span></p>
+
+<details open data-label="colour-accessibility" aria-expanded="false">
+  <summary>Accessibility &amp; browser testing</summary>
+  <div class="accordion-panel">
+  <strong>Passed</strong>:
+    <ul>
+      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+    </ul>
+  <strong>Untested</strong>:
+    <ul>
+      <li>WCAG:AA manual</li>
+      <li>Browser support &mdash; automated and manual</li>
+    </ul>
+  </div>
+</details>
+
+Style guide: Colours.3 Accessibility
+*/
+/*
+IE Conditionals
+
+Based on implementation by govuk_frontend_toolkit
+https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_conditionals.scss
+
+The base css you write should be for mobile. You can
+then add desktop styles on top.
+
+Usage:
+
+  div.columns {
+    border: 1px solid;
+
+    @include media($desktop){
+      width: 30%;
+      float: left;
+    }
+    @include ie-lte(8) {
+      something to fix visual bugs in old IE
+    }
+    @include ie(6) {
+      padding: 0;
+    }
+  }
+*/
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+.visuallyhidden,
+.is-visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/*
+  Warning/notification regarding feature support
+*/
+.ua-notification {
+  display: block;
+  padding: 0.8em;
+  text-align: center;
+  background-color: #f9c642;
+  color: #313131;
+  font-size: rem(17);
+  margin-bottom: 0;
+}
+
+.icon-chevron::before {
+  border-style: solid;
+  border-width: 0.25em 0.25em 0 0;
+  content: '';
+  display: inline-block;
+  height: 0.5em;
+  left: 0.15em;
+  position: relative;
+  vertical-align: top;
+  width: 0.5em;
+  transition: -webkit-transform 300ms linear;
+  transition: transform 300ms linear;
+  transition: transform 300ms linear, -webkit-transform 300ms linear;
+}
+
+.icon-chevron.top::before {
+  top: 0.75em;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.icon-chevron.right::before {
+  left: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.icon-chevron.bottom::before {
+  top: 0.5em;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.icon-chevron.left::before {
+  left: 0.25em;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+@media print {
+  *,
+  *::before,
+  *::after,
+  *::first-letter,
+  *::first-line {
+    background: transparent;
+    color: #000;
+    box-shadow: none;
+    text-shadow: none;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+  a[href^='#']::after,
+  a[href^='javascript:']::after {
+    content: '';
+  }
+  pre,
+  blockquote {
+    border: 1px solid #bbbbbb;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100%;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+/*! responsive-nav.js 1.0.39 by @viljamis */
+.nav-collapse ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+  list-style: none;
+}
+
+.nav-collapse li {
+  width: 100%;
+  display: block;
+}
+
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.nav-collapse.opened {
+  max-height: 9999px;
+}
+
+.nav-toggle {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+@media screen and (min-width: 40em) {
+  .js .nav-collapse {
+    position: relative;
+  }
+  .js .nav-collapse.closed {
+    max-height: none;
+  }
+  .nav-toggle {
+    display: none;
+  }
+}
+
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  box-sizing: content-box;
+  /* 2 */
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+/*
+Grid
+
+This framework uses <a href="http://bourbon.io/" rel="external">Bourbon</a> and <a href="http://neat.bourbon.io/" rel="external">Neat</a> to create a consistent 16 column responsive grid layout with good defaults.
+
+Bourbon is a <a href="http://sass-lang.com/" rel="external">SASS</a> mixin library (it provides little styling). Neat is a flexible grid framework.
+
+Avoid mixing this layout with other grid layouts.
+
+<p class="callout"><strong>Grid classes?</strong> There are no non-semantic grid classes with which to set block elements. This is intentional. If you need to add to or customise the grid system see below.</p>
+
+Primary content is always contained in 12 columns. This allows for seamless introduction of a sidebar/side navigation.
+
+The grid unit proportions, gutters and spacing are defined in `_grid-settings.scss`.
+
+If you need an element not defined here you are probably not the only one &mdash; please <a href="https://github.com/AusDTO/gov-au-ui-kit/issues" rel="external">log a GitHub issue</a> so we can provide it for everyone.
+
+***
+
+This guidance is in part adapted from <a href="http://govuk-elements.herokuapp.com" rel="external">GOV.UK elements</a> under <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="external">Open Government Licence v3.0</a>, and <a href="https://standards.usa.gov/getting-started/" rel="external">18F Draft US Web Design Standards</a> under <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode" rel="external">CC0 1.0 Universal</a>.
+
+Style guide: Grid
+*/
+/*
+Responsive breakpoints
+
+This framework has a mobile-first default layout of 4 columns, and adds 3 breakpoints for grid layout on larger screens:
+
+- Default: 4 columns
+- Mobile: 8 columns, 420px minimum
+- Tablet: 12 columns, 768px minimum
+- Desktop: 16 columns, 1200px minimum
+
+If you give an element a modified grid setting consider the implications for all breakpoints. The Digital Service Standard recommends you <a href="https://www.dto.gov.au/standard/6-consistent-and-responsive/" rel="external">build using mobile first design principles</a>.
+
+Please also consider the [font size](section-typography.html#kssref-typography-2-headings-body-copy-1-breakpoints) at different breakpoints.
+
+```
+$mobile: new-breakpoint(min-width 420px 8);
+$tablet: new-breakpoint(min-width 768px 12);
+$desktop: new-breakpoint(min-width $max-width 16);
+```
+
+Style guide: Grid.3 Breakpoints
+*/
+/*
+Helpers
+
+Style guide: Grid.4 Helpers
+*/
+/*
+Omega Reset
+
+When applying grid-columns to responsive layouts you may find yourself needing to reset the [omega properties applied by Neat](http://thoughtbot.github.io/neat-docs/latest/#omega):
+
+```
+.grid-item {
+  @include span-columns(2 of 4);
+  @include omega(2n);
+
+  @include media($desktop) {
+    @include omega-reset(2n);
+    @include span-columns(4 of 12);
+    @include omega(3n);
+  }
+}
+```
+
+Style guide: Grid.4 Helpers.1 Font stacks
+*/
+/*
+Debugging
+
+Turn on the visual grid to help debugging:
+
+```
+$visual-grid: true;
+```
+
+See the example <a href="http://neat.bourbon.io/examples/" rel="external">Bourbon Neat working grid layout</a>.
+
+Style guide: Grid.4 Helpers.2 Debugging
+*/
+html {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+.breadcrumbs--inverted {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.breadcrumbs--inverted ul {
+  padding-left: 0;
+  margin: 0;
+}
+
+.breadcrumbs--inverted ul li {
+  display: inline;
+}
+
+.breadcrumbs--inverted ul li:after {
+  content: ' > ';
+}
+
+.breadcrumbs--inverted ul li:last-child:after {
+  display: none;
+}
+
+.block-twitter-block {
+  display: none;
+}
+
+.block-govcms-social-links {
+  display: none;
+}
+
+.block-menu-menu-footer-menu {
+  display: none;
+}
+
+#block-menu-menu-quick-links {
+  display: none;
+}
+
+#block-views-footer-teaser-block {
+  display: none;
+}
+
+#block-menu-menu-footer-menu {
+  display: none;
+}
+
+.footer-copyright {
+  border-top: 1px solid black;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+#block-menu-menu-footer-sub-menu h2, #block-menu-menu-footer-sub-menu ul {
+  display: none;
+}
+
+.logo-wrapper {
+  display: table;
+}
+
+.logo-wrapper > a, .logo-wrapper > div {
+  display: table-cell;
+  vertical-align: middle;
+  padding-right: 12pt;
+}
+
+.logo-wrapper .header-title {
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.header__logo:after {
+  display: none;
+}
+
+.skip-to {
+  display: none;
+}
+
+.region-header {
+  display: none;
+}
+
+.menu.sf-menu {
+  display: none;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+.mobile-expand-search {
+  display: none;
+}
+
+.mobile-expand-menu {
+  display: none;
+}
+
+.header__secondary-menu {
+  display: none;
+}
+
+.block-menu-block {
+  display: none;
+}
+
+.slider-controls {
+  display: none;
+}
+
+body {
+  font-family: "Book Antiqua", Georgia, "Bitstream Vera Serif", serif;
+  font-size: 12pt;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 400;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 30pt;
+}
+
+h1:first-of-type {
+  margin-top: 0.4em;
+}
+
+h2 {
+  line-height: 1.2;
+  font-size: 30pt;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 19.5pt;
+}
+
+h4, h5, h6 {
+  font-size: 13.5pt;
+  font-weight: 700;
+}
+
+h1 a::after, h2 a::after, h3 a::after, h4 a::after, h5 a::after, h6 a::after {
+  display: block;
+  font-size: 10pt;
+  font-weight: normal;
+}
+
+img {
+  height: auto;
+}
+
+ul.inline li {
+  padding-left: 0;
+}
+
+.view-home-page-blog-articles .view-content, .view-latest-news .view-content, body.page-events .view .view-content, body.page-publications .view .view-content, body.page-news-media .view .view-content, body.page-news .view .view-content {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+.view-home-page-blog-articles .view-content .views-row, .view-latest-news .view-content .views-row, body.page-events .view .view-content .views-row, body.page-publications .view .view-content .views-row, body.page-news-media .view .view-content .views-row, body.page-news .view .view-content .views-row {
+  width: 50%;
+  box-sizing: border-box;
+  margin-bottom: 1em;
+}
+
+.view-home-page-blog-articles .view-content .views-row:nth-child(2n + 1), .view-latest-news .view-content .views-row:nth-child(2n + 1), body.page-events .view .view-content .views-row:nth-child(2n + 1), body.page-publications .view .view-content .views-row:nth-child(2n + 1), body.page-news-media .view .view-content .views-row:nth-child(2n + 1), body.page-news .view .view-content .views-row:nth-child(2n + 1) {
+  padding-right: 1em;
+}
+
+.view-home-page-blog-articles .view-content .views-row:nth-child(2n), .view-latest-news .view-content .views-row:nth-child(2n), body.page-events .view .view-content .views-row:nth-child(2n), body.page-publications .view .view-content .views-row:nth-child(2n), body.page-news-media .view .view-content .views-row:nth-child(2n), body.page-news .view .view-content .views-row:nth-child(2n) {
+  padding-left: 1em;
+}
+
+.field-name-field-thumbnail a::after, .field-name-field-image a::after {
+  display: none;
+}
+
+.item-list .pager {
+  display: none;
+}
+
+.view-content ul {
+  padding-left: 0;
+}
+
+.view-content ul li {
+  list-style: none;
+  margin-bottom: 1em;
+}
+
+.view-content ul li .field-name-field-slide-image a::after {
+  display: none;
+}
+
+.view-content ul li .field-name-field-slide-image img {
+  height: auto;
+}
+/*# sourceMappingURL=print_styles.css.map */
