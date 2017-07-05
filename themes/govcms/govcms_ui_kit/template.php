@@ -183,7 +183,7 @@ function govcms_ui_kit_breadcrumb($variables) {
 
   if (!empty($breadcrumb)) {
     // Build the breadcrumb trail.
-    $output = '<nav class="breadcrumbs--inverted" role="navigation" aria-label="breadcrumb">';
+    $output = '<nav class="breadcrumbs--inverted" aria-label="breadcrumb">';
     $output .= '<ul><li>' . implode('</li><li>', $breadcrumb) . '</li></ul>';
     $output .= '</nav>';
   }
