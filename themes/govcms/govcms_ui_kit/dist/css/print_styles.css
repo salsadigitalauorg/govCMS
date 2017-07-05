@@ -1,11 +1,3 @@
-html {
-  box-sizing: border-box;
-}
-
-*, *::after, *::before {
-  box-sizing: inherit;
-}
-
 /*
 Colours
 
@@ -197,15 +189,317 @@ The <a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-con
 
 Style guide: Colours.3 Accessibility
 */
-.timeline-Viewport {
-  width: 100% !important;
+/*
+IE Conditionals
+
+Based on implementation by govuk_frontend_toolkit
+https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_conditionals.scss
+
+The base css you write should be for mobile. You can
+then add desktop styles on top.
+
+Usage:
+
+  div.columns {
+    border: 1px solid;
+
+    @include media($desktop){
+      width: 30%;
+      float: left;
+    }
+    @include ie-lte(8) {
+      something to fix visual bugs in old IE
+    }
+    @include ie(6) {
+      padding: 0;
+    }
+  }
+*/
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+.visuallyhidden,
+.is-visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
-.timeline-Viewport .timeline-TweetList {
-  padding: 0;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+/*
+  Warning/notification regarding feature support
+*/
+.ua-notification {
+  display: block;
+  padding: 0.8em;
+  text-align: center;
+  background-color: #f9c642;
+  color: #313131;
+  font-size: rem(17);
+  margin-bottom: 0;
+}
+
+.icon-chevron::before {
+  border-style: solid;
+  border-width: 0.25em 0.25em 0 0;
+  content: '';
+  display: inline-block;
+  height: 0.5em;
+  left: 0.15em;
+  position: relative;
+  vertical-align: top;
+  width: 0.5em;
+  transition: -webkit-transform 300ms linear;
+  transition: transform 300ms linear;
+  transition: transform 300ms linear, -webkit-transform 300ms linear;
+}
+
+.icon-chevron.top::before {
+  top: 0.75em;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.icon-chevron.right::before {
+  left: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.icon-chevron.bottom::before {
+  top: 0.5em;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.icon-chevron.left::before {
+  left: 0.25em;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+@media print {
+  *,
+  *::before,
+  *::after,
+  *::first-letter,
+  *::first-line {
+    background: transparent;
+    color: #000;
+    box-shadow: none;
+    text-shadow: none;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+  a[href^='#']::after,
+  a[href^='javascript:']::after {
+    content: '';
+  }
+  pre,
+  blockquote {
+    border: 1px solid #bbbbbb;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100%;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+.breadcrumbs--inverted {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.breadcrumbs--inverted ul {
+  padding-left: 0;
+  margin: 0;
+}
+
+.breadcrumbs--inverted ul li {
+  display: inline;
+}
+
+.breadcrumbs--inverted ul li:after {
+  content: ' > ';
+}
+
+.breadcrumbs--inverted ul li:last-child:after {
+  display: none;
+}
+
+.block-twitter-block {
+  display: none;
+}
+
+.block-govcms-social-links {
+  display: none;
+}
+
+.block-menu-menu-footer-menu {
+  display: none;
+}
+
+#block-menu-menu-quick-links {
+  display: none;
+}
+
+#block-views-footer-teaser-block {
+  display: none;
+}
+
+#block-menu-menu-footer-menu {
+  display: none;
+}
+
+.footer-copyright {
+  border-top: 1px solid black;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+#block-menu-menu-footer-sub-menu h2, #block-menu-menu-footer-sub-menu ul {
+  display: none;
+}
+
+.logo-wrapper {
+  display: table;
+}
+
+.logo-wrapper > a, .logo-wrapper > div {
+  display: table-cell;
+  vertical-align: middle;
+  padding-right: 12pt;
+}
+
+.logo-wrapper .header-title {
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.header__logo:after {
+  display: none;
+}
+
+.skip-to {
+  display: none;
+}
+
+.region-header {
+  display: none;
+}
+
+.menu.sf-menu {
+  display: none;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+.mobile-expand-search {
+  display: none;
+}
+
+.mobile-expand-menu {
+  display: none;
+}
+
+.header__secondary-menu {
+  display: none;
+}
+
+.block-menu-block {
+  display: none;
+}
+
+.slider-controls {
+  display: none;
+}
+
+body {
+  font-family: "Book Antiqua", Georgia, "Bitstream Vera Serif", serif;
+  font-size: 12pt;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 400;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 30pt;
+}
+
+h1:first-of-type {
+  margin-top: 0.4em;
+}
+
+h2 {
+  line-height: 1.2;
+  font-size: 30pt;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 19.5pt;
+}
+
+h4, h5, h6 {
+  font-size: 13.5pt;
+  font-weight: 700;
+}
+
+h1 a::after, h2 a::after, h3 a::after, h4 a::after, h5 a::after, h6 a::after {
+  display: block;
+  font-size: 10pt;
+  font-weight: normal;
+}
+
+img {
+  height: auto;
+}
+
+ul.inline li {
+  padding-left: 0;
+}
+
+.view-home-page-blog-articles .view-content, .view-latest-news .view-content, body.page-events .view .view-content, body.page-publications .view .view-content, body.page-news-media .view .view-content, body.page-news .view .view-content {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -214,47 +508,42 @@ Style guide: Colours.3 Accessibility
           flex-wrap: wrap;
 }
 
-.timeline-Viewport .timeline-TweetList::after {
-  clear: both;
-  content: "";
-  display: table;
+.view-home-page-blog-articles .view-content .views-row, .view-latest-news .view-content .views-row, body.page-events .view .view-content .views-row, body.page-publications .view .view-content .views-row, body.page-news-media .view .view-content .views-row, body.page-news .view .view-content .views-row {
+  width: 50%;
+  box-sizing: border-box;
+  margin-bottom: 1em;
 }
 
-.timeline-Viewport .timeline-TweetList .timeline-TweetList-tweet {
-  width: 100%;
+.view-home-page-blog-articles .view-content .views-row:nth-child(2n + 1), .view-latest-news .view-content .views-row:nth-child(2n + 1), body.page-events .view .view-content .views-row:nth-child(2n + 1), body.page-publications .view .view-content .views-row:nth-child(2n + 1), body.page-news-media .view .view-content .views-row:nth-child(2n + 1), body.page-news .view .view-content .views-row:nth-child(2n + 1) {
+  padding-right: 1em;
 }
 
-@media (min-width: 768px) {
-  .timeline-Viewport .timeline-TweetList .timeline-TweetList-tweet {
-    float: left;
-    display: block;
-    margin-right: 2.3576515979%;
-    width: 31.7615656014%;
-    display: inline-block;
-  }
-  .timeline-Viewport .timeline-TweetList .timeline-TweetList-tweet:last-child {
-    margin-right: 0;
-  }
+.view-home-page-blog-articles .view-content .views-row:nth-child(2n), .view-latest-news .view-content .views-row:nth-child(2n), body.page-events .view .view-content .views-row:nth-child(2n), body.page-publications .view .view-content .views-row:nth-child(2n), body.page-news-media .view .view-content .views-row:nth-child(2n), body.page-news .view .view-content .views-row:nth-child(2n) {
+  padding-left: 1em;
 }
 
-@media (min-width: 768px) {
-  .timeline-Viewport .timeline-TweetList .timeline-TweetList-tweet:nth-child(3n) {
-    margin-right: 0;
-  }
+.field-name-field-thumbnail a::after, .field-name-field-image a::after {
+  display: none;
 }
 
-.timeline-Viewport .timeline-TweetList .timeline-TweetList-tweet .timeline-Tweet-text {
-  font-size: 16px;
-  line-height: 1.5;
+.item-list .pager {
+  display: none;
 }
 
-.timeline-Viewport .timeline-TweetList .timeline-TweetList-tweet .timeline-Tweet-text a {
-  color: #224A61;
-  border-bottom: 1px solid #5bcbe3;
+.view-content ul {
+  padding-left: 0;
 }
 
-.timeline-Viewport .timeline-TweetList .timeline-TweetList-tweet .timeline-Tweet-text a:hover {
-  color: #313131;
-  background-color: #5bcbe3;
+.view-content ul li {
+  list-style: none;
+  margin-bottom: 1em;
 }
-/*# sourceMappingURL=custom_twitter_theme.css.map */
+
+.view-content ul li .field-name-field-slide-image a::after {
+  display: none;
+}
+
+.view-content ul li .field-name-field-slide-image img {
+  height: auto;
+}
+/*# sourceMappingURL=print_styles.css.map */

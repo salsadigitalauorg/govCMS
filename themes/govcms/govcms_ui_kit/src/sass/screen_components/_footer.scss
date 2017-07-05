@@ -9,8 +9,8 @@
     }
     .content {
       @include center-column($desktop_column);
-      padding-top: rem(17px);
-      padding-bottom: rem(17px);
+      padding-top: rem(16px);
+      padding-bottom: rem(16px);
       color: white;
       @include breakpoint(tablet) {
         padding-top: rem(64px);
@@ -42,11 +42,14 @@
           margin-bottom: $default_padding;
           padding: 0;
           list-style: none;
-          margin-bottom: rem(15px);
+          margin-bottom: rem(16px);
           &>a {
             font-weight: 600;
             @include breakpoint(tablet) {
               font-weight: 700;
+            }
+            &[rel~='external']::after {
+              @include ui-kit-external-light;
             }
           }
           &>ul {
@@ -54,7 +57,7 @@
             @include breakpoint(tablet) {
               display: block;
               padding-left: 0;
-              margin-top: rem(35px);
+              margin-top: rem(36px);
             }
             li {
               a {

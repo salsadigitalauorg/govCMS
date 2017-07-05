@@ -4,6 +4,10 @@
  */
 (function($, Drupal, window, document, undefined) {
 
+  var $html = null;
+  var $slider_controls = null;
+  var $owl_carousel = null;
+
   function slider_responsive() {
     var w = window.innerWidth || document.documentElement.clientWidth;
     // Mobile (No Slider).
@@ -42,7 +46,8 @@
     html += '<button class="slider-next" title="Next slide">Next Slide</button>';
     html += '<button class="slider-play paused" title="Play slideshow">Play</button>';
     html += '</div>';
-    $slider.after(html);
+    $slider_controls = $(html);
+    $slider.after($slider_controls);
 
     // Apply listeners.
     $('.slider-prev').bind('click', previous_button_click);
@@ -68,11 +73,11 @@
 
   function position_custom_controls() {
     // Positioning must also cater for html text_resize functionality.
-    var base_scale = parseInt($('html').css('font-size'));
+    var base_scale = parseInt($html.css('font-size'));
     var scale_perc = base_scale / 16;
-    var left = ($(window).width() * 0.5) - ((desktop_column * 0.5) * scale_perc);
+    var left = ($owl_carousel.width() * 0.5) - ((desktop_column * 0.5) * scale_perc);
     left = (left < 20) ? '20px' : (left / base_scale) + 'rem';
-    $('.slider-controls').css('left', left);
+    $slider_controls.css('left', left);
   }
 
   function previous_button_click(e) {
@@ -130,16 +135,18 @@
       if ($slider.length > 0) {
         // Slider only initialized if more than 1 item present.
         if ($slider.children().length > 1) {
+          $html = $('html');
           $slider.owlCarousel(banner_settings).removeClass('mobile');
           owl = $slider.data('owlCarousel');
           owl.stop();
+          $owl_carousel = $('.owl-carousel');
           create_custom_controls();
           $(window).unbind('resize', slider_responsive).bind('resize', slider_responsive);
           slider_responsive();
           objectFitImages($slider.find('img'));
 
           // Add support for text resize widget.
-          $('html').on('font-size-change', position_custom_controls);
+          $html.on('font-size-change', position_custom_controls);
         }
       }
     }

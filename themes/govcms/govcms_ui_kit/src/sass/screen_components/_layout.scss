@@ -15,11 +15,11 @@ html {
   body.not-front & {
     .content-header {
       background-color: $secondary_1;
-      padding-top: rem(19px);
-      padding-bottom: rem(25px);
-      margin-bottom: rem(25px);
+      padding-top: rem(20px);
+      padding-bottom: rem(24px);
+      margin-bottom: rem(24px);
       @include breakpoint(tablet) {
-        height: rem(235px);
+        height: rem(234px);
         padding-top: rem(40px);
         padding-bottom: rem(40px);
         margin-bottom: rem(80px);
@@ -64,7 +64,7 @@ html {
   }
 }
 
-.sidebar-first {
+.content-sidebar-first {
   order: -1;
   width: 100%;
   @include breakpoint(large_tablet) {
@@ -79,7 +79,7 @@ html {
     .region-content {
       width: 100%;
       @include breakpoint(large_tablet) {
-        max-width: $desktop_content_column;
+        max-width: $desktop_column;
       }
     }
     .panel-display {
@@ -92,10 +92,10 @@ html {
         // Node Pages
         .node {
           &>.submitted {
-            @include center-column($desktop_content_column);
+            @include center-column($desktop_column);
           }
           &>.content {
-            @include center-column($desktop_content_column);
+            @include center-column($desktop_column);
           }
         }
         // Node Webforms
@@ -115,18 +115,18 @@ html {
       @include center-column($desktop_column);
       // One Column (100)
       &.panel-1col, &.panel-1col-stacked {
-        @include center-column($desktop_content_column);
+        @include center-column($desktop_column);
       }
       // Two Columns (50 50)
       &.panel-2col, &.panel-2col-bricks, &.panel-2col-stacked {
-        @include center-column($desktop_content_column);
+        @include center-column($desktop_column);
       }
     }
     #site-map {
-      @include center-column($desktop_content_column);
+      @include center-column($desktop_column);
     }
     .search-api-page-results {
-      @include center-column($desktop_content_column);
+      @include center-column($desktop_column);
     }
     .page-contact & {
       .block-system {
@@ -135,12 +135,12 @@ html {
     }
     .page-search404 & {
       .block-system {
-        @include center-column($desktop_content_column);
+        @include center-column($desktop_column);
       }
     }
     .page-node-done & {
       .block-system {
-        @include center-column($desktop_content_column);
+        @include center-column($desktop_column);
       }
     }
   }
@@ -181,6 +181,7 @@ ul, ol, dl, p, dt, dd {
 
 .field-name-body {
   @include wysiwyg;
+  max-width: $desktop_content_column;
 }
 
 a[rel~='external']::after {
@@ -198,4 +199,14 @@ a[rel~='external']::after {
 
 #content {
   @include button-colours($secondary_1, #10505F, #0C3C47, white);
+}
+
+body.fixed-width {
+  #header, #nav, #page {
+    @include body-column;
+  }
+}
+
+img {
+  height: auto;
 }

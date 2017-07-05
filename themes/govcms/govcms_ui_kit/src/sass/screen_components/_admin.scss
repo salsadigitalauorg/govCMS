@@ -1,14 +1,31 @@
 .drupal-navbar {
   ul {
     @include media($tablet) {
-      font-size: rem(16);
+      font-size: rem(13px);
     }
   }
 }
 
 ul.contextual-links {
   @include media($tablet) {
-    font-size: rem(16);
+    font-size: rem(13px);
+  }
+}
+
+.content-body .content {
+  .contextual-links-wrapper {
+    a {
+      background-color: transparent;
+      border-bottom: 0;
+      transition: none;
+    }
+    ul {
+      a {
+        &:focus, &:hover {
+          background-color: #bfdcee;
+        }
+      }
+    }
   }
 }
 

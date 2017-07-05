@@ -210,13 +210,21 @@ var desktop_column = 1170;
     var was_closed = $button.hasClass('menu-closed');
 
     if (was_closed) {
-      $menu.removeClass('menu-closed').attr('aria-hidden', 'false');
-      $button.removeClass('menu-closed').attr('aria-expanded', 'true').attr('title', 'Collapse menu');
+      expand($menu, $button);
     }
     else {
-      $menu.addClass('menu-closed').attr('aria-hidden', 'true');
-      $button.addClass('menu-closed').attr('aria-expanded', 'false').attr('title', 'Expand menu');
+      collapse($menu, $button);
     }
+  }
+
+  function collapse($menu, $button) {
+    $menu.addClass('menu-closed').attr('aria-hidden', 'true');
+    $button.addClass('menu-closed').attr('aria-expanded', 'false').attr('title', 'Expand menu');
+  }
+
+  function expand($menu, $button) {
+    $menu.removeClass('menu-closed').attr('aria-hidden', 'false');
+    $button.removeClass('menu-closed').attr('aria-expanded', 'true').attr('title', 'Collapse menu');
   }
 
   function add_toggle_buttons() {
@@ -225,8 +233,15 @@ var desktop_column = 1170;
       var $list_item = $(this);
       var $sub_menu = $list_item.children('ul.menu');
       if ($sub_menu.length > 0) {
-        var $button = $('<button class="sidebar-toggle-menu" aria-controls="' + $sub_menu.attr('id') + '" aria-expanded="true" title="Collapse menu">Toggle sub menu</button>');
+        var is_active_trail = $list_item.hasClass('active-trail');
         $sub_menu.attr('id', 'sidebar-submenu-' + idx);
+        var $button = $('<button class="sidebar-toggle-menu" aria-controls="' + $sub_menu.attr('id') + '">Toggle sub menu</button>');
+        if (is_active_trail) {
+          expand($sub_menu, $button);
+        }
+        else {
+          collapse($sub_menu, $button);
+        }
         $list_item.children('a').after($button);
         $button.unbind('click', toggle_button_click).bind('click', toggle_button_click);
       }
@@ -311,6 +326,10 @@ var desktop_column = 1170;
  */
 (function($, Drupal, window, document, undefined) {
 
+  var $html = null;
+  var $slider_controls = null;
+  var $owl_carousel = null;
+
   function slider_responsive() {
     var w = window.innerWidth || document.documentElement.clientWidth;
     // Mobile (No Slider).
@@ -349,7 +368,8 @@ var desktop_column = 1170;
     html += '<button class="slider-next" title="Next slide">Next Slide</button>';
     html += '<button class="slider-play paused" title="Play slideshow">Play</button>';
     html += '</div>';
-    $slider.after(html);
+    $slider_controls = $(html);
+    $slider.after($slider_controls);
 
     // Apply listeners.
     $('.slider-prev').bind('click', previous_button_click);
@@ -375,11 +395,11 @@ var desktop_column = 1170;
 
   function position_custom_controls() {
     // Positioning must also cater for html text_resize functionality.
-    var base_scale = parseInt($('html').css('font-size'));
+    var base_scale = parseInt($html.css('font-size'));
     var scale_perc = base_scale / 16;
-    var left = ($(window).width() * 0.5) - ((desktop_column * 0.5) * scale_perc);
+    var left = ($owl_carousel.width() * 0.5) - ((desktop_column * 0.5) * scale_perc);
     left = (left < 20) ? '20px' : (left / base_scale) + 'rem';
-    $('.slider-controls').css('left', left);
+    $slider_controls.css('left', left);
   }
 
   function previous_button_click(e) {
@@ -437,16 +457,18 @@ var desktop_column = 1170;
       if ($slider.length > 0) {
         // Slider only initialized if more than 1 item present.
         if ($slider.children().length > 1) {
+          $html = $('html');
           $slider.owlCarousel(banner_settings).removeClass('mobile');
           owl = $slider.data('owlCarousel');
           owl.stop();
+          $owl_carousel = $('.owl-carousel');
           create_custom_controls();
           $(window).unbind('resize', slider_responsive).bind('resize', slider_responsive);
           slider_responsive();
           objectFitImages($slider.find('img'));
 
           // Add support for text resize widget.
-          $('html').on('font-size-change', position_custom_controls);
+          $html.on('font-size-change', position_custom_controls);
         }
       }
     }
@@ -511,23 +533,25 @@ var desktop_column = 1170;
       // Wait for twitter to load, then apply a custom style.
       var url = settings.basePath + settings.pathToTheme + "/dist/css/custom_twitter_theme.css";
 
-      twttr.ready(function() {
-        twttr.events.bind('loaded', function(event) {
-          // Inject a custom stylesheet into the twitter frame.
-          for (var i = 0; i < frames.length; i++) {
-            var frame = frames[i];
-            try {
-              if (frame.frameElement.id.indexOf('twitter-widget') >= 0) {
-                embedCss(frame, frame.document, url);
+      if (typeof twttr !== 'undefined') {
+        twttr.ready(function() {
+          twttr.events.bind('loaded', function(event) {
+            // Inject a custom stylesheet into the twitter frame.
+            for (var i = 0; i < frames.length; i++) {
+              var frame = frames[i];
+              try {
+                if (frame.frameElement.id.indexOf('twitter-widget') >= 0) {
+                  embedCss(frame, frame.document, url);
+                }
+              }
+              catch (e) {
+                console.log("caught an error");
+                console.log(e);
               }
             }
-            catch (e) {
-              console.log("caught an error");
-              console.log(e);
-            }
-          }
+          });
         });
-      });
+      }
     }
   };
 

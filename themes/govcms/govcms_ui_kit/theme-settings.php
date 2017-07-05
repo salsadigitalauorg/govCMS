@@ -45,6 +45,13 @@ function govcms_ui_kit_form_system_theme_settings_alter(&$form, $form_state) {
     '#description'   => t("Enable this to override any user-defined image styles with govCMS UI Kit default styles. Disabling this is recommend if modifying site."),
   );
 
+  $form['govcms_ui_kit_options']['govcms_ui_kit_fix_site_width'] = array(
+    '#type'          => 'checkbox',
+    '#title'         => t('Fix site width'),
+    '#default_value' => theme_get_setting('govcms_ui_kit_fix_site_width'),
+    '#description'   => t("Enable this to fix the width of the site contents and footer to a max of 1650 pixels."),
+  );
+
   $form['govcms_ui_kit_options']['govcms_ui_kit_show_webform_assistance'] = array(
     '#type'          => 'checkbox',
     '#title'         => t('Show webform assistance'),

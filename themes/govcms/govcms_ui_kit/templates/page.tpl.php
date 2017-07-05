@@ -104,7 +104,7 @@
         <?php endif; ?>
         <div class="content-body-inner<?php print $sidebar_first ? ' has-sidebar' : ' no-sidebar'; ?>">
           <?php if ($sidebar_first): ?>
-            <aside class="sidebar-first">
+            <aside class="content-sidebar-first">
               <?php print $sidebar_first; ?>
             </aside>
           <?php endif; ?>
@@ -116,11 +116,11 @@
   </div>
 
   <?php if ($sidebar_second): ?>
-    <aside class="sidebar-second">
+    <aside class="content-sidebar-second">
       <?php print $sidebar_second; ?>
     </aside>
   <?php endif; ?>
-  
+
   <div id="footer">
     <?php print render($page['footer']); ?>
   </div>

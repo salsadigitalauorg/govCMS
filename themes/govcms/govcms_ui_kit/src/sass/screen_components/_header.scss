@@ -27,6 +27,13 @@
     .logo-wrapper {
       display: flex;
       align-items: center;
+      justify-content: space-between;
+      html.no-flexbox & {
+        @include breakpoint(tablet) {
+          display: inline-block;
+          width: auto;
+        }
+      }
       a {
         display: inline-block;
         vertical-align: middle;
@@ -39,16 +46,16 @@
         }
       }
       .header-title {
-        padding-left: rem(5px);
+        padding-left: rem(4px);
         margin-right: auto;
         font-size: rem(18px);
         line-height: 1em;
         color: $primary_1;
         font-weight: 400;
+        display: inline-block;
         @include breakpoint(tablet) {
           margin-left: $default_padding;
           padding-left: 0;
-          display: inline-block;
           vertical-align: middle;
           font-size: rem(30px);
         }
@@ -68,19 +75,20 @@
       margin-right: $default_padding;
     }
     ul.text-resize {
-      display: flex;
+      display: table;
       padding: 0;
       margin: 0;
-      margin-left: rem(5px);
+      margin-left: rem(4px);
       li {
-        display: inline-block;
+        display: table-cell;
         vertical-align: middle;
         list-style: none;
         margin-bottom: 0;
         height: rem(30px);
         a {
           @include hide-text;
-          display: inline-block;
+          color: transparent;
+          display: block;
           background-repeat: no-repeat;
           background-position: center;
           width: rem(30px);
@@ -110,10 +118,29 @@
   .region-header {
     display: flex;
     align-items: center;
+    html.no-flexbox & {
+      @include breakpoint(desktop) {
+        display: inline-block;
+        float: right;
+        width: 500px;
+      }
+    }
+    .block-govcms-text-resize {
+      html.no-flexbox & {
+        @include breakpoint(tablet) {
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+    }
     .block-search-api-page {
       width: 100%;
       @include breakpoint(tablet) {
         width: auto;
+      }
+      html.no-flexbox & {
+        display: inline-block;
+        vertical-align: middle;
       }
     }
     .search-form-widget {
@@ -144,17 +171,26 @@
       &>div {
         display: flex;
         justify-content: flex-start;
+        html.no-flexbox & {
+          display: table;
+        }
         .form-item {
           margin: 0;
           width: 100%;
           box-sizing: border-box;
           flex: 1;
+          html.no-flexbox & {
+            display: table-cell;
+          }
           input {
             @include search-text-field;
           }
         }
         input[type="submit"] {
           @include search-submit-button;
+          html.no-flexbox & {
+            display: table-cell;
+          }
         }
       }
     }
@@ -166,16 +202,18 @@
 // =========================================================
 .mobile-expand-search {
   @include hide-text;
-  width: rem(35px);
+  width: rem(36px);
   padding: 0;
   margin: 0;
   border: 0;
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
-  outline: inherit;
   background-image: url(../images/svg/mobile_search_open.svg);
   margin-right: $mobile_expand_search_width;
+  html.no-flexbox & {
+    float: right;
+  }
   &:hover, &:focus {
     background-image: url(../images/svg/mobile_search_open_hover.svg);
   }
@@ -196,7 +234,6 @@
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
-  outline: inherit;
   background-image: url(../images/svg/mobile_menu_open.svg);
   position: absolute;
   z-index: 1;
@@ -210,5 +247,9 @@
     &:hover, &:focus {
       background-image: url(../images/svg/mobile_search_close_hover.svg);
     }
+  }
+  // For admin.
+  .navbar-vertical & {
+    top: rem(16px + 38px);
   }
 }

@@ -1,0 +1,197 @@
+// =========================================================
+// LISTING
+// The default style for content views.
+// =========================================================
+@mixin generic-view-row-base() {
+  max-width: rem(370px);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: rem(30px);
+  @include breakpoint(tablet) {
+    max-width: none;
+  }
+}
+
+@mixin generic-view-row-3() {
+  @include breakpoint(tablet) {
+    @include span-columns(4 of 12);
+    &:last-child {
+      margin-right: auto;
+    }
+  }
+  &:nth-child(3n) {
+    @include breakpoint(tablet) {
+      margin-right: 0;
+    }
+  }
+  &:nth-child(3n+1) {
+    .no-flexbox & {
+      @include breakpoint(tablet) {
+        clear: both;
+      }
+    }
+  }
+}
+
+@mixin generic-view-row-2() {
+  @include breakpoint(tablet) {
+    @include span-columns(6 of 12);
+    &:last-child {
+      margin-right: auto;
+    }
+  }
+  &:nth-child(2n) {
+    @include breakpoint(tablet) {
+      margin-right: 0;
+    }
+  }
+  &:nth-child(2n+1) {
+    .no-flexbox & {
+      @include breakpoint(tablet) {
+        clear: both;
+      }
+    }
+  }
+}
+
+// A generic view layout for sidebar / no sidebar types.
+// This should be applied to the body of pages you wish to show a generic view on.
+@mixin generic-view-layout() {
+  .no-sidebar {
+    .content-body-inner-pane {
+      .page__title {
+        @include center-column($desktop_column);
+      }
+    }
+    .view {
+      @include center-column($desktop_column);
+      .views-row {
+        @include generic-view-row-3;
+      }
+    }
+  }
+  .has-sidebar {
+    .view {
+      max-width: $desktop_content_column;
+      .views-row {
+        @include generic-view-row-2;
+      }
+    }
+  }
+  .view {
+    .view-content {
+      @include breakpoint(tablet) {
+        @include outer-container(100%);
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+    .views-row {
+      @include generic-view-row-base;
+      .node {
+        @include listing-component-wrapper;
+        padding-left: 0;
+        padding-right: 0;
+        &.has-thumbnail {
+          padding-top: $listing_component_image_height;
+          .field-type-image {
+            @include listing-component-image;
+            .field-item:nth-child(n + 2) {
+              display: none;
+            }
+          }
+          h2 {
+            margin-top: rem(30px);
+          }
+        }
+        &>.links {
+          li {
+            padding-left: 0;
+          }
+        }
+      }
+      h2 {
+        @include listing-component-heading;
+        margin-top: 0;
+      }
+      .field-name-field-date, .submitted, .field-type-datetime {
+        @include listing-component-subtext;
+      }
+      .field-name-body {
+        @include listing-component-body;
+      }
+      .node-readmore {
+        padding: 0;
+        a {
+          @include listing-component-button;
+        }
+      }
+    }
+    .pager {
+      margin-top: $default_padding;
+      margin-bottom: $default_padding;
+    }
+  }
+}
+
+// Pagination.
+.item-list {
+  .pager {
+    position: relative;
+    li {
+      margin: 0 5px;
+      padding: 0;
+      display: inline-block;
+      @include breakpoint(tablet) {
+        background-image: none;
+        display: inline;
+        list-style-type: none;
+        padding: 0.5em;
+      }
+    }
+    .pager-previous {
+      left: 0;
+      @include breakpoint(tablet) {
+        left: auto;
+      }
+    }
+    .pager-next {
+      right: 0;
+      @include breakpoint(tablet) {
+        right: auto;
+      }
+    }
+    .pager-previous, .pager-next {
+      position: absolute;
+      @include breakpoint(tablet) {
+        position: relative;
+      }
+      a {
+        display: inline-block;
+        @include breakpoint(tablet) {
+          width: auto;
+          display: inline;
+        }
+      }
+      .ajax-progress {
+        display: none;
+        @include breakpoint(tablet) {
+          display: inline-block;
+        }
+      }
+    }
+    .pager-item, .pager-ellipsis, .pager-first, .pager-last {
+      display: none;
+      @include breakpoint(tablet) {
+        display: inline;
+      }
+    }
+  }
+}
+
+// Implementations of the generic view.
+body.page-events, body.page-publications, body.page-news-media, body.page-news {
+  #content {
+    @include generic-view-layout;
+  }
+}
