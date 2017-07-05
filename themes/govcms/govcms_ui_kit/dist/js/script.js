@@ -513,27 +513,37 @@ var desktop_column = 1170;
  */
 (function($, Drupal, window, document, undefined) {
 
-  var embedCss = function(frame, doc, url) {
+  function embedCss(frame, doc, url) {
     var $link = $('<link href="' + url + '" rel="stylesheet" type="text/css" />');
 
     $link.on('load', function() {
       // Force twitter frame height update.
       var outer_height = frame.frameElement.clientHeight;
-      var inner_height = frame.document.body.children[0].clientHeight;
-      if (inner_height !== outer_height) {
-        $(frame.frameElement).height(inner_height);
+      if (frame.document.body.childElementCount) {
+        var inner_height = frame.document.body.children[0].clientHeight;
+        if (inner_height !== outer_height) {
+          $(frame.frameElement).height(inner_height);
+        }
       }
     });
 
     $('head', doc).append($link);
-  };
+  }
 
   Drupal.behaviors.govcms_ui_kit_twitter_theme = {
     attach: function(context, settings) {
-      // Wait for twitter to load, then apply a custom style.
-      var url = settings.basePath + settings.pathToTheme + "/dist/css/custom_twitter_theme.css";
 
-      if (typeof twttr !== 'undefined') {
+      var initialize_attempts = 20;
+
+      function alterTwitterWidget() {
+        if (typeof twttr === 'undefined') {
+          if (initialize_attempts > 0) {
+            initialize_attempts--;
+            setTimeout(alterTwitterWidget, 300);
+          }
+          return;
+        }
+
         twttr.ready(function() {
           twttr.events.bind('loaded', function(event) {
             // Inject a custom stylesheet into the twitter frame.
@@ -551,6 +561,12 @@ var desktop_column = 1170;
             }
           });
         });
+      }
+
+      // Wait for twitter to load, then apply a custom style.
+      var url = settings.basePath + settings.pathToTheme + "/dist/css/custom_twitter_theme.css";
+      if ($('.twitter-timeline').length) {
+        setTimeout(alterTwitterWidget, 300);
       }
     }
   };
