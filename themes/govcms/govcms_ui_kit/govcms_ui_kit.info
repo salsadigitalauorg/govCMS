@@ -5,7 +5,7 @@ core        = 7.x
 
 stylesheets[screen, projection][] = vendor/owl-carousel/owl.carousel.css
 stylesheets[screen, projection][] = vendor/owl-carousel/owl.transitions.css
-stylesheets[screen, projection][] = dist/css/styles.css
+stylesheets[screen, projection][] = dist/css/screen_styles.css
 stylesheets[print][] = dist/css/print_styles.css
 
 scripts[] = vendor/modernizr/modernizr-custom.js

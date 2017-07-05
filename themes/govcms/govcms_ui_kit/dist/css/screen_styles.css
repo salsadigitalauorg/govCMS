@@ -9220,14 +9220,24 @@ form.webform-client-form .webform-next {
 
 @media screen and (min-width: 768px) {
   .drupal-navbar ul {
-    font-size: 1rem;
+    font-size: 0.8125rem;
   }
 }
 
 @media screen and (min-width: 768px) {
   ul.contextual-links {
-    font-size: 1rem;
+    font-size: 0.8125rem;
   }
+}
+
+.content-body .content .contextual-links-wrapper a {
+  background-color: transparent;
+  border-bottom: 0;
+  transition: none;
+}
+
+.content-body .content .contextual-links-wrapper ul a:focus, .content-body .content .contextual-links-wrapper ul a:hover {
+  background-color: #bfdcee;
 }
 
 ul.tabs.primary {
