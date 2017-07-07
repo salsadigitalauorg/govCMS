@@ -24,19 +24,38 @@
     // min: jQuery.validator.format("Please enter a value greater than or equal to {0}.")
   });
 
+  function get_label(ielem) {
+    var $parent = null;
+    if (ielem.hasClass('form-radio')) {
+      // Radio buttons in grids.
+      $parent = ielem.closest('.webform-component-radios, .webform-component-grid');
+    }
+    else if (ielem.hasClass('form-select') && (ielem.hasClass('day') || ielem.hasClass('month') || ielem.hasClass('year'))) {
+      // Date field.
+      $parent = ielem.closest('.webform-component-date');
+    }
+    else {
+      // All other fields.
+      $parent = ielem.closest('.form-item');
+    }
+    return $parent.children('label');
+  }
+
   Drupal.behaviors.govcms_ui_kit_form_validation = {
     attach: function(context, settings) {
       // Webform validation.
       $('form.webform-client-form, form.contact-form', context).validate({
         errorElement: 'span',
         errorPlacement: function(error, element) {
+          // No multiple error messages - strip any existing ones.
+          get_label(element).children('.error').remove();
           // Place error msg within field label.
-          error.appendTo(element.closest('.form-item').children('label'));
+          error.appendTo(get_label(element));
         },
         showErrors: function(errorMap, errorList) {
           // Remove asterisk and display custom markup for error.
           $(errorList).each(function() {
-            $(this.element).closest('.form-item').children('label').children('.form-required').remove();
+            get_label($(this.element)).children('.form-required').remove();
             this.message = '(Error - ' + this.message + ')';
           });
           this.defaultShowErrors();
