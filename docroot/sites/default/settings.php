@@ -33,7 +33,7 @@ if (isset($_ENV['AH_SITE_GROUP']) && isset($_ENV['AH_SITE_ENVIRONMENT'])) {
 }
 
 if (file_exists('/var/www/site-php')) {
-  require '/var/www/site-php/govcmsnewtheme/govcmsnewtheme-settings.inc';
+  require '/var/www/site-php/govcmsnewthm/govcmsnewthm-settings.inc';
 }
 
 if (isset($conf['memcache_servers'])) {
