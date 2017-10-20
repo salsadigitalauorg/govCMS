@@ -43,7 +43,7 @@
  */
 ?><!DOCTYPE html>
 <html lang="<?php print $language->language; ?>" class="no-js">
-<head profile="<?php print $grddl_profile; ?>">
+<head>
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>

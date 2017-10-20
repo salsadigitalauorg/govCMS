@@ -3,9 +3,9 @@ name        = govCMS UI Kit
 description = The govCMS UI Kit theme, based on GOV.AU UI-Kit.
 core        = 7.x
 
-stylesheets[screen, projection][] = vendor/owl-carousel/owl.carousel.css
-stylesheets[screen, projection][] = vendor/owl-carousel/owl.transitions.css
-stylesheets[screen, projection][] = dist/css/screen_styles.css
+stylesheets[only screen][] = vendor/owl-carousel/owl.carousel.css
+stylesheets[only screen][] = vendor/owl-carousel/owl.transitions.css
+stylesheets[only screen][] = dist/css/screen_styles.css
 stylesheets[print][] = dist/css/print_styles.css
 
 scripts[] = vendor/modernizr/modernizr-custom.js

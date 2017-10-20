@@ -21,6 +21,15 @@ function govcms_ui_kit_html_head_alter(&$head_elements) {
     '#tag' => 'meta',
     '#attributes' => array('http-equiv' => 'x-ua-compatible', 'content' => 'ie=edge'),
   );
+  // Add grddl_profile.
+  $head_elements['profile'] = array(
+    '#type' => 'html_tag',
+    '#tag' => 'link',
+    '#attributes' => array(
+      'rel' => 'profile',
+      'href' => 'http://www.w3.org/1999/xhtml/vocab',
+    ),
+  );
 }
 
 /**
@@ -166,6 +175,11 @@ function govcms_ui_kit_preprocess_node(&$variables) {
     if ($has_thumb || $has_image || $has_featured_image) {
       $variables['classes_array'][] = 'has-thumbnail';
     }
+  }
+
+  // Remove xml:lang from submitted author names. This should not be needed if lang is set.
+  if (!empty($variables['submitted'])) {
+    $variables['submitted'] = preg_replace('/xml:lang=\"(\w|\s)*\"/', '', $variables['submitted']);
   }
 
   if ($variables['type'] === 'webform') {
