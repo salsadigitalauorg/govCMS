@@ -177,11 +177,6 @@ function govcms_ui_kit_preprocess_node(&$variables) {
     }
   }
 
-  // Remove xml:lang from submitted author names. This should not be needed if lang is set.
-  if (!empty($variables['submitted'])) {
-    $variables['submitted'] = preg_replace('/xml:lang=\"(\w|\s)*\"/', '', $variables['submitted']);
-  }
-
   if ($variables['type'] === 'webform') {
     // Hide submitted date on webforms.
     $variables['display_submitted'] = FALSE;
@@ -315,4 +310,11 @@ function govcms_ui_kit_webform_grid($variables) {
 
   $option_count = count($header) - 1;
   return theme('table', array('header' => $header, 'rows' => $rows, 'sticky' => $element['#sticky'], 'attributes' => array('class' => array('webform-grid', 'webform-grid-' . $option_count))));
+}
+
+/**
+ * Implement hook_preprocess_username().
+ */
+function govcms_ui_kit_preprocess_username(&$variables) {
+  unset($variables['attributes_array']['xml:lang']);
 }
