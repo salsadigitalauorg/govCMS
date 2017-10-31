@@ -24,6 +24,12 @@
     // min: jQuery.validator.format("Please enter a value greater than or equal to {0}.")
   });
 
+  // Email validation resembling filter_var (used in common.inc valid_email_address).
+  // Regexp taken from: https://github.com/javazac/filter_var/blob/master/filter_var.php
+  jQuery.validator.addMethod("email", function(value, element) {
+    return this.optional(element) || /^(?:[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\`\{\|\}\~]+\.)*[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\`\{\|\}\~]+@(?:(?:(?:[a-zA-Z0-9_](?:[a-zA-Z0-9_\-](?!\.)){0,61}[a-zA-Z0-9_-]?\.)+[a-zA-Z0-9_](?:[a-zA-Z0-9_\-](?!$)){0,61}[a-zA-Z0-9_]?)|(?:\[(?:(?:[01]?\d{1,2}|2[0-4]\d|25[0-5])\.){3}(?:[01]?\d{1,2}|2[0-4]\d|25[0-5])\]))$/.test(value);
+  }, jQuery.validator.messages.email);
+
   function get_label(ielem) {
     var $parent = null;
     if (ielem.hasClass('form-radio')) {
