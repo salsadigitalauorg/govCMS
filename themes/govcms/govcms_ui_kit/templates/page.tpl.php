@@ -75,14 +75,14 @@
 
   <?php
     // Render the sidebars to see if there's anything in them.
-    $sidebar_first  = render($page['sidebar_first']);
+    $sidebar_first = render($page['sidebar_first']);
     $sidebar_second = render($page['sidebar_second']);
   ?>
 
   <?php print render($page['highlighted']); ?>
 
   <div id="main">
-    <div id="content" class="column" role="main">
+    <div id="content" class="column">
       <div class="content-header">
         <div class="content-header-inner">
           <?php print $breadcrumb; ?>
