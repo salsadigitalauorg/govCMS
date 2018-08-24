@@ -33,9 +33,9 @@ default:
       blackbox:                   ~
       api_driver:                 "drupal"
       drupal:
-        drupal_root:              ../../
+        drupal_root:              /app
       drush:
-        root:                     ../../
+        root:                     /app
       selectors:
         success_message_selector: '.messages.status'
         message_selector:         '.messages'
@@ -48,7 +48,7 @@ default:
         footer:                   '.region.region-footer'
         header:                   '#header'
     IntegratedExperts\BehatScreenshotExtension:
-      dir:                        '%paths.base%/screenshots'
+      dir:                        '%paths.base%/features/screenshots'
       fail:                       true
       purge:                      false
     # Show explicit fail information and continue the test run.
