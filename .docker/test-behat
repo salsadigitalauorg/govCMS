@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-# Behat testing.
-
-APP_DIR=${APPDIR:-/app}
-
-${APP_DIR}/tests/vendor/bin/behat --strict --colors $BEHAT_PROFILE $@
-a
