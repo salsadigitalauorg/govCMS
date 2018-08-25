@@ -17,7 +17,9 @@ jobs:
           command: composer validate -d tests --ansi --strict
       - run:
           name: Update codebase to follow CI configuration
-          command: sed -i -e "/###/d" /app/docker-compose.yml
+          command: |
+            sed -i -e "/###/d" docker-compose.yml
+            cp .env.default .env
       - setup_remote_docker
       - run:
           name: Start amazeeio-network
