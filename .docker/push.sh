@@ -18,7 +18,7 @@ FORCE_IMAGE_BUILD=${FORCE_IMAGE_BUILD:-}
 FILE_EXTENSION_PREFIX=${FILE_EXTENSION_PREFIX:-.docker/Dockerfile.}
 
 for file in $(echo $FILE_EXTENSION_PREFIX"*"); do
-    service=${file/$FILE_PREFIX/}
+    service=${file/$FILE_EXTENSION_PREFIX/}
 
     version_tag=$IMAGE_VERSION_TAG
     [ "$IMAGE_VERSION_TAG_PREFIX" != "" ] && version_tag=${IMAGE_VERSION_TAG/$IMAGE_VERSION_TAG_PREFIX/}

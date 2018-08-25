@@ -9,10 +9,10 @@ DOCKERHUB_NAMESPACE=${DOCKERHUB_NAMESPACE:-govcms}
 IMAGE_TAG_EDGE=${IMAGE_TAG_EDGE:-beta}
 
 # Path prefix to Dockerfiles extension that is used as a name of the service.
-FILE_PREFIX=${FILE_PREFIX:-.docker/Dockerfile.}
+FILE_EXTENSION_PREFIX=${FILE_EXTENSION_PREFIX:-.docker/Dockerfile.}
 
-for file in $(echo $FILE_PREFIX"*"); do
-    service=${file/$FILE_PREFIX/}
+for file in $(echo $FILE_EXTENSION_PREFIX"*"); do
+    service=${file/$FILE_EXTENSION_PREFIX/}
 
     echo "==> Releasing \"$service\" image for service \"$DOCKERHUB_NAMESPACE/$service\""
     docker pull $DOCKERHUB_NAMESPACE/$service:$IMAGE_TAG_EDGE
