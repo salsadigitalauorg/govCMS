@@ -16,6 +16,8 @@ services:
       dockerfile: $PWD/.docker/Dockerfile.govcms7
     image: ${DOCKERHUB_NAMESPACE:-govcms}/govcms7
     << : *default-volumes
+    environment:
+      LAGOON_ROUTE: &default-url ${LOCALDEV_URL:-http://govcms.docker.amazee.io}
 
   test:
     build:
@@ -25,6 +27,8 @@ services:
         CLI_IMAGE: ${DOCKERHUB_NAMESPACE:-govcms}/govcms7
     image: ${DOCKERHUB_NAMESPACE:-govcms}/test
     << : *default-volumes
+    environment:
+      LAGOON_ROUTE: *default-url
     depends_on:
       - cli
 
@@ -37,7 +41,7 @@ services:
     image: ${DOCKERHUB_NAMESPACE:-govcms}/nginx-drupal
     << : *default-volumes
     environment:
-      LAGOON_LOCALDEV_URL: ${LOCALDEV_URL:-http://govcms.docker.amazee.io}
+      LAGOON_LOCALDEV_URL: *default-url
     networks:
       - amazeeio-network
       - default
