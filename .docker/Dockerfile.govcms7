@@ -11,14 +11,15 @@ RUN rm -rf /app \
     && rm -rf /tmp/src /usr/local/etc/php/conf.d/memory.ini /home/.drush \
 	&& cp /app/sites/default/default.settings.php /app/sites/default/settings.php \
 	&& { \
+		echo ; \
 		echo "\$databases['default']['default'] = array ("; \
-		echo "  'database' => getenv('DRUPAL_DB_NAME') ?: 'drupal',"; \
-		echo "  'username' => getenv('DRUPAL_DB_USER') ?: 'drupal',"; \
-		echo "  'password' => getenv('DRUPAL_DB_PASS') ?: 'drupal',"; \
-		echo "  'prefix' => '',"; \
-		echo "  'host' => getenv('DRUPAL_DB_HOST') ?: 'drupal',"; \
-		echo "  'port' => getenv('DRUPAL_DB_PORT') ?: '3306',"; \
 		echo "  'driver' => 'mysql',"; \
+		echo "  'database' => getenv('MARIADB_DATABASE') ?: 'drupal',"; \
+		echo "  'username' => getenv('MARIADB_USERNAME') ?: 'drupal',"; \
+		echo "  'password' => getenv('MARIADB_PASSWORD') ?: 'drupal',"; \
+		echo "  'host' => getenv('MARIADB_HOST') ?: 'mariadb',"; \
+		echo "  'port' => '3306',"; \
+		echo "  'prefix' => '',"; \
 		echo ");"; \
 		echo ; \
 		echo "\$drupal_hash_salt = getenv('DRUPAL_HASH_SALT') ?: 'changeme';"; \
