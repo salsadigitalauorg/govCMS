@@ -5,6 +5,8 @@
  * Drupal 7 configuration file.
  */
 
+$conf['install_profile'] = 'govcms';
+
 $databases['default']['default'] = [
   'driver' => 'mysql',
   'database' => getenv('MARIADB_DATABASE') ?: 'drupal',
@@ -15,7 +17,8 @@ $databases['default']['default'] = [
   'prefix' => '',
 ];
 
-// Temp directory.
+$drupal_hash_salt = getenv('DRUPAL_HASH_SALT') ?: 'changeme';
+
 if (getenv('TMP')) {
   $conf['file_temporary_path'] = getenv('TMP');
 }
