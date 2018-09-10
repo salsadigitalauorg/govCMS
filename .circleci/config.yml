@@ -55,6 +55,8 @@ jobs:
               docker login -u $DOCKER_USER -p $DOCKER_PASS
               export $(grep -v '^#' .env | xargs)
               ahoy push
+            else
+              echo "Skipping deployment"
             fi
 workflows:
   version: 2
